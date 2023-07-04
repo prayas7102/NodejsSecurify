@@ -1,0 +1,1877 @@
+{
+ "type": "Program",
+ "body": [
+  {
+   "type": "VariableDeclaration",
+   "declarations": [
+    {
+     "type": "VariableDeclarator",
+     "id": {
+      "type": "Identifier",
+      "name": "emailModel"
+     },
+     "init": {
+      "type": "CallExpression",
+      "callee": {
+       "type": "Identifier",
+       "name": "require"
+      },
+      "arguments": [
+       {
+        "type": "Literal",
+        "value": "../models/emailModel",
+        "raw": "'../models/emailModel'"
+       }
+      ]
+     }
+    }
+   ],
+   "kind": "const"
+  },
+  {
+   "type": "VariableDeclaration",
+   "declarations": [
+    {
+     "type": "VariableDeclarator",
+     "id": {
+      "type": "Identifier",
+      "name": "nodemailer"
+     },
+     "init": {
+      "type": "CallExpression",
+      "callee": {
+       "type": "Identifier",
+       "name": "require"
+      },
+      "arguments": [
+       {
+        "type": "Literal",
+        "value": "nodemailer",
+        "raw": "'nodemailer'"
+       }
+      ]
+     }
+    }
+   ],
+   "kind": "const"
+  },
+  {
+   "type": "VariableDeclaration",
+   "declarations": [
+    {
+     "type": "VariableDeclarator",
+     "id": {
+      "type": "Identifier",
+      "name": "nodeCron"
+     },
+     "init": {
+      "type": "CallExpression",
+      "callee": {
+       "type": "Identifier",
+       "name": "require"
+      },
+      "arguments": [
+       {
+        "type": "Literal",
+        "value": "node-cron",
+        "raw": "\"node-cron\""
+       }
+      ]
+     }
+    }
+   ],
+   "kind": "const"
+  },
+  {
+   "type": "VariableDeclaration",
+   "declarations": [
+    {
+     "type": "VariableDeclarator",
+     "id": {
+      "type": "Identifier",
+      "name": "StringFilter"
+     },
+     "init": {
+      "type": "ArrowFunctionExpression",
+      "id": null,
+      "params": [
+       {
+        "type": "Identifier",
+        "name": "str"
+       }
+      ],
+      "body": {
+       "type": "BlockStatement",
+       "body": [
+        {
+         "type": "VariableDeclaration",
+         "declarations": [
+          {
+           "type": "VariableDeclarator",
+           "id": {
+            "type": "Identifier",
+            "name": "date"
+           },
+           "init": {
+            "type": "CallExpression",
+            "callee": {
+             "type": "MemberExpression",
+             "computed": false,
+             "object": {
+              "type": "NewExpression",
+              "callee": {
+               "type": "Identifier",
+               "name": "Date"
+              },
+              "arguments": [
+               {
+                "type": "Identifier",
+                "name": "str"
+               }
+              ]
+             },
+             "property": {
+              "type": "Identifier",
+              "name": "toLocaleDateString"
+             }
+            },
+            "arguments": []
+           }
+          }
+         ],
+         "kind": "const"
+        },
+        {
+         "type": "VariableDeclaration",
+         "declarations": [
+          {
+           "type": "VariableDeclarator",
+           "id": {
+            "type": "Identifier",
+            "name": "time"
+           },
+           "init": {
+            "type": "CallExpression",
+            "callee": {
+             "type": "MemberExpression",
+             "computed": false,
+             "object": {
+              "type": "NewExpression",
+              "callee": {
+               "type": "Identifier",
+               "name": "Date"
+              },
+              "arguments": [
+               {
+                "type": "Identifier",
+                "name": "str"
+               }
+              ]
+             },
+             "property": {
+              "type": "Identifier",
+              "name": "toLocaleTimeString"
+             }
+            },
+            "arguments": [
+             {
+              "type": "Literal",
+              "value": "en-GB",
+              "raw": "\"en-GB\""
+             },
+             {
+              "type": "ObjectExpression",
+              "properties": [
+               {
+                "type": "Property",
+                "key": {
+                 "type": "Identifier",
+                 "name": "hour"
+                },
+                "computed": false,
+                "value": {
+                 "type": "Literal",
+                 "value": "2-digit",
+                 "raw": "'2-digit'"
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false
+               },
+               {
+                "type": "Property",
+                "key": {
+                 "type": "Identifier",
+                 "name": "minute"
+                },
+                "computed": false,
+                "value": {
+                 "type": "Literal",
+                 "value": "2-digit",
+                 "raw": "'2-digit'"
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false
+               }
+              ]
+             }
+            ]
+           }
+          }
+         ],
+         "kind": "const"
+        },
+        {
+         "type": "VariableDeclaration",
+         "declarations": [
+          {
+           "type": "VariableDeclarator",
+           "id": {
+            "type": "Identifier",
+            "name": "strArr"
+           },
+           "init": {
+            "type": "CallExpression",
+            "callee": {
+             "type": "MemberExpression",
+             "computed": false,
+             "object": {
+              "type": "Identifier",
+              "name": "date"
+             },
+             "property": {
+              "type": "Identifier",
+              "name": "split"
+             }
+            },
+            "arguments": [
+             {
+              "type": "Literal",
+              "value": "/",
+              "raw": "\"/\""
+             }
+            ]
+           }
+          }
+         ],
+         "kind": "let"
+        },
+        {
+         "type": "ExpressionStatement",
+         "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+           "type": "Identifier",
+           "name": "strArr"
+          },
+          "right": {
+           "type": "CallExpression",
+           "callee": {
+            "type": "MemberExpression",
+            "computed": false,
+            "object": {
+             "type": "Identifier",
+             "name": "strArr"
+            },
+            "property": {
+             "type": "Identifier",
+             "name": "concat"
+            }
+           },
+           "arguments": [
+            {
+             "type": "CallExpression",
+             "callee": {
+              "type": "MemberExpression",
+              "computed": false,
+              "object": {
+               "type": "Identifier",
+               "name": "time"
+              },
+              "property": {
+               "type": "Identifier",
+               "name": "split"
+              }
+             },
+             "arguments": [
+              {
+               "type": "Literal",
+               "value": ":",
+               "raw": "\":\""
+              }
+             ]
+            }
+           ]
+          }
+         }
+        },
+        {
+         "type": "ExpressionStatement",
+         "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+           "type": "MemberExpression",
+           "computed": true,
+           "object": {
+            "type": "Identifier",
+            "name": "strArr"
+           },
+           "property": {
+            "type": "BinaryExpression",
+            "operator": "-",
+            "left": {
+             "type": "MemberExpression",
+             "computed": false,
+             "object": {
+              "type": "Identifier",
+              "name": "strArr"
+             },
+             "property": {
+              "type": "Identifier",
+              "name": "length"
+             }
+            },
+            "right": {
+             "type": "Literal",
+             "value": 1,
+             "raw": "1"
+            }
+           }
+          },
+          "right": {
+           "type": "CallExpression",
+           "callee": {
+            "type": "MemberExpression",
+            "computed": false,
+            "object": {
+             "type": "MemberExpression",
+             "computed": true,
+             "object": {
+              "type": "Identifier",
+              "name": "strArr"
+             },
+             "property": {
+              "type": "BinaryExpression",
+              "operator": "-",
+              "left": {
+               "type": "MemberExpression",
+               "computed": false,
+               "object": {
+                "type": "Identifier",
+                "name": "strArr"
+               },
+               "property": {
+                "type": "Identifier",
+                "name": "length"
+               }
+              },
+              "right": {
+               "type": "Literal",
+               "value": 1,
+               "raw": "1"
+              }
+             }
+            },
+            "property": {
+             "type": "Identifier",
+             "name": "replace"
+            }
+           },
+           "arguments": [
+            {
+             "type": "Literal",
+             "value": {},
+             "raw": "/\\D/g",
+             "regex": {
+              "pattern": "\\D",
+              "flags": "g"
+             }
+            },
+            {
+             "type": "Literal",
+             "value": "",
+             "raw": "''"
+            }
+           ]
+          }
+         }
+        },
+        {
+         "type": "ReturnStatement",
+         "argument": {
+          "type": "Identifier",
+          "name": "strArr"
+         }
+        }
+       ]
+      },
+      "generator": false,
+      "expression": false,
+      "async": false
+     }
+    }
+   ],
+   "kind": "const"
+  },
+  {
+   "type": "VariableDeclaration",
+   "declarations": [
+    {
+     "type": "VariableDeclarator",
+     "id": {
+      "type": "Identifier",
+      "name": "SendEmail"
+     },
+     "init": {
+      "type": "ArrowFunctionExpression",
+      "id": null,
+      "params": [
+       {
+        "type": "Identifier",
+        "name": "req"
+       },
+       {
+        "type": "Identifier",
+        "name": "res"
+       }
+      ],
+      "body": {
+       "type": "BlockStatement",
+       "body": [
+        {
+         "type": "VariableDeclaration",
+         "declarations": [
+          {
+           "type": "VariableDeclarator",
+           "id": {
+            "type": "ObjectPattern",
+            "properties": [
+             {
+              "type": "Property",
+              "key": {
+               "type": "Identifier",
+               "name": "msg"
+              },
+              "computed": false,
+              "value": {
+               "type": "Identifier",
+               "name": "msg"
+              },
+              "kind": "init",
+              "method": false,
+              "shorthand": true
+             },
+             {
+              "type": "Property",
+              "key": {
+               "type": "Identifier",
+               "name": "time"
+              },
+              "computed": false,
+              "value": {
+               "type": "Identifier",
+               "name": "time"
+              },
+              "kind": "init",
+              "method": false,
+              "shorthand": true
+             }
+            ]
+           },
+           "init": {
+            "type": "MemberExpression",
+            "computed": false,
+            "object": {
+             "type": "Identifier",
+             "name": "req"
+            },
+            "property": {
+             "type": "Identifier",
+             "name": "body"
+            }
+           }
+          }
+         ],
+         "kind": "const"
+        },
+        {
+         "type": "VariableDeclaration",
+         "declarations": [
+          {
+           "type": "VariableDeclarator",
+           "id": {
+            "type": "Identifier",
+            "name": "EMAIL"
+           },
+           "init": {
+            "type": "MemberExpression",
+            "computed": false,
+            "object": {
+             "type": "MemberExpression",
+             "computed": false,
+             "object": {
+              "type": "Identifier",
+              "name": "process"
+             },
+             "property": {
+              "type": "Identifier",
+              "name": "env"
+             }
+            },
+            "property": {
+             "type": "Identifier",
+             "name": "EMAIL"
+            }
+           }
+          }
+         ],
+         "kind": "const"
+        },
+        {
+         "type": "VariableDeclaration",
+         "declarations": [
+          {
+           "type": "VariableDeclarator",
+           "id": {
+            "type": "ArrayPattern",
+            "elements": [
+             {
+              "type": "Identifier",
+              "name": "day"
+             },
+             {
+              "type": "Identifier",
+              "name": "month"
+             },
+             {
+              "type": "Identifier",
+              "name": "year"
+             },
+             {
+              "type": "Identifier",
+              "name": "hour"
+             },
+             {
+              "type": "Identifier",
+              "name": "minute"
+             }
+            ]
+           },
+           "init": {
+            "type": "CallExpression",
+            "callee": {
+             "type": "Identifier",
+             "name": "StringFilter"
+            },
+            "arguments": [
+             {
+              "type": "CallExpression",
+              "callee": {
+               "type": "Identifier",
+               "name": "Object"
+              },
+              "arguments": [
+               {
+                "type": "Identifier",
+                "name": "time"
+               }
+              ]
+             }
+            ]
+           }
+          }
+         ],
+         "kind": "const"
+        },
+        {
+         "type": "VariableDeclaration",
+         "declarations": [
+          {
+           "type": "VariableDeclarator",
+           "id": {
+            "type": "Identifier",
+            "name": "recieverArr"
+           },
+           "init": {
+            "type": "ArrayExpression",
+            "elements": [
+             {
+              "type": "Literal",
+              "value": "prayas.prithvirajpratap7@gmail.com",
+              "raw": "\"prayas.prithvirajpratap7@gmail.com\""
+             },
+             {
+              "type": "Literal",
+              "value": "prayas7102@gmail.com",
+              "raw": "\"prayas7102@gmail.com\""
+             },
+             {
+              "type": "Literal",
+              "value": "prayas.stingkumar777@gmail.com",
+              "raw": "\"prayas.stingkumar777@gmail.com\""
+             },
+             {
+              "type": "Literal",
+              "value": "sonu.patna0808@gmail.com",
+              "raw": "\"sonu.patna0808@gmail.com\""
+             },
+             {
+              "type": "Literal",
+              "value": "samarmahato2505@gmail.com",
+              "raw": "\"samarmahato2505@gmail.com\""
+             },
+             {
+              "type": "Literal",
+              "value": "swajeetg768@gmail.com",
+              "raw": "\"swajeetg768@gmail.com\""
+             },
+             {
+              "type": "Literal",
+              "value": "kumarmithu2021@gmail.com",
+              "raw": "\"kumarmithu2021@gmail.com\""
+             }
+            ]
+           }
+          }
+         ],
+         "kind": "const"
+        },
+        {
+         "type": "VariableDeclaration",
+         "declarations": [
+          {
+           "type": "VariableDeclarator",
+           "id": {
+            "type": "Identifier",
+            "name": "dateString"
+           },
+           "init": {
+            "type": "CallExpression",
+            "callee": {
+             "type": "Identifier",
+             "name": "String"
+            },
+            "arguments": [
+             {
+              "type": "TemplateLiteral",
+              "quasis": [
+               {
+                "type": "TemplateElement",
+                "value": {
+                 "raw": "",
+                 "cooked": ""
+                },
+                "tail": false
+               },
+               {
+                "type": "TemplateElement",
+                "value": {
+                 "raw": " ",
+                 "cooked": " "
+                },
+                "tail": false
+               },
+               {
+                "type": "TemplateElement",
+                "value": {
+                 "raw": " ",
+                 "cooked": " "
+                },
+                "tail": false
+               },
+               {
+                "type": "TemplateElement",
+                "value": {
+                 "raw": " ",
+                 "cooked": " "
+                },
+                "tail": false
+               },
+               {
+                "type": "TemplateElement",
+                "value": {
+                 "raw": " *",
+                 "cooked": " *"
+                },
+                "tail": true
+               }
+              ],
+              "expressions": [
+               {
+                "type": "Identifier",
+                "name": "minute"
+               },
+               {
+                "type": "Identifier",
+                "name": "hour"
+               },
+               {
+                "type": "Identifier",
+                "name": "day"
+               },
+               {
+                "type": "Identifier",
+                "name": "month"
+               }
+              ]
+             }
+            ]
+           }
+          }
+         ],
+         "kind": "const"
+        },
+        {
+         "type": "ExpressionStatement",
+         "expression": {
+          "type": "CallExpression",
+          "callee": {
+           "type": "MemberExpression",
+           "computed": false,
+           "object": {
+            "type": "Identifier",
+            "name": "console"
+           },
+           "property": {
+            "type": "Identifier",
+            "name": "log"
+           }
+          },
+          "arguments": [
+           {
+            "type": "Identifier",
+            "name": "dateString"
+           }
+          ]
+         }
+        },
+        {
+         "type": "VariableDeclaration",
+         "declarations": [
+          {
+           "type": "VariableDeclarator",
+           "id": {
+            "type": "Identifier",
+            "name": "job"
+           },
+           "init": {
+            "type": "CallExpression",
+            "callee": {
+             "type": "MemberExpression",
+             "computed": false,
+             "object": {
+              "type": "Identifier",
+              "name": "nodeCron"
+             },
+             "property": {
+              "type": "Identifier",
+              "name": "schedule"
+             }
+            },
+            "arguments": [
+             {
+              "type": "Identifier",
+              "name": "dateString"
+             },
+             {
+              "type": "FunctionExpression",
+              "id": {
+               "type": "Identifier",
+               "name": "jobYouNeedToExecute"
+              },
+              "params": [],
+              "body": {
+               "type": "BlockStatement",
+               "body": [
+                {
+                 "type": "VariableDeclaration",
+                 "declarations": [
+                  {
+                   "type": "VariableDeclarator",
+                   "id": {
+                    "type": "Identifier",
+                    "name": "transporter"
+                   },
+                   "init": {
+                    "type": "CallExpression",
+                    "callee": {
+                     "type": "MemberExpression",
+                     "computed": false,
+                     "object": {
+                      "type": "Identifier",
+                      "name": "nodemailer"
+                     },
+                     "property": {
+                      "type": "Identifier",
+                      "name": "createTransport"
+                     }
+                    },
+                    "arguments": [
+                     {
+                      "type": "ObjectExpression",
+                      "properties": [
+                       {
+                        "type": "Property",
+                        "key": {
+                         "type": "Identifier",
+                         "name": "host"
+                        },
+                        "computed": false,
+                        "value": {
+                         "type": "MemberExpression",
+                         "computed": false,
+                         "object": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                           "type": "Identifier",
+                           "name": "process"
+                          },
+                          "property": {
+                           "type": "Identifier",
+                           "name": "env"
+                          }
+                         },
+                         "property": {
+                          "type": "Identifier",
+                          "name": "SMPT_HOST"
+                         }
+                        },
+                        "kind": "init",
+                        "method": false,
+                        "shorthand": false
+                       },
+                       {
+                        "type": "Property",
+                        "key": {
+                         "type": "Identifier",
+                         "name": "port"
+                        },
+                        "computed": false,
+                        "value": {
+                         "type": "MemberExpression",
+                         "computed": false,
+                         "object": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                           "type": "Identifier",
+                           "name": "process"
+                          },
+                          "property": {
+                           "type": "Identifier",
+                           "name": "env"
+                          }
+                         },
+                         "property": {
+                          "type": "Identifier",
+                          "name": "SMPT_PORT"
+                         }
+                        },
+                        "kind": "init",
+                        "method": false,
+                        "shorthand": false
+                       },
+                       {
+                        "type": "Property",
+                        "key": {
+                         "type": "Identifier",
+                         "name": "secure"
+                        },
+                        "computed": false,
+                        "value": {
+                         "type": "Literal",
+                         "value": true,
+                         "raw": "true"
+                        },
+                        "kind": "init",
+                        "method": false,
+                        "shorthand": false
+                       },
+                       {
+                        "type": "Property",
+                        "key": {
+                         "type": "Identifier",
+                         "name": "auth"
+                        },
+                        "computed": false,
+                        "value": {
+                         "type": "ObjectExpression",
+                         "properties": [
+                          {
+                           "type": "Property",
+                           "key": {
+                            "type": "Identifier",
+                            "name": "user"
+                           },
+                           "computed": false,
+                           "value": {
+                            "type": "Identifier",
+                            "name": "EMAIL"
+                           },
+                           "kind": "init",
+                           "method": false,
+                           "shorthand": false
+                          },
+                          {
+                           "type": "Property",
+                           "key": {
+                            "type": "Identifier",
+                            "name": "pass"
+                           },
+                           "computed": false,
+                           "value": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                             "type": "MemberExpression",
+                             "computed": false,
+                             "object": {
+                              "type": "Identifier",
+                              "name": "process"
+                             },
+                             "property": {
+                              "type": "Identifier",
+                              "name": "env"
+                             }
+                            },
+                            "property": {
+                             "type": "Identifier",
+                             "name": "PASSWORD"
+                            }
+                           },
+                           "kind": "init",
+                           "method": false,
+                           "shorthand": false
+                          }
+                         ]
+                        },
+                        "kind": "init",
+                        "method": false,
+                        "shorthand": false
+                       },
+                       {
+                        "type": "Property",
+                        "key": {
+                         "type": "Identifier",
+                         "name": "service"
+                        },
+                        "computed": false,
+                        "value": {
+                         "type": "MemberExpression",
+                         "computed": false,
+                         "object": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                           "type": "Identifier",
+                           "name": "process"
+                          },
+                          "property": {
+                           "type": "Identifier",
+                           "name": "env"
+                          }
+                         },
+                         "property": {
+                          "type": "Identifier",
+                          "name": "SMPT_SERVICE"
+                         }
+                        },
+                        "kind": "init",
+                        "method": false,
+                        "shorthand": false
+                       }
+                      ]
+                     }
+                    ]
+                   }
+                  }
+                 ],
+                 "kind": "let"
+                },
+                {
+                 "type": "VariableDeclaration",
+                 "declarations": [
+                  {
+                   "type": "VariableDeclarator",
+                   "id": {
+                    "type": "Identifier",
+                    "name": "message"
+                   },
+                   "init": {
+                    "type": "ObjectExpression",
+                    "properties": [
+                     {
+                      "type": "Property",
+                      "key": {
+                       "type": "Identifier",
+                       "name": "from"
+                      },
+                      "computed": false,
+                      "value": {
+                       "type": "Identifier",
+                       "name": "EMAIL"
+                      },
+                      "kind": "init",
+                      "method": false,
+                      "shorthand": false
+                     },
+                     {
+                      "type": "Property",
+                      "key": {
+                       "type": "Identifier",
+                       "name": "to"
+                      },
+                      "computed": false,
+                      "value": {
+                       "type": "Identifier",
+                       "name": "recieverArr"
+                      },
+                      "kind": "init",
+                      "method": false,
+                      "shorthand": false
+                     },
+                     {
+                      "type": "Property",
+                      "key": {
+                       "type": "Identifier",
+                       "name": "subject"
+                      },
+                      "computed": false,
+                      "value": {
+                       "type": "Literal",
+                       "value": "From bulk email sender",
+                       "raw": "\"From bulk email sender\""
+                      },
+                      "kind": "init",
+                      "method": false,
+                      "shorthand": false
+                     },
+                     {
+                      "type": "Property",
+                      "key": {
+                       "type": "Identifier",
+                       "name": "text"
+                      },
+                      "computed": false,
+                      "value": {
+                       "type": "Identifier",
+                       "name": "msg"
+                      },
+                      "kind": "init",
+                      "method": false,
+                      "shorthand": false
+                     },
+                     {
+                      "type": "Property",
+                      "key": {
+                       "type": "Identifier",
+                       "name": "html"
+                      },
+                      "computed": false,
+                      "value": {
+                       "type": "Identifier",
+                       "name": "msg"
+                      },
+                      "kind": "init",
+                      "method": false,
+                      "shorthand": false
+                     }
+                    ]
+                   }
+                  }
+                 ],
+                 "kind": "let"
+                },
+                {
+                 "type": "ExpressionStatement",
+                 "expression": {
+                  "type": "CallExpression",
+                  "callee": {
+                   "type": "MemberExpression",
+                   "computed": false,
+                   "object": {
+                    "type": "CallExpression",
+                    "callee": {
+                     "type": "MemberExpression",
+                     "computed": false,
+                     "object": {
+                      "type": "CallExpression",
+                      "callee": {
+                       "type": "MemberExpression",
+                       "computed": false,
+                       "object": {
+                        "type": "Identifier",
+                        "name": "transporter"
+                       },
+                       "property": {
+                        "type": "Identifier",
+                        "name": "sendMail"
+                       }
+                      },
+                      "arguments": [
+                       {
+                        "type": "Identifier",
+                        "name": "message"
+                       }
+                      ]
+                     },
+                     "property": {
+                      "type": "Identifier",
+                      "name": "then"
+                     }
+                    },
+                    "arguments": [
+                     {
+                      "type": "ArrowFunctionExpression",
+                      "id": null,
+                      "params": [
+                       {
+                        "type": "Identifier",
+                        "name": "info"
+                       }
+                      ],
+                      "body": {
+                       "type": "BlockStatement",
+                       "body": [
+                        {
+                         "type": "ForOfStatement",
+                         "left": {
+                          "type": "VariableDeclaration",
+                          "declarations": [
+                           {
+                            "type": "VariableDeclarator",
+                            "id": {
+                             "type": "Identifier",
+                             "name": "recv"
+                            },
+                            "init": null
+                           }
+                          ],
+                          "kind": "let"
+                         },
+                         "right": {
+                          "type": "Identifier",
+                          "name": "recieverArr"
+                         },
+                         "body": {
+                          "type": "BlockStatement",
+                          "body": [
+                           {
+                            "type": "VariableDeclaration",
+                            "declarations": [
+                             {
+                              "type": "VariableDeclarator",
+                              "id": {
+                               "type": "Identifier",
+                               "name": "email"
+                              },
+                              "init": {
+                               "type": "AwaitExpression",
+                               "argument": {
+                                "type": "CallExpression",
+                                "callee": {
+                                 "type": "MemberExpression",
+                                 "computed": false,
+                                 "object": {
+                                  "type": "Identifier",
+                                  "name": "emailModel"
+                                 },
+                                 "property": {
+                                  "type": "Identifier",
+                                  "name": "create"
+                                 }
+                                },
+                                "arguments": [
+                                 {
+                                  "type": "ObjectExpression",
+                                  "properties": [
+                                   {
+                                    "type": "Property",
+                                    "key": {
+                                     "type": "Identifier",
+                                     "name": "senderName"
+                                    },
+                                    "computed": false,
+                                    "value": {
+                                     "type": "Identifier",
+                                     "name": "EMAIL"
+                                    },
+                                    "kind": "init",
+                                    "method": false,
+                                    "shorthand": false
+                                   },
+                                   {
+                                    "type": "Property",
+                                    "key": {
+                                     "type": "Identifier",
+                                     "name": "recieverName"
+                                    },
+                                    "computed": false,
+                                    "value": {
+                                     "type": "Identifier",
+                                     "name": "recv"
+                                    },
+                                    "kind": "init",
+                                    "method": false,
+                                    "shorthand": false
+                                   },
+                                   {
+                                    "type": "Property",
+                                    "key": {
+                                     "type": "Identifier",
+                                     "name": "body"
+                                    },
+                                    "computed": false,
+                                    "value": {
+                                     "type": "Identifier",
+                                     "name": "msg"
+                                    },
+                                    "kind": "init",
+                                    "method": false,
+                                    "shorthand": false
+                                   },
+                                   {
+                                    "type": "Property",
+                                    "key": {
+                                     "type": "Identifier",
+                                     "name": "time"
+                                    },
+                                    "computed": false,
+                                    "value": {
+                                     "type": "Identifier",
+                                     "name": "time"
+                                    },
+                                    "kind": "init",
+                                    "method": false,
+                                    "shorthand": true
+                                   }
+                                  ]
+                                 }
+                                ]
+                               }
+                              }
+                             }
+                            ],
+                            "kind": "const"
+                           },
+                           {
+                            "type": "ExpressionStatement",
+                            "expression": {
+                             "type": "AwaitExpression",
+                             "argument": {
+                              "type": "CallExpression",
+                              "callee": {
+                               "type": "MemberExpression",
+                               "computed": false,
+                               "object": {
+                                "type": "Identifier",
+                                "name": "email"
+                               },
+                               "property": {
+                                "type": "Identifier",
+                                "name": "save"
+                               }
+                              },
+                              "arguments": []
+                             }
+                            }
+                           }
+                          ]
+                         }
+                        },
+                        {
+                         "type": "ReturnStatement",
+                         "argument": {
+                          "type": "CallExpression",
+                          "callee": {
+                           "type": "MemberExpression",
+                           "computed": false,
+                           "object": {
+                            "type": "CallExpression",
+                            "callee": {
+                             "type": "MemberExpression",
+                             "computed": false,
+                             "object": {
+                              "type": "Identifier",
+                              "name": "res"
+                             },
+                             "property": {
+                              "type": "Identifier",
+                              "name": "status"
+                             }
+                            },
+                            "arguments": [
+                             {
+                              "type": "Literal",
+                              "value": 200,
+                              "raw": "200"
+                             }
+                            ]
+                           },
+                           "property": {
+                            "type": "Identifier",
+                            "name": "json"
+                           }
+                          },
+                          "arguments": [
+                           {
+                            "type": "ObjectExpression",
+                            "properties": [
+                             {
+                              "type": "Property",
+                              "key": {
+                               "type": "Identifier",
+                               "name": "msg"
+                              },
+                              "computed": false,
+                              "value": {
+                               "type": "Identifier",
+                               "name": "msg"
+                              },
+                              "kind": "init",
+                              "method": false,
+                              "shorthand": false
+                             },
+                             {
+                              "type": "Property",
+                              "key": {
+                               "type": "Identifier",
+                               "name": "info"
+                              },
+                              "computed": false,
+                              "value": {
+                               "type": "MemberExpression",
+                               "computed": false,
+                               "object": {
+                                "type": "Identifier",
+                                "name": "info"
+                               },
+                               "property": {
+                                "type": "Identifier",
+                                "name": "messageId"
+                               }
+                              },
+                              "kind": "init",
+                              "method": false,
+                              "shorthand": false
+                             },
+                             {
+                              "type": "Property",
+                              "key": {
+                               "type": "Identifier",
+                               "name": "preview"
+                              },
+                              "computed": false,
+                              "value": {
+                               "type": "CallExpression",
+                               "callee": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                 "type": "Identifier",
+                                 "name": "nodemailer"
+                                },
+                                "property": {
+                                 "type": "Identifier",
+                                 "name": "getTestMessageUrl"
+                                }
+                               },
+                               "arguments": [
+                                {
+                                 "type": "Identifier",
+                                 "name": "info"
+                                }
+                               ]
+                              },
+                              "kind": "init",
+                              "method": false,
+                              "shorthand": false
+                             }
+                            ]
+                           }
+                          ]
+                         }
+                        }
+                       ]
+                      },
+                      "generator": false,
+                      "expression": false,
+                      "async": true
+                     }
+                    ]
+                   },
+                   "property": {
+                    "type": "Identifier",
+                    "name": "catch"
+                   }
+                  },
+                  "arguments": [
+                   {
+                    "type": "ArrowFunctionExpression",
+                    "id": null,
+                    "params": [
+                     {
+                      "type": "Identifier",
+                      "name": "error"
+                     }
+                    ],
+                    "body": {
+                     "type": "BlockStatement",
+                     "body": [
+                      {
+                       "type": "ExpressionStatement",
+                       "expression": {
+                        "type": "CallExpression",
+                        "callee": {
+                         "type": "MemberExpression",
+                         "computed": false,
+                         "object": {
+                          "type": "Identifier",
+                          "name": "console"
+                         },
+                         "property": {
+                          "type": "Identifier",
+                          "name": "log"
+                         }
+                        },
+                        "arguments": [
+                         {
+                          "type": "Identifier",
+                          "name": "error"
+                         }
+                        ]
+                       }
+                      },
+                      {
+                       "type": "ReturnStatement",
+                       "argument": {
+                        "type": "CallExpression",
+                        "callee": {
+                         "type": "MemberExpression",
+                         "computed": false,
+                         "object": {
+                          "type": "CallExpression",
+                          "callee": {
+                           "type": "MemberExpression",
+                           "computed": false,
+                           "object": {
+                            "type": "Identifier",
+                            "name": "res"
+                           },
+                           "property": {
+                            "type": "Identifier",
+                            "name": "status"
+                           }
+                          },
+                          "arguments": [
+                           {
+                            "type": "Literal",
+                            "value": 500,
+                            "raw": "500"
+                           }
+                          ]
+                         },
+                         "property": {
+                          "type": "Identifier",
+                          "name": "json"
+                         }
+                        },
+                        "arguments": [
+                         {
+                          "type": "ObjectExpression",
+                          "properties": [
+                           {
+                            "type": "Property",
+                            "key": {
+                             "type": "Identifier",
+                             "name": "error"
+                            },
+                            "computed": false,
+                            "value": {
+                             "type": "Identifier",
+                             "name": "error"
+                            },
+                            "kind": "init",
+                            "method": false,
+                            "shorthand": true
+                           }
+                          ]
+                         }
+                        ]
+                       }
+                      }
+                     ]
+                    },
+                    "generator": false,
+                    "expression": false,
+                    "async": false
+                   }
+                  ]
+                 }
+                }
+               ]
+              },
+              "generator": false,
+              "expression": false,
+              "async": false
+             },
+             {
+              "type": "ObjectExpression",
+              "properties": [
+               {
+                "type": "Property",
+                "key": {
+                 "type": "Identifier",
+                 "name": "scheduled"
+                },
+                "computed": false,
+                "value": {
+                 "type": "Literal",
+                 "value": true,
+                 "raw": "true"
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false
+               },
+               {
+                "type": "Property",
+                "key": {
+                 "type": "Identifier",
+                 "name": "timezone"
+                },
+                "computed": false,
+                "value": {
+                 "type": "Literal",
+                 "value": "Asia/Kolkata",
+                 "raw": "\"Asia/Kolkata\""
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false
+               }
+              ]
+             }
+            ]
+           }
+          }
+         ],
+         "kind": "const"
+        }
+       ]
+      },
+      "generator": false,
+      "expression": false,
+      "async": true
+     }
+    }
+   ],
+   "kind": "const"
+  },
+  {
+   "type": "VariableDeclaration",
+   "declarations": [
+    {
+     "type": "VariableDeclarator",
+     "id": {
+      "type": "Identifier",
+      "name": "GetEmail"
+     },
+     "init": {
+      "type": "ArrowFunctionExpression",
+      "id": null,
+      "params": [
+       {
+        "type": "Identifier",
+        "name": "req"
+       },
+       {
+        "type": "Identifier",
+        "name": "res"
+       }
+      ],
+      "body": {
+       "type": "BlockStatement",
+       "body": [
+        {
+         "type": "VariableDeclaration",
+         "declarations": [
+          {
+           "type": "VariableDeclarator",
+           "id": {
+            "type": "Identifier",
+            "name": "emailList"
+           },
+           "init": {
+            "type": "AwaitExpression",
+            "argument": {
+             "type": "CallExpression",
+             "callee": {
+              "type": "MemberExpression",
+              "computed": false,
+              "object": {
+               "type": "Identifier",
+               "name": "emailModel"
+              },
+              "property": {
+               "type": "Identifier",
+               "name": "find"
+              }
+             },
+             "arguments": [
+              {
+               "type": "ObjectExpression",
+               "properties": []
+              }
+             ]
+            }
+           }
+          }
+         ],
+         "kind": "const"
+        },
+        {
+         "type": "IfStatement",
+         "test": {
+          "type": "MemberExpression",
+          "computed": false,
+          "object": {
+           "type": "Identifier",
+           "name": "emailList"
+          },
+          "property": {
+           "type": "Identifier",
+           "name": "length"
+          }
+         },
+         "consequent": {
+          "type": "BlockStatement",
+          "body": [
+           {
+            "type": "ReturnStatement",
+            "argument": {
+             "type": "CallExpression",
+             "callee": {
+              "type": "MemberExpression",
+              "computed": false,
+              "object": {
+               "type": "CallExpression",
+               "callee": {
+                "type": "MemberExpression",
+                "computed": false,
+                "object": {
+                 "type": "Identifier",
+                 "name": "res"
+                },
+                "property": {
+                 "type": "Identifier",
+                 "name": "status"
+                }
+               },
+               "arguments": [
+                {
+                 "type": "Literal",
+                 "value": 200,
+                 "raw": "200"
+                }
+               ]
+              },
+              "property": {
+               "type": "Identifier",
+               "name": "json"
+              }
+             },
+             "arguments": [
+              {
+               "type": "ObjectExpression",
+               "properties": [
+                {
+                 "type": "Property",
+                 "key": {
+                  "type": "Identifier",
+                  "name": "success"
+                 },
+                 "computed": false,
+                 "value": {
+                  "type": "Literal",
+                  "value": false,
+                  "raw": "false"
+                 },
+                 "kind": "init",
+                 "method": false,
+                 "shorthand": false
+                },
+                {
+                 "type": "Property",
+                 "key": {
+                  "type": "Literal",
+                  "value": "emailList",
+                  "raw": "\"emailList\""
+                 },
+                 "computed": false,
+                 "value": {
+                  "type": "Identifier",
+                  "name": "emailList"
+                 },
+                 "kind": "init",
+                 "method": false,
+                 "shorthand": false
+                }
+               ]
+              }
+             ]
+            }
+           }
+          ]
+         },
+         "alternate": {
+          "type": "BlockStatement",
+          "body": [
+           {
+            "type": "ReturnStatement",
+            "argument": {
+             "type": "CallExpression",
+             "callee": {
+              "type": "MemberExpression",
+              "computed": false,
+              "object": {
+               "type": "CallExpression",
+               "callee": {
+                "type": "MemberExpression",
+                "computed": false,
+                "object": {
+                 "type": "Identifier",
+                 "name": "res"
+                },
+                "property": {
+                 "type": "Identifier",
+                 "name": "status"
+                }
+               },
+               "arguments": [
+                {
+                 "type": "Literal",
+                 "value": 400,
+                 "raw": "400"
+                }
+               ]
+              },
+              "property": {
+               "type": "Identifier",
+               "name": "json"
+              }
+             },
+             "arguments": [
+              {
+               "type": "ObjectExpression",
+               "properties": [
+                {
+                 "type": "Property",
+                 "key": {
+                  "type": "Identifier",
+                  "name": "success"
+                 },
+                 "computed": false,
+                 "value": {
+                  "type": "Literal",
+                  "value": false,
+                  "raw": "false"
+                 },
+                 "kind": "init",
+                 "method": false,
+                 "shorthand": false
+                },
+                {
+                 "type": "Property",
+                 "key": {
+                  "type": "Identifier",
+                  "name": "message"
+                 },
+                 "computed": false,
+                 "value": {
+                  "type": "ArrayExpression",
+                  "elements": []
+                 },
+                 "kind": "init",
+                 "method": false,
+                 "shorthand": false
+                }
+               ]
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      },
+      "generator": false,
+      "expression": false,
+      "async": true
+     }
+    }
+   ],
+   "kind": "const"
+  },
+  {
+   "type": "ExpressionStatement",
+   "expression": {
+    "type": "AssignmentExpression",
+    "operator": "=",
+    "left": {
+     "type": "MemberExpression",
+     "computed": false,
+     "object": {
+      "type": "Identifier",
+      "name": "module"
+     },
+     "property": {
+      "type": "Identifier",
+      "name": "exports"
+     }
+    },
+    "right": {
+     "type": "ObjectExpression",
+     "properties": [
+      {
+       "type": "Property",
+       "key": {
+        "type": "Identifier",
+        "name": "SendEmail"
+       },
+       "computed": false,
+       "value": {
+        "type": "Identifier",
+        "name": "SendEmail"
+       },
+       "kind": "init",
+       "method": false,
+       "shorthand": true
+      },
+      {
+       "type": "Property",
+       "key": {
+        "type": "Identifier",
+        "name": "GetEmail"
+       },
+       "computed": false,
+       "value": {
+        "type": "Identifier",
+        "name": "GetEmail"
+       },
+       "kind": "init",
+       "method": false,
+       "shorthand": true
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "sourceType": "script"
+}
