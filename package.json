@@ -5,7 +5,7 @@
   "main": "./dist/NodeJsSecurify.js",
   "types": "./dist/NodeJsSecurify.d.ts",
   "scripts": {
-    "build": "npx tsc -w",
+    "build": "tsc",
     "prepare": "npm run build",
     "start": "concurrently \"npx tsc -w\" \"node ./dist/NodeJsSecurify.js\""
   },
