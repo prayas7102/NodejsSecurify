@@ -1,9 +1,12 @@
 {
-  "name": "nodesecurify",
-  "description": "NodejsSecurify is an advanced npm package designed to enhance the security of Node.js applications. It provides a comprehensive set of security features and analysis capabilities to identify potential vulnerabilities and enforce best practices in accordance with OWASP guidelines.",
+  "name": "Node-Js-Securify",
+  "description": "Node-Js-Securify is an advanced npm package designed to enhance the security of Node.js applications. It provides a comprehensive set of security features and analysis capabilities to identify potential vulnerabilities and enforce best practices in accordance with OWASP guidelines.",
   "version": "1.0.0",
-  "main": "NodeJsSecurify.js",
+  "main": "./dist/NodeJsSecurify.js",
+  "types": "./dist/NodeJsSecurify.d.ts",
   "scripts": {
+    "build": "npx tsc -w",
+    "prepare": "npm run build",
     "start": "concurrently \"npx tsc -w\" \"node ./dist/NodeJsSecurify.js\""
   },
   "author": "Prayas Kumar",
@@ -17,5 +20,6 @@
     "concurrently": "^8.2.0",
     "esprima": "^4.0.1",
     "path": "^0.12.7"
-  }
+  },
+  "files": ["dist/**/*"]
 }
