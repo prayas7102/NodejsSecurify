@@ -1,14 +1,21 @@
 {
-  "dependencies": {
-    "esprima": "^4.0.1"
-  },
   "name": "nodesecurify",
   "description": "NodejsSecurify is an advanced npm package designed to enhance the security of Node.js applications. It provides a comprehensive set of security features and analysis capabilities to identify potential vulnerabilities and enforce best practices in accordance with OWASP guidelines.",
   "version": "1.0.0",
   "main": "NodeJsSecurify.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"tsc ./src/NodeJsSecurify.ts\" \"node ./src/NodeJsSecurify.js\""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/esprima": "^4.0.3",
+    "@types/node": "^20.3.3",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0",
+    "esprima": "^4.0.1",
+    "path": "^0.12.7"
+  }
 }
