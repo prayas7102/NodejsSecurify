@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "main": "NodeJsSecurify.js",
   "scripts": {
-    "start": "concurrently \"npx tsc -w\" \"node ./src/NodeJsSecurify.js\""
+    "start": "concurrently \"npx tsc -w\" \"node ./dist/NodeJsSecurify.js\""
   },
-  "author": "",
+  "author": "Prayas Kumar",
   "license": "ISC",
   "devDependencies": {
     "@types/esprima": "^4.0.3",

@@ -4,7 +4,7 @@
 
 import * as esprima from 'esprima';
 import * as fs from "fs";
-import  * as path from 'path';
+import * as path from 'path';
 
 // Construct an absolute path
 const absolutePath = path?.resolve('C:/Users/hp/Desktop/NodeSecurify');
@@ -23,7 +23,6 @@ try {
 
     // Write data in 'ParsedOutput.json' .
     fs?.writeFile('./EsprimaOutput/ParsedOutput.json', strAst, (err: any) => {
-        // In case of a error throw err.
         if (err) throw err;
     });
 }
@@ -31,45 +30,48 @@ catch (error: any) {
     console.error("Error parsing file:", error);
 }
 
-function VariableDeclaration() {
+export class Log {
 
-}
-function IfStatement() {
+    static VariableDeclaration() {
 
-}
-function ExpressionStatement() {
+    }
+    static IfStatement() {
 
-}
-function ArrowFunctionExpression() {
+    }
+    static ExpressionStatement() {
 
-}
-function AssignmentExpression() {
+    }
+    static ArrowstaticExpression() {
 
-}
-function MemberExpression() {
+    }
+    static AssignmentExpression() {
 
-}
-function ObjectExpression() {
+    }
+    static MemberExpression() {
 
-}
-function CallExpression() {
+    }
+    static ObjectExpression() {
 
-}
-function VariableDeclarator() {
+    }
+    static CallExpression() {
 
-}
-function NewExpression() {
+    }
+    static VariableDeclarator() {
 
-}
-function BinaryExpression() {
+    }
+    static NewExpression() {
 
-}
-function Identifier() {
+    }
+    static BinaryExpression() {
 
-}
-function Literal() {
+    }
+    static Identifier() {
 
-}
-function BlockStatement() {
+    }
+    static Literal() {
 
+    }
+    static BlockStatement() {
+
+    }
 }

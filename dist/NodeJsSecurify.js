@@ -26,6 +26,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Log = void 0;
 const esprima = __importStar(require("esprima"));
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
@@ -42,7 +43,6 @@ try {
     const strAst = JSON.stringify(jsonAst, null, 1);
     // Write data in 'ParsedOutput.json' .
     fs === null || fs === void 0 ? void 0 : fs.writeFile('./EsprimaOutput/ParsedOutput.json', strAst, (err) => {
-        // In case of a error throw err.
         if (err)
             throw err;
     });
@@ -50,31 +50,34 @@ try {
 catch (error) {
     console.error("Error parsing file:", error);
 }
-function VariableDeclaration() {
+class Log {
+    static VariableDeclaration() {
+    }
+    static IfStatement() {
+    }
+    static ExpressionStatement() {
+    }
+    static ArrowstaticExpression() {
+    }
+    static AssignmentExpression() {
+    }
+    static MemberExpression() {
+    }
+    static ObjectExpression() {
+    }
+    static CallExpression() {
+    }
+    static VariableDeclarator() {
+    }
+    static NewExpression() {
+    }
+    static BinaryExpression() {
+    }
+    static Identifier() {
+    }
+    static Literal() {
+    }
+    static BlockStatement() {
+    }
 }
-function IfStatement() {
-}
-function ExpressionStatement() {
-}
-function ArrowFunctionExpression() {
-}
-function AssignmentExpression() {
-}
-function MemberExpression() {
-}
-function ObjectExpression() {
-}
-function CallExpression() {
-}
-function VariableDeclarator() {
-}
-function NewExpression() {
-}
-function BinaryExpression() {
-}
-function Identifier() {
-}
-function Literal() {
-}
-function BlockStatement() {
-}
+exports.Log = Log;
