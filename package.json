@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "NodeJsSecurify.js",
   "scripts": {
-    "start": "concurrently \"tsc ./src/NodeJsSecurify.ts\" \"node ./src/NodeJsSecurify.js\""
+    "start": "concurrently \"npx tsc -w\" \"node ./src/NodeJsSecurify.js\""
   },
   "author": "",
   "license": "ISC",

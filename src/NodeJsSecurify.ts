@@ -7,13 +7,12 @@ import * as fs from "fs";
 import  * as path from 'path';
 
 // Construct an absolute path
-const absolutePath = path?.resolve('/');
+const absolutePath = path?.resolve('C:/Users/hp/Desktop/NodeSecurify');
 console.log(absolutePath);
 
+// recursively traverse all the files in given directory path
+const filePath: string = "./API_Based_Email_Sender/Backend/controller/EmailController.js";
 
-// Specify the file you want to parse
-const filePath: string = "API_Based_Email_Sender/Backend/controller/EmailController.js";
-console.log(filePath);
 // Read the content of the file
 const fileContent: string = fs?.readFileSync(filePath, "utf-8");
 
@@ -21,15 +20,12 @@ try {
     // Parse the file content using the esprima parser
     const jsonAst: esprima.Program = esprima?.parseScript(fileContent, { loc: true });
     const strAst: string = JSON.stringify(jsonAst, null, 1);
-    console.log(jsonAst);
-    // console.log(strAst);
 
-    // Write data in 'EsprimaOutput.json' .
+    // Write data in 'ParsedOutput.json' .
     fs?.writeFile('./EsprimaOutput/ParsedOutput.json', strAst, (err: any) => {
         // In case of a error throw err.
         if (err) throw err;
     });
-
 }
 catch (error: any) {
     console.error("Error parsing file:", error);
