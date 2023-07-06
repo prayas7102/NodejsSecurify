@@ -30,9 +30,8 @@ exports.Log = void 0;
 const esprima = __importStar(require("esprima"));
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
-// Recursively traverse all the files in given directory path.
-// Ensure it does the same when installed by anyone in any directory of their system.
-// So make such changes to ensure the former. 
+// traversing all the gitignore files and including all the file names 
+// not be parsed in gitIgnoreFiles string
 function findGitIgnoreFiles(directory) {
     let gitIgnoreFiles = "";
     function traverseDirectory(dir) {
@@ -45,7 +44,6 @@ function findGitIgnoreFiles(directory) {
             }
             else if (file === '.gitignore') {
                 const fileContent = fs === null || fs === void 0 ? void 0 : fs.readFileSync(filePath, 'utf8');
-                // console.log(typeof(fileContent));
                 gitIgnoreFiles += (fileContent);
             }
         });
@@ -53,20 +51,26 @@ function findGitIgnoreFiles(directory) {
     traverseDirectory(directory);
     return gitIgnoreFiles;
 }
+// Recursively traverse all the files in given directory path.
+// Ensure it does the same when installed by anyone in any directory of their system.
+// So make such changes to ensure the former. 
 function parseJSFiles(directory, gitIgnoreFilesArray) {
     let files = fs.readdirSync(directory);
-    files = files.filter(function (e) { return gitIgnoreFilesArray.indexOf(e) !== -1; });
+    files = files.filter(function (e) {
+        return gitIgnoreFilesArray.indexOf(e) === -1;
+    });
     for (const file of files) {
         const filePath = path.join(directory, file);
         const stat = fs === null || fs === void 0 ? void 0 : fs.statSync(filePath);
+        const fileLastName = path.extname(filePath);
         if (stat.isDirectory()) {
             parseJSFiles(filePath, gitIgnoreFilesArray); // Recursively parse files in subdirectories
         }
-        else if (path.extname(filePath) === '.js') {
-            // console.log(filePath);
+        else if (fileLastName === '.js' || fileLastName === '.jsx') {
+            console.log(filePath);
             const fileContent = fs === null || fs === void 0 ? void 0 : fs.readFileSync(filePath, 'utf8');
             // Parse the file content using the esprima parser
-            const jsonAst = esprima === null || esprima === void 0 ? void 0 : esprima.parseScript(fileContent, { loc: true, comment: true, tokens: true, tolerant: true });
+            const jsonAst = esprima === null || esprima === void 0 ? void 0 : esprima.parseScript(fileContent, { loc: true, comment: true, tokens: true, tolerant: true, jsx: true });
             const strAst = JSON.stringify(jsonAst, null, 1);
             // Write data in 'name_of_file_being_parsed.json'.
             fs === null || fs === void 0 ? void 0 : fs.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err) => {
@@ -78,8 +82,12 @@ function parseJSFiles(directory, gitIgnoreFilesArray) {
 }
 try {
     __dirname = 'C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender';
+    // concat all the results from gitignore files
     let gitIgnoreFiles = findGitIgnoreFiles(__dirname);
     let gitIgnoreFilesArray = gitIgnoreFiles.split('\n');
+    // including node_modules in gitIgnoreFilesArray
+    gitIgnoreFilesArray.push('node_modules');
+    // parsing all the .js & .jsx files, except files in gitIgnoreFilesArray
     parseJSFiles(__dirname, gitIgnoreFilesArray);
 }
 catch (error) {

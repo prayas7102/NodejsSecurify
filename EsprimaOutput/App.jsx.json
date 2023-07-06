@@ -1,0 +1,1647 @@
+{
+ "type": "Program",
+ "body": [
+  {
+   "type": "ImportDeclaration",
+   "specifiers": [
+    {
+     "type": "ImportSpecifier",
+     "local": {
+      "type": "Identifier",
+      "name": "useState",
+      "loc": {
+       "start": {
+        "line": 1,
+        "column": 9
+       },
+       "end": {
+        "line": 1,
+        "column": 17
+       }
+      }
+     },
+     "imported": {
+      "type": "Identifier",
+      "name": "useState",
+      "loc": {
+       "start": {
+        "line": 1,
+        "column": 9
+       },
+       "end": {
+        "line": 1,
+        "column": 17
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 1,
+       "column": 9
+      },
+      "end": {
+       "line": 1,
+       "column": 17
+      }
+     }
+    }
+   ],
+   "source": {
+    "type": "Literal",
+    "value": "react",
+    "raw": "\"react\"",
+    "loc": {
+     "start": {
+      "line": 1,
+      "column": 25
+     },
+     "end": {
+      "line": 1,
+      "column": 32
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 0
+    },
+    "end": {
+     "line": 1,
+     "column": 33
+    }
+   }
+  },
+  {
+   "type": "ImportDeclaration",
+   "specifiers": [
+    {
+     "type": "ImportDefaultSpecifier",
+     "local": {
+      "type": "Identifier",
+      "name": "CkeEditor",
+      "loc": {
+       "start": {
+        "line": 2,
+        "column": 7
+       },
+       "end": {
+        "line": 2,
+        "column": 16
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 2,
+       "column": 7
+      },
+      "end": {
+       "line": 2,
+       "column": 16
+      }
+     }
+    }
+   ],
+   "source": {
+    "type": "Literal",
+    "value": "./assets/CkeEditor/CkEditor",
+    "raw": "\"./assets/CkeEditor/CkEditor\"",
+    "loc": {
+     "start": {
+      "line": 2,
+      "column": 22
+     },
+     "end": {
+      "line": 2,
+      "column": 51
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 0
+    },
+    "end": {
+     "line": 2,
+     "column": 52
+    }
+   }
+  },
+  {
+   "type": "ImportDeclaration",
+   "specifiers": [
+    {
+     "type": "ImportDefaultSpecifier",
+     "local": {
+      "type": "Identifier",
+      "name": "EmailLists",
+      "loc": {
+       "start": {
+        "line": 3,
+        "column": 7
+       },
+       "end": {
+        "line": 3,
+        "column": 17
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 3,
+       "column": 7
+      },
+      "end": {
+       "line": 3,
+       "column": 17
+      }
+     }
+    }
+   ],
+   "source": {
+    "type": "Literal",
+    "value": "./assets/EmailLists/EmailLists",
+    "raw": "\"./assets/EmailLists/EmailLists\"",
+    "loc": {
+     "start": {
+      "line": 3,
+      "column": 23
+     },
+     "end": {
+      "line": 3,
+      "column": 55
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 0
+    },
+    "end": {
+     "line": 3,
+     "column": 56
+    }
+   }
+  },
+  {
+   "type": "ImportDeclaration",
+   "specifiers": [],
+   "source": {
+    "type": "Literal",
+    "value": "./App.css",
+    "raw": "\"./App.css\"",
+    "loc": {
+     "start": {
+      "line": 4,
+      "column": 7
+     },
+     "end": {
+      "line": 4,
+      "column": 18
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 0
+    },
+    "end": {
+     "line": 4,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "FunctionDeclaration",
+   "id": {
+    "type": "Identifier",
+    "name": "App",
+    "loc": {
+     "start": {
+      "line": 6,
+      "column": 9
+     },
+     "end": {
+      "line": 6,
+      "column": 12
+     }
+    }
+   },
+   "params": [],
+   "body": {
+    "type": "BlockStatement",
+    "body": [
+     {
+      "type": "VariableDeclaration",
+      "declarations": [
+       {
+        "type": "VariableDeclarator",
+        "id": {
+         "type": "ArrayPattern",
+         "elements": [
+          {
+           "type": "Identifier",
+           "name": "count",
+           "loc": {
+            "start": {
+             "line": 7,
+             "column": 9
+            },
+            "end": {
+             "line": 7,
+             "column": 14
+            }
+           }
+          },
+          {
+           "type": "Identifier",
+           "name": "setCount",
+           "loc": {
+            "start": {
+             "line": 7,
+             "column": 16
+            },
+            "end": {
+             "line": 7,
+             "column": 24
+            }
+           }
+          }
+         ],
+         "loc": {
+          "start": {
+           "line": 7,
+           "column": 8
+          },
+          "end": {
+           "line": 7,
+           "column": 25
+          }
+         }
+        },
+        "init": {
+         "type": "CallExpression",
+         "callee": {
+          "type": "Identifier",
+          "name": "useState",
+          "loc": {
+           "start": {
+            "line": 7,
+            "column": 28
+           },
+           "end": {
+            "line": 7,
+            "column": 36
+           }
+          }
+         },
+         "arguments": [
+          {
+           "type": "Literal",
+           "value": 0,
+           "raw": "0",
+           "loc": {
+            "start": {
+             "line": 7,
+             "column": 37
+            },
+            "end": {
+             "line": 7,
+             "column": 38
+            }
+           }
+          }
+         ],
+         "loc": {
+          "start": {
+           "line": 7,
+           "column": 28
+          },
+          "end": {
+           "line": 7,
+           "column": 39
+          }
+         }
+        },
+        "loc": {
+         "start": {
+          "line": 7,
+          "column": 8
+         },
+         "end": {
+          "line": 7,
+          "column": 39
+         }
+        }
+       }
+      ],
+      "kind": "const",
+      "loc": {
+       "start": {
+        "line": 7,
+        "column": 2
+       },
+       "end": {
+        "line": 7,
+        "column": 40
+       }
+      }
+     },
+     {
+      "type": "ReturnStatement",
+      "argument": {
+       "type": "JSXElement",
+       "openingElement": {
+        "type": "JSXOpeningElement",
+        "name": {
+         "type": "JSXIdentifier",
+         "name": "div",
+         "loc": {
+          "start": {
+           "line": 10,
+           "column": 5
+          },
+          "end": {
+           "line": 10,
+           "column": 8
+          }
+         }
+        },
+        "selfClosing": false,
+        "attributes": [
+         {
+          "type": "JSXAttribute",
+          "name": {
+           "type": "JSXIdentifier",
+           "name": "className",
+           "loc": {
+            "start": {
+             "line": 10,
+             "column": 9
+            },
+            "end": {
+             "line": 10,
+             "column": 18
+            }
+           }
+          },
+          "value": {
+           "type": "Literal",
+           "value": "App",
+           "raw": "\"App\"",
+           "loc": {
+            "start": {
+             "line": 10,
+             "column": 19
+            },
+            "end": {
+             "line": 10,
+             "column": 24
+            }
+           }
+          },
+          "loc": {
+           "start": {
+            "line": 10,
+            "column": 9
+           },
+           "end": {
+            "line": 10,
+            "column": 24
+           }
+          }
+         }
+        ],
+        "loc": {
+         "start": {
+          "line": 10,
+          "column": 4
+         },
+         "end": {
+          "line": 10,
+          "column": 25
+         }
+        }
+       },
+       "children": [
+        {
+         "type": "JSXText",
+         "value": "\n      ",
+         "raw": "\n      ",
+         "loc": {
+          "start": {
+           "line": 10,
+           "column": 25
+          },
+          "end": {
+           "line": 11,
+           "column": 6
+          }
+         }
+        },
+        {
+         "type": "JSXElement",
+         "openingElement": {
+          "type": "JSXOpeningElement",
+          "name": {
+           "type": "JSXIdentifier",
+           "name": "CkeEditor",
+           "loc": {
+            "start": {
+             "line": 11,
+             "column": 7
+            },
+            "end": {
+             "line": 11,
+             "column": 16
+            }
+           }
+          },
+          "selfClosing": true,
+          "attributes": [],
+          "loc": {
+           "start": {
+            "line": 11,
+            "column": 6
+           },
+           "end": {
+            "line": 11,
+            "column": 19
+           }
+          }
+         },
+         "children": [],
+         "closingElement": null,
+         "loc": {
+          "start": {
+           "line": 11,
+           "column": 6
+          },
+          "end": {
+           "line": 11,
+           "column": 19
+          }
+         }
+        },
+        {
+         "type": "JSXText",
+         "value": "\n      ",
+         "raw": "\n      ",
+         "loc": {
+          "start": {
+           "line": 11,
+           "column": 19
+          },
+          "end": {
+           "line": 12,
+           "column": 6
+          }
+         }
+        },
+        {
+         "type": "JSXElement",
+         "openingElement": {
+          "type": "JSXOpeningElement",
+          "name": {
+           "type": "JSXIdentifier",
+           "name": "EmailLists",
+           "loc": {
+            "start": {
+             "line": 12,
+             "column": 7
+            },
+            "end": {
+             "line": 12,
+             "column": 17
+            }
+           }
+          },
+          "selfClosing": true,
+          "attributes": [],
+          "loc": {
+           "start": {
+            "line": 12,
+            "column": 6
+           },
+           "end": {
+            "line": 12,
+            "column": 20
+           }
+          }
+         },
+         "children": [],
+         "closingElement": null,
+         "loc": {
+          "start": {
+           "line": 12,
+           "column": 6
+          },
+          "end": {
+           "line": 12,
+           "column": 20
+          }
+         }
+        },
+        {
+         "type": "JSXText",
+         "value": "\n    ",
+         "raw": "\n    ",
+         "loc": {
+          "start": {
+           "line": 12,
+           "column": 20
+          },
+          "end": {
+           "line": 13,
+           "column": 4
+          }
+         }
+        }
+       ],
+       "closingElement": {
+        "type": "JSXClosingElement",
+        "name": {
+         "type": "JSXIdentifier",
+         "name": "div",
+         "loc": {
+          "start": {
+           "line": 13,
+           "column": 6
+          },
+          "end": {
+           "line": 13,
+           "column": 9
+          }
+         }
+        },
+        "loc": {
+         "start": {
+          "line": 13,
+          "column": 4
+         },
+         "end": {
+          "line": 13,
+          "column": 10
+         }
+        }
+       },
+       "loc": {
+        "start": {
+         "line": 10,
+         "column": 4
+        },
+        "end": {
+         "line": 13,
+         "column": 10
+        }
+       }
+      },
+      "loc": {
+       "start": {
+        "line": 9,
+        "column": 2
+       },
+       "end": {
+        "line": 14,
+        "column": 4
+       }
+      }
+     }
+    ],
+    "loc": {
+     "start": {
+      "line": 6,
+      "column": 15
+     },
+     "end": {
+      "line": 15,
+      "column": 1
+     }
+    }
+   },
+   "generator": false,
+   "expression": false,
+   "async": false,
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 0
+    },
+    "end": {
+     "line": 15,
+     "column": 1
+    }
+   }
+  },
+  {
+   "type": "ExportDefaultDeclaration",
+   "declaration": {
+    "type": "Identifier",
+    "name": "App",
+    "loc": {
+     "start": {
+      "line": 17,
+      "column": 15
+     },
+     "end": {
+      "line": 17,
+      "column": 18
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 17,
+     "column": 0
+    },
+    "end": {
+     "line": 17,
+     "column": 19
+    }
+   }
+  }
+ ],
+ "sourceType": "script",
+ "loc": {
+  "start": {
+   "line": 1,
+   "column": 0
+  },
+  "end": {
+   "line": 17,
+   "column": 19
+  }
+ },
+ "comments": [],
+ "tokens": [
+  {
+   "type": "Keyword",
+   "value": "import",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 0
+    },
+    "end": {
+     "line": 1,
+     "column": 6
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "{",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 7
+    },
+    "end": {
+     "line": 1,
+     "column": 8
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "useState",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 9
+    },
+    "end": {
+     "line": 1,
+     "column": 17
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "}",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 18
+    },
+    "end": {
+     "line": 1,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "from",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 20
+    },
+    "end": {
+     "line": 1,
+     "column": 24
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "\"react\"",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 25
+    },
+    "end": {
+     "line": 1,
+     "column": 32
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 32
+    },
+    "end": {
+     "line": 1,
+     "column": 33
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "import",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 0
+    },
+    "end": {
+     "line": 2,
+     "column": 6
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "CkeEditor",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 7
+    },
+    "end": {
+     "line": 2,
+     "column": 16
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "from",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 17
+    },
+    "end": {
+     "line": 2,
+     "column": 21
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "\"./assets/CkeEditor/CkEditor\"",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 22
+    },
+    "end": {
+     "line": 2,
+     "column": 51
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 51
+    },
+    "end": {
+     "line": 2,
+     "column": 52
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "import",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 0
+    },
+    "end": {
+     "line": 3,
+     "column": 6
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "EmailLists",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 7
+    },
+    "end": {
+     "line": 3,
+     "column": 17
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "from",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 18
+    },
+    "end": {
+     "line": 3,
+     "column": 22
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "\"./assets/EmailLists/EmailLists\"",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 23
+    },
+    "end": {
+     "line": 3,
+     "column": 55
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 55
+    },
+    "end": {
+     "line": 3,
+     "column": 56
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "import",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 0
+    },
+    "end": {
+     "line": 4,
+     "column": 6
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "\"./App.css\"",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 7
+    },
+    "end": {
+     "line": 4,
+     "column": 18
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 18
+    },
+    "end": {
+     "line": 4,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "function",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 0
+    },
+    "end": {
+     "line": 6,
+     "column": 8
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "App",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 9
+    },
+    "end": {
+     "line": 6,
+     "column": 12
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 12
+    },
+    "end": {
+     "line": 6,
+     "column": 13
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 13
+    },
+    "end": {
+     "line": 6,
+     "column": 14
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "{",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 15
+    },
+    "end": {
+     "line": 6,
+     "column": 16
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "const",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 2
+    },
+    "end": {
+     "line": 7,
+     "column": 7
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "[",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 8
+    },
+    "end": {
+     "line": 7,
+     "column": 9
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "count",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 9
+    },
+    "end": {
+     "line": 7,
+     "column": 14
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ",",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 14
+    },
+    "end": {
+     "line": 7,
+     "column": 15
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "setCount",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 16
+    },
+    "end": {
+     "line": 7,
+     "column": 24
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "]",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 24
+    },
+    "end": {
+     "line": 7,
+     "column": 25
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 26
+    },
+    "end": {
+     "line": 7,
+     "column": 27
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "useState",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 28
+    },
+    "end": {
+     "line": 7,
+     "column": 36
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 36
+    },
+    "end": {
+     "line": 7,
+     "column": 37
+    }
+   }
+  },
+  {
+   "type": "Numeric",
+   "value": "0",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 37
+    },
+    "end": {
+     "line": 7,
+     "column": 38
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 38
+    },
+    "end": {
+     "line": 7,
+     "column": 39
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 39
+    },
+    "end": {
+     "line": 7,
+     "column": 40
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "return",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 2
+    },
+    "end": {
+     "line": 9,
+     "column": 8
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 9
+    },
+    "end": {
+     "line": 9,
+     "column": 10
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "<",
+   "loc": {
+    "start": {
+     "line": 10,
+     "column": 4
+    },
+    "end": {
+     "line": 10,
+     "column": 5
+    }
+   }
+  },
+  {
+   "type": "JSXIdentifier",
+   "value": "div",
+   "loc": {
+    "start": {
+     "line": 10,
+     "column": 5
+    },
+    "end": {
+     "line": 10,
+     "column": 8
+    }
+   }
+  },
+  {
+   "type": "JSXIdentifier",
+   "value": "className",
+   "loc": {
+    "start": {
+     "line": 10,
+     "column": 9
+    },
+    "end": {
+     "line": 10,
+     "column": 18
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=",
+   "loc": {
+    "start": {
+     "line": 10,
+     "column": 18
+    },
+    "end": {
+     "line": 10,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "\"App\"",
+   "loc": {
+    "start": {
+     "line": 10,
+     "column": 19
+    },
+    "end": {
+     "line": 10,
+     "column": 24
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ">",
+   "loc": {
+    "start": {
+     "line": 10,
+     "column": 24
+    },
+    "end": {
+     "line": 10,
+     "column": 25
+    }
+   }
+  },
+  {
+   "type": "JSXText",
+   "value": "\n      ",
+   "loc": {
+    "start": {
+     "line": 10,
+     "column": 25
+    },
+    "end": {
+     "line": 11,
+     "column": 6
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "<",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 6
+    },
+    "end": {
+     "line": 11,
+     "column": 7
+    }
+   }
+  },
+  {
+   "type": "JSXIdentifier",
+   "value": "CkeEditor",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 7
+    },
+    "end": {
+     "line": 11,
+     "column": 16
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "/",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 17
+    },
+    "end": {
+     "line": 11,
+     "column": 18
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ">",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 18
+    },
+    "end": {
+     "line": 11,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "JSXText",
+   "value": "\n      ",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 19
+    },
+    "end": {
+     "line": 12,
+     "column": 6
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "<",
+   "loc": {
+    "start": {
+     "line": 12,
+     "column": 6
+    },
+    "end": {
+     "line": 12,
+     "column": 7
+    }
+   }
+  },
+  {
+   "type": "JSXIdentifier",
+   "value": "EmailLists",
+   "loc": {
+    "start": {
+     "line": 12,
+     "column": 7
+    },
+    "end": {
+     "line": 12,
+     "column": 17
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "/",
+   "loc": {
+    "start": {
+     "line": 12,
+     "column": 18
+    },
+    "end": {
+     "line": 12,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ">",
+   "loc": {
+    "start": {
+     "line": 12,
+     "column": 19
+    },
+    "end": {
+     "line": 12,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "JSXText",
+   "value": "\n    ",
+   "loc": {
+    "start": {
+     "line": 12,
+     "column": 20
+    },
+    "end": {
+     "line": 13,
+     "column": 4
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "<",
+   "loc": {
+    "start": {
+     "line": 13,
+     "column": 4
+    },
+    "end": {
+     "line": 13,
+     "column": 5
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "/",
+   "loc": {
+    "start": {
+     "line": 13,
+     "column": 5
+    },
+    "end": {
+     "line": 13,
+     "column": 6
+    }
+   }
+  },
+  {
+   "type": "JSXIdentifier",
+   "value": "div",
+   "loc": {
+    "start": {
+     "line": 13,
+     "column": 6
+    },
+    "end": {
+     "line": 13,
+     "column": 9
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ">",
+   "loc": {
+    "start": {
+     "line": 13,
+     "column": 9
+    },
+    "end": {
+     "line": 13,
+     "column": 10
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 14,
+     "column": 2
+    },
+    "end": {
+     "line": 14,
+     "column": 3
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 14,
+     "column": 3
+    },
+    "end": {
+     "line": 14,
+     "column": 4
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "}",
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 0
+    },
+    "end": {
+     "line": 15,
+     "column": 1
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "export",
+   "loc": {
+    "start": {
+     "line": 17,
+     "column": 0
+    },
+    "end": {
+     "line": 17,
+     "column": 6
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "default",
+   "loc": {
+    "start": {
+     "line": 17,
+     "column": 7
+    },
+    "end": {
+     "line": 17,
+     "column": 14
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "App",
+   "loc": {
+    "start": {
+     "line": 17,
+     "column": 15
+    },
+    "end": {
+     "line": 17,
+     "column": 18
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 17,
+     "column": 18
+    },
+    "end": {
+     "line": 17,
+     "column": 19
+    }
+   }
+  }
+ ],
+ "errors": [
+  {
+   "index": 0,
+   "lineNumber": 1,
+   "description": "Unexpected token"
+  },
+  {
+   "index": 34,
+   "lineNumber": 2,
+   "description": "Unexpected token"
+  },
+  {
+   "index": 87,
+   "lineNumber": 3,
+   "description": "Unexpected token"
+  },
+  {
+   "index": 144,
+   "lineNumber": 4,
+   "description": "Unexpected token"
+  },
+  {
+   "index": 321,
+   "lineNumber": 17,
+   "description": "Unexpected token"
+  }
+ ]
+}

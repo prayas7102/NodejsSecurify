@@ -1,0 +1,1283 @@
+{
+ "type": "Program",
+ "body": [
+  {
+   "type": "ImportDeclaration",
+   "specifiers": [
+    {
+     "type": "ImportDefaultSpecifier",
+     "local": {
+      "type": "Identifier",
+      "name": "React",
+      "loc": {
+       "start": {
+        "line": 1,
+        "column": 7
+       },
+       "end": {
+        "line": 1,
+        "column": 12
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 1,
+       "column": 7
+      },
+      "end": {
+       "line": 1,
+       "column": 12
+      }
+     }
+    }
+   ],
+   "source": {
+    "type": "Literal",
+    "value": "react",
+    "raw": "'react'",
+    "loc": {
+     "start": {
+      "line": 1,
+      "column": 18
+     },
+     "end": {
+      "line": 1,
+      "column": 25
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 0
+    },
+    "end": {
+     "line": 1,
+     "column": 25
+    }
+   }
+  },
+  {
+   "type": "ImportDeclaration",
+   "specifiers": [
+    {
+     "type": "ImportDefaultSpecifier",
+     "local": {
+      "type": "Identifier",
+      "name": "ReactDOM",
+      "loc": {
+       "start": {
+        "line": 2,
+        "column": 7
+       },
+       "end": {
+        "line": 2,
+        "column": 15
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 2,
+       "column": 7
+      },
+      "end": {
+       "line": 2,
+       "column": 15
+      }
+     }
+    }
+   ],
+   "source": {
+    "type": "Literal",
+    "value": "react-dom/client",
+    "raw": "'react-dom/client'",
+    "loc": {
+     "start": {
+      "line": 2,
+      "column": 21
+     },
+     "end": {
+      "line": 2,
+      "column": 39
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 0
+    },
+    "end": {
+     "line": 2,
+     "column": 39
+    }
+   }
+  },
+  {
+   "type": "ImportDeclaration",
+   "specifiers": [
+    {
+     "type": "ImportDefaultSpecifier",
+     "local": {
+      "type": "Identifier",
+      "name": "App",
+      "loc": {
+       "start": {
+        "line": 3,
+        "column": 7
+       },
+       "end": {
+        "line": 3,
+        "column": 10
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 3,
+       "column": 7
+      },
+      "end": {
+       "line": 3,
+       "column": 10
+      }
+     }
+    }
+   ],
+   "source": {
+    "type": "Literal",
+    "value": "./App",
+    "raw": "'./App'",
+    "loc": {
+     "start": {
+      "line": 3,
+      "column": 16
+     },
+     "end": {
+      "line": 3,
+      "column": 23
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 0
+    },
+    "end": {
+     "line": 3,
+     "column": 23
+    }
+   }
+  },
+  {
+   "type": "ImportDeclaration",
+   "specifiers": [],
+   "source": {
+    "type": "Literal",
+    "value": "./index.css",
+    "raw": "'./index.css'",
+    "loc": {
+     "start": {
+      "line": 4,
+      "column": 7
+     },
+     "end": {
+      "line": 4,
+      "column": 20
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 0
+    },
+    "end": {
+     "line": 4,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "ExpressionStatement",
+   "expression": {
+    "type": "CallExpression",
+    "callee": {
+     "type": "MemberExpression",
+     "computed": false,
+     "object": {
+      "type": "CallExpression",
+      "callee": {
+       "type": "MemberExpression",
+       "computed": false,
+       "object": {
+        "type": "Identifier",
+        "name": "ReactDOM",
+        "loc": {
+         "start": {
+          "line": 6,
+          "column": 0
+         },
+         "end": {
+          "line": 6,
+          "column": 8
+         }
+        }
+       },
+       "property": {
+        "type": "Identifier",
+        "name": "createRoot",
+        "loc": {
+         "start": {
+          "line": 6,
+          "column": 9
+         },
+         "end": {
+          "line": 6,
+          "column": 19
+         }
+        }
+       },
+       "loc": {
+        "start": {
+         "line": 6,
+         "column": 0
+        },
+        "end": {
+         "line": 6,
+         "column": 19
+        }
+       }
+      },
+      "arguments": [
+       {
+        "type": "CallExpression",
+        "callee": {
+         "type": "MemberExpression",
+         "computed": false,
+         "object": {
+          "type": "Identifier",
+          "name": "document",
+          "loc": {
+           "start": {
+            "line": 6,
+            "column": 20
+           },
+           "end": {
+            "line": 6,
+            "column": 28
+           }
+          }
+         },
+         "property": {
+          "type": "Identifier",
+          "name": "getElementById",
+          "loc": {
+           "start": {
+            "line": 6,
+            "column": 29
+           },
+           "end": {
+            "line": 6,
+            "column": 43
+           }
+          }
+         },
+         "loc": {
+          "start": {
+           "line": 6,
+           "column": 20
+          },
+          "end": {
+           "line": 6,
+           "column": 43
+          }
+         }
+        },
+        "arguments": [
+         {
+          "type": "Literal",
+          "value": "root",
+          "raw": "'root'",
+          "loc": {
+           "start": {
+            "line": 6,
+            "column": 44
+           },
+           "end": {
+            "line": 6,
+            "column": 50
+           }
+          }
+         }
+        ],
+        "loc": {
+         "start": {
+          "line": 6,
+          "column": 20
+         },
+         "end": {
+          "line": 6,
+          "column": 51
+         }
+        }
+       }
+      ],
+      "loc": {
+       "start": {
+        "line": 6,
+        "column": 0
+       },
+       "end": {
+        "line": 6,
+        "column": 52
+       }
+      }
+     },
+     "property": {
+      "type": "Identifier",
+      "name": "render",
+      "loc": {
+       "start": {
+        "line": 6,
+        "column": 53
+       },
+       "end": {
+        "line": 6,
+        "column": 59
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 6,
+       "column": 0
+      },
+      "end": {
+       "line": 6,
+       "column": 59
+      }
+     }
+    },
+    "arguments": [
+     {
+      "type": "JSXElement",
+      "openingElement": {
+       "type": "JSXOpeningElement",
+       "name": {
+        "type": "JSXMemberExpression",
+        "object": {
+         "type": "JSXIdentifier",
+         "name": "React",
+         "loc": {
+          "start": {
+           "line": 7,
+           "column": 3
+          },
+          "end": {
+           "line": 7,
+           "column": 8
+          }
+         }
+        },
+        "property": {
+         "type": "JSXIdentifier",
+         "name": "StrictMode",
+         "loc": {
+          "start": {
+           "line": 7,
+           "column": 9
+          },
+          "end": {
+           "line": 7,
+           "column": 19
+          }
+         }
+        },
+        "loc": {
+         "start": {
+          "line": 7,
+          "column": 3
+         },
+         "end": {
+          "line": 7,
+          "column": 19
+         }
+        }
+       },
+       "selfClosing": false,
+       "attributes": [],
+       "loc": {
+        "start": {
+         "line": 7,
+         "column": 2
+        },
+        "end": {
+         "line": 7,
+         "column": 20
+        }
+       }
+      },
+      "children": [
+       {
+        "type": "JSXText",
+        "value": "\n    ",
+        "raw": "\n    ",
+        "loc": {
+         "start": {
+          "line": 7,
+          "column": 20
+         },
+         "end": {
+          "line": 8,
+          "column": 4
+         }
+        }
+       },
+       {
+        "type": "JSXElement",
+        "openingElement": {
+         "type": "JSXOpeningElement",
+         "name": {
+          "type": "JSXIdentifier",
+          "name": "App",
+          "loc": {
+           "start": {
+            "line": 8,
+            "column": 5
+           },
+           "end": {
+            "line": 8,
+            "column": 8
+           }
+          }
+         },
+         "selfClosing": true,
+         "attributes": [],
+         "loc": {
+          "start": {
+           "line": 8,
+           "column": 4
+          },
+          "end": {
+           "line": 8,
+           "column": 11
+          }
+         }
+        },
+        "children": [],
+        "closingElement": null,
+        "loc": {
+         "start": {
+          "line": 8,
+          "column": 4
+         },
+         "end": {
+          "line": 8,
+          "column": 11
+         }
+        }
+       },
+       {
+        "type": "JSXText",
+        "value": "\n  ",
+        "raw": "\n  ",
+        "loc": {
+         "start": {
+          "line": 8,
+          "column": 11
+         },
+         "end": {
+          "line": 9,
+          "column": 2
+         }
+        }
+       }
+      ],
+      "closingElement": {
+       "type": "JSXClosingElement",
+       "name": {
+        "type": "JSXMemberExpression",
+        "object": {
+         "type": "JSXIdentifier",
+         "name": "React",
+         "loc": {
+          "start": {
+           "line": 9,
+           "column": 4
+          },
+          "end": {
+           "line": 9,
+           "column": 9
+          }
+         }
+        },
+        "property": {
+         "type": "JSXIdentifier",
+         "name": "StrictMode",
+         "loc": {
+          "start": {
+           "line": 9,
+           "column": 10
+          },
+          "end": {
+           "line": 9,
+           "column": 20
+          }
+         }
+        },
+        "loc": {
+         "start": {
+          "line": 9,
+          "column": 4
+         },
+         "end": {
+          "line": 9,
+          "column": 20
+         }
+        }
+       },
+       "loc": {
+        "start": {
+         "line": 9,
+         "column": 2
+        },
+        "end": {
+         "line": 9,
+         "column": 21
+        }
+       }
+      },
+      "loc": {
+       "start": {
+        "line": 7,
+        "column": 2
+       },
+       "end": {
+        "line": 9,
+        "column": 21
+       }
+      }
+     }
+    ],
+    "loc": {
+     "start": {
+      "line": 6,
+      "column": 0
+     },
+     "end": {
+      "line": 10,
+      "column": 1
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 0
+    },
+    "end": {
+     "line": 10,
+     "column": 1
+    }
+   }
+  }
+ ],
+ "sourceType": "script",
+ "loc": {
+  "start": {
+   "line": 1,
+   "column": 0
+  },
+  "end": {
+   "line": 10,
+   "column": 1
+  }
+ },
+ "comments": [],
+ "tokens": [
+  {
+   "type": "Keyword",
+   "value": "import",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 0
+    },
+    "end": {
+     "line": 1,
+     "column": 6
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "React",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 7
+    },
+    "end": {
+     "line": 1,
+     "column": 12
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "from",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 13
+    },
+    "end": {
+     "line": 1,
+     "column": 17
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'react'",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 18
+    },
+    "end": {
+     "line": 1,
+     "column": 25
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "import",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 0
+    },
+    "end": {
+     "line": 2,
+     "column": 6
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "ReactDOM",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 7
+    },
+    "end": {
+     "line": 2,
+     "column": 15
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "from",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 16
+    },
+    "end": {
+     "line": 2,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'react-dom/client'",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 21
+    },
+    "end": {
+     "line": 2,
+     "column": 39
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "import",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 0
+    },
+    "end": {
+     "line": 3,
+     "column": 6
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "App",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 7
+    },
+    "end": {
+     "line": 3,
+     "column": 10
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "from",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 11
+    },
+    "end": {
+     "line": 3,
+     "column": 15
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'./App'",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 16
+    },
+    "end": {
+     "line": 3,
+     "column": 23
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "import",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 0
+    },
+    "end": {
+     "line": 4,
+     "column": 6
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'./index.css'",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 7
+    },
+    "end": {
+     "line": 4,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "ReactDOM",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 0
+    },
+    "end": {
+     "line": 6,
+     "column": 8
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 8
+    },
+    "end": {
+     "line": 6,
+     "column": 9
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "createRoot",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 9
+    },
+    "end": {
+     "line": 6,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 19
+    },
+    "end": {
+     "line": 6,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "document",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 20
+    },
+    "end": {
+     "line": 6,
+     "column": 28
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 28
+    },
+    "end": {
+     "line": 6,
+     "column": 29
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "getElementById",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 29
+    },
+    "end": {
+     "line": 6,
+     "column": 43
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 43
+    },
+    "end": {
+     "line": 6,
+     "column": 44
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'root'",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 44
+    },
+    "end": {
+     "line": 6,
+     "column": 50
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 50
+    },
+    "end": {
+     "line": 6,
+     "column": 51
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 51
+    },
+    "end": {
+     "line": 6,
+     "column": 52
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 52
+    },
+    "end": {
+     "line": 6,
+     "column": 53
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "render",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 53
+    },
+    "end": {
+     "line": 6,
+     "column": 59
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 59
+    },
+    "end": {
+     "line": 6,
+     "column": 60
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "<",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 2
+    },
+    "end": {
+     "line": 7,
+     "column": 3
+    }
+   }
+  },
+  {
+   "type": "JSXIdentifier",
+   "value": "React",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 3
+    },
+    "end": {
+     "line": 7,
+     "column": 8
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 8
+    },
+    "end": {
+     "line": 7,
+     "column": 9
+    }
+   }
+  },
+  {
+   "type": "JSXIdentifier",
+   "value": "StrictMode",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 9
+    },
+    "end": {
+     "line": 7,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ">",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 19
+    },
+    "end": {
+     "line": 7,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "JSXText",
+   "value": "\n    ",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 20
+    },
+    "end": {
+     "line": 8,
+     "column": 4
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "<",
+   "loc": {
+    "start": {
+     "line": 8,
+     "column": 4
+    },
+    "end": {
+     "line": 8,
+     "column": 5
+    }
+   }
+  },
+  {
+   "type": "JSXIdentifier",
+   "value": "App",
+   "loc": {
+    "start": {
+     "line": 8,
+     "column": 5
+    },
+    "end": {
+     "line": 8,
+     "column": 8
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "/",
+   "loc": {
+    "start": {
+     "line": 8,
+     "column": 9
+    },
+    "end": {
+     "line": 8,
+     "column": 10
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ">",
+   "loc": {
+    "start": {
+     "line": 8,
+     "column": 10
+    },
+    "end": {
+     "line": 8,
+     "column": 11
+    }
+   }
+  },
+  {
+   "type": "JSXText",
+   "value": "\n  ",
+   "loc": {
+    "start": {
+     "line": 8,
+     "column": 11
+    },
+    "end": {
+     "line": 9,
+     "column": 2
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "<",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 2
+    },
+    "end": {
+     "line": 9,
+     "column": 3
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "/",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 3
+    },
+    "end": {
+     "line": 9,
+     "column": 4
+    }
+   }
+  },
+  {
+   "type": "JSXIdentifier",
+   "value": "React",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 4
+    },
+    "end": {
+     "line": 9,
+     "column": 9
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 9
+    },
+    "end": {
+     "line": 9,
+     "column": 10
+    }
+   }
+  },
+  {
+   "type": "JSXIdentifier",
+   "value": "StrictMode",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 10
+    },
+    "end": {
+     "line": 9,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ">",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 20
+    },
+    "end": {
+     "line": 9,
+     "column": 21
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ",",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 21
+    },
+    "end": {
+     "line": 9,
+     "column": 22
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 10,
+     "column": 0
+    },
+    "end": {
+     "line": 10,
+     "column": 1
+    }
+   }
+  }
+ ],
+ "errors": [
+  {
+   "index": 0,
+   "lineNumber": 1,
+   "description": "Unexpected token"
+  },
+  {
+   "index": 26,
+   "lineNumber": 2,
+   "description": "Unexpected token"
+  },
+  {
+   "index": 66,
+   "lineNumber": 3,
+   "description": "Unexpected token"
+  },
+  {
+   "index": 90,
+   "lineNumber": 4,
+   "description": "Unexpected token"
+  }
+ ]
+}
