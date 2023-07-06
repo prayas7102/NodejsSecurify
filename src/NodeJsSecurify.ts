@@ -10,24 +10,46 @@ import * as path from 'path';
 // Ensure it does the same when installed by anyone in any directory of their system.
 // So make such changes to ensure the former. 
 
-function parseJSFiles(directory: string) {
+function findGitIgnoreFiles(directory: string) {
+    let gitIgnoreFiles: string = "";
 
-    const files: string[] = fs.readdirSync(directory);
+    function traverseDirectory(dir: any) {
+        const files = fs.readdirSync(dir);
+
+        files.forEach(file => {
+            const filePath = path.join(dir, file);
+            const stat = fs.statSync(filePath);
+
+            if (stat.isDirectory()) {
+                traverseDirectory(filePath); // Recursively traverse subdirectories
+            } else if (file === '.gitignore') {
+                const fileContent: string = fs?.readFileSync(filePath, 'utf8');
+                // console.log(typeof(fileContent));
+                gitIgnoreFiles+=(fileContent);
+            }
+        });
+    }
+
+    traverseDirectory(directory);
+    return gitIgnoreFiles;
+}
+
+function parseJSFiles(directory: string, gitIgnoreFilesArray: string[]) {
+
+    let files: string[] = fs.readdirSync(directory);
+    files = files.filter(function (e) { return gitIgnoreFilesArray.indexOf(e) !== -1  });
 
     for (const file of files) {
 
-        if (file.indexOf('node_modules') !== -1 || file.indexOf('frontend') !== -1) return;
-
         const filePath: string = path.join(directory, file);
-
         const stat: any = fs?.statSync(filePath);
 
         if (stat.isDirectory()) {
-            parseJSFiles(filePath); // Recursively parse files in subdirectories
-        } 
+            parseJSFiles(filePath, gitIgnoreFilesArray); // Recursively parse files in subdirectories
+        }
         else if (path.extname(filePath) === '.js') {
 
-            console.log(filePath);
+            // console.log(filePath);
             const fileContent: string = fs?.readFileSync(filePath, 'utf8');
 
             // Parse the file content using the esprima parser
@@ -44,7 +66,9 @@ function parseJSFiles(directory: string) {
 
 try {
     __dirname = 'C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender'
-    parseJSFiles(__dirname);
+    let gitIgnoreFiles: string = findGitIgnoreFiles(__dirname);
+    let gitIgnoreFilesArray: string[] = gitIgnoreFiles.split('\n');
+    parseJSFiles(__dirname, gitIgnoreFilesArray);
 }
 catch (error: any) {
     console.error("Error parsing file:", error);
