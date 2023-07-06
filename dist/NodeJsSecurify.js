@@ -82,13 +82,19 @@ function parseJSFiles(directory, gitIgnoreFilesArray) {
 }
 try {
     __dirname = 'C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender';
+    console.log('Dir name :');
+    console.log(__dirname);
     // concat all the results from gitignore files
     let gitIgnoreFiles = findGitIgnoreFiles(__dirname);
     let gitIgnoreFilesArray = gitIgnoreFiles.split('\n');
+    console.log("\nFile names in .gitignore files not getting parsed: \n");
     // including node_modules in gitIgnoreFilesArray
     gitIgnoreFilesArray.push('node_modules');
+    console.log(gitIgnoreFilesArray);
     // parsing all the .js & .jsx files, except files in gitIgnoreFilesArray
+    console.log("\nFile path name of .js & .jsx files getting parsed: \n");
     parseJSFiles(__dirname, gitIgnoreFilesArray);
+    console.log("\n");
 }
 catch (error) {
     console.error("Error parsing file:", error);
