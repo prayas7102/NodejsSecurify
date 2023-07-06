@@ -29,23 +29,37 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Log = void 0;
 const esprima = __importStar(require("esprima"));
 const fs = __importStar(require("fs"));
-// import * as path from 'path';
+const path = __importStar(require("path"));
 // Recursively traverse all the files in given directory path.
 // Ensure it does the same when installed by anyone in any directory of their system.
 // So make such changes to ensure the former. 
-// 
-const filePath = "./API_Based_Email_Sender/Backend/controller/EmailController.js";
-// Read the content of the file
-const fileContent = fs === null || fs === void 0 ? void 0 : fs.readFileSync(filePath, "utf-8");
+function parseJSFiles(directory) {
+    const files = fs.readdirSync(directory);
+    for (const file of files) {
+        if (file.indexOf('node_modules') !== -1 || file.indexOf('frontend') !== -1)
+            return;
+        const filePath = path.join(directory, file);
+        const stat = fs === null || fs === void 0 ? void 0 : fs.statSync(filePath);
+        if (stat.isDirectory()) {
+            parseJSFiles(filePath); // Recursively parse files in subdirectories
+        }
+        else if (path.extname(filePath) === '.js') {
+            console.log(filePath);
+            const fileContent = fs === null || fs === void 0 ? void 0 : fs.readFileSync(filePath, 'utf8');
+            // Parse the file content using the esprima parser
+            const jsonAst = esprima === null || esprima === void 0 ? void 0 : esprima.parseScript(fileContent, { loc: true, comment: true, tokens: true, tolerant: true });
+            const strAst = JSON.stringify(jsonAst, null, 1);
+            // Write data in 'name_of_file_being_parsed.json'.
+            fs === null || fs === void 0 ? void 0 : fs.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err) => {
+                if (err)
+                    throw err;
+            });
+        }
+    }
+}
 try {
-    // Parse the file content using the esprima parser
-    const jsonAst = esprima === null || esprima === void 0 ? void 0 : esprima.parseScript(fileContent, { loc: true });
-    const strAst = JSON.stringify(jsonAst, null, 1);
-    // Write data in 'name_of_file_being_parsed.json'.
-    fs === null || fs === void 0 ? void 0 : fs.writeFile('./EsprimaOutput/ParsedOutput.json', strAst, (err) => {
-        if (err)
-            throw err;
-    });
+    __dirname = 'C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender';
+    parseJSFiles(__dirname);
 }
 catch (error) {
     console.error("Error parsing file:", error);
