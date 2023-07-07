@@ -6,6 +6,8 @@ import * as esprima from 'esprima';
 import * as fs from "fs";
 import * as path from 'path';
 import * as colors from 'colors';
+import { CallBackHell } from './Vulnerability/CallBackHell';
+import { DOSAttack } from './Vulnerability/DOSAttack';
 
 const colours = colors;
 export class Log {
@@ -103,6 +105,6 @@ try {
 }
 catch (error: any) {
     console.log("Error parsing file".underline.red);
-    console.log("Please resolve error before running NodeJsSecurify".underline.red);
+    console.log("Please resolve error in file (check last file path) before running NodeJsSecurify".underline.red);
     console.error(error);
 }

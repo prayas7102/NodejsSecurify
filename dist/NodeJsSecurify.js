@@ -109,6 +109,6 @@ try {
 }
 catch (error) {
     console.log("Error parsing file".underline.red);
-    console.log("Please resolve error before running NodeJsSecurify".underline.red);
+    console.log("Please resolve error in file (check last file path) before running NodeJsSecurify".underline.red);
     console.error(error);
 }
