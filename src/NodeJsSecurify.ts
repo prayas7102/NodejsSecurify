@@ -5,6 +5,14 @@
 import * as esprima from 'esprima';
 import * as fs from "fs";
 import * as path from 'path';
+import * as colors from 'colors';
+
+const colours = colors;
+export class Log {
+    static NodeJsSecurifyResults() {
+        console.log('Working');
+    }
+}
 
 // traversing all the gitignore files and including all the file names 
 // not be parsed in gitIgnoreFiles string
@@ -20,7 +28,8 @@ function findGitIgnoreFiles(directory: string) {
             const stat = fs.statSync(filePath);
 
             if (stat.isDirectory()) {
-                traverseDirectory(filePath); // Recursively traverse subdirectories
+                // Recursively traverse subdirectories
+                traverseDirectory(filePath);
             } else if (file === '.gitignore') {
                 const fileContent: string = fs?.readFileSync(filePath, 'utf8');
                 gitIgnoreFiles += (fileContent);
@@ -46,15 +55,16 @@ function parseJSFiles(directory: string, gitIgnoreFilesArray: string[]) {
     for (const file of files) {
 
         const filePath: string = path.join(directory, file);
-        const stat: any = fs?.statSync(filePath);
-        const fileLastName = path.extname(filePath);
+        const stat: fs.Stats = fs?.statSync(filePath);
+        const fileLastName: string = path.extname(filePath);
 
         if (stat.isDirectory()) {
-            parseJSFiles(filePath, gitIgnoreFilesArray); // Recursively parse files in subdirectories
+            // Recursively parse files in subdirectories
+            parseJSFiles(filePath, gitIgnoreFilesArray);
         }
         else if (fileLastName === '.js' || fileLastName === '.jsx') {
 
-            console.log(filePath);
+            console.log(filePath.blue);
             const fileContent: string = fs?.readFileSync(filePath, 'utf8');
 
             // Parse the file content using the esprima parser
@@ -62,7 +72,7 @@ function parseJSFiles(directory: string, gitIgnoreFilesArray: string[]) {
             const strAst: string = JSON.stringify(jsonAst, null, 1);
 
             // Write data in 'name_of_file_being_parsed.json'.
-            fs?.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err: any) => {
+            fs?.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err: any): any => {
                 if (err) throw err;
             });
         }
@@ -71,69 +81,28 @@ function parseJSFiles(directory: string, gitIgnoreFilesArray: string[]) {
 
 try {
     __dirname = 'C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender';
-    console.log('Dir name :')
-    console.log(__dirname);
-    
+    console.log('\nRoot Directory Name : '.yellow + __dirname.rainbow);
+
     // concat all the results from gitignore files
     let gitIgnoreFiles: string = findGitIgnoreFiles(__dirname);
 
     let gitIgnoreFilesArray: string[] = gitIgnoreFiles.split('\n');
-    console.log("\nFile names in .gitignore files not getting parsed: \n");
+    console.log("\nFile names in .gitignore files not getting parsed: \n".yellow);
+
     // including node_modules in gitIgnoreFilesArray
     gitIgnoreFilesArray.push('node_modules');
-    console.log(gitIgnoreFilesArray);
+    const arrayString = gitIgnoreFilesArray.join(", ");
+    console.log(arrayString.cyan);
 
     // parsing all the .js & .jsx files, except files in gitIgnoreFilesArray
-    console.log("\nFile path name of .js & .jsx files getting parsed: \n");
+    console.log("\nFile path name of .js & .jsx files getting parsed: \n".yellow);
     parseJSFiles(__dirname, gitIgnoreFilesArray);
     console.log("\n");
+
+    Log.NodeJsSecurifyResults();
 }
 catch (error: any) {
-    console.error("Error parsing file:", error);
-}
-
-export class Log {
-
-    static VariableDeclaration() {
-
-    }
-    static IfStatement() {
-
-    }
-    static ExpressionStatement() {
-
-    }
-    static ArrowstaticExpression() {
-
-    }
-    static AssignmentExpression() {
-
-    }
-    static MemberExpression() {
-
-    }
-    static ObjectExpression() {
-
-    }
-    static CallExpression() {
-
-    }
-    static VariableDeclarator() {
-
-    }
-    static NewExpression() {
-
-    }
-    static BinaryExpression() {
-
-    }
-    static Identifier() {
-
-    }
-    static Literal() {
-
-    }
-    static BlockStatement() {
-
-    }
+    console.log("Error parsing file".underline.red);
+    console.log("Please resolve error before running NodeJsSecurify".underline.red);
+    console.error(error);
 }

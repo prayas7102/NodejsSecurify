@@ -30,6 +30,14 @@ exports.Log = void 0;
 const esprima = __importStar(require("esprima"));
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
+const colors = __importStar(require("colors"));
+const colours = colors;
+class Log {
+    static NodeJsSecurifyResults() {
+        console.log('Working');
+    }
+}
+exports.Log = Log;
 // traversing all the gitignore files and including all the file names 
 // not be parsed in gitIgnoreFiles string
 function findGitIgnoreFiles(directory) {
@@ -40,7 +48,8 @@ function findGitIgnoreFiles(directory) {
             const filePath = path.join(dir, file);
             const stat = fs.statSync(filePath);
             if (stat.isDirectory()) {
-                traverseDirectory(filePath); // Recursively traverse subdirectories
+                // Recursively traverse subdirectories
+                traverseDirectory(filePath);
             }
             else if (file === '.gitignore') {
                 const fileContent = fs === null || fs === void 0 ? void 0 : fs.readFileSync(filePath, 'utf8');
@@ -64,10 +73,11 @@ function parseJSFiles(directory, gitIgnoreFilesArray) {
         const stat = fs === null || fs === void 0 ? void 0 : fs.statSync(filePath);
         const fileLastName = path.extname(filePath);
         if (stat.isDirectory()) {
-            parseJSFiles(filePath, gitIgnoreFilesArray); // Recursively parse files in subdirectories
+            // Recursively parse files in subdirectories
+            parseJSFiles(filePath, gitIgnoreFilesArray);
         }
         else if (fileLastName === '.js' || fileLastName === '.jsx') {
-            console.log(filePath);
+            console.log(filePath.blue);
             const fileContent = fs === null || fs === void 0 ? void 0 : fs.readFileSync(filePath, 'utf8');
             // Parse the file content using the esprima parser
             const jsonAst = esprima === null || esprima === void 0 ? void 0 : esprima.parseScript(fileContent, { loc: true, comment: true, tokens: true, tolerant: true, jsx: true });
@@ -82,51 +92,23 @@ function parseJSFiles(directory, gitIgnoreFilesArray) {
 }
 try {
     __dirname = 'C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender';
-    console.log('Dir name :');
-    console.log(__dirname);
+    console.log('\nRoot Directory Name : '.yellow + __dirname.rainbow);
     // concat all the results from gitignore files
     let gitIgnoreFiles = findGitIgnoreFiles(__dirname);
     let gitIgnoreFilesArray = gitIgnoreFiles.split('\n');
-    console.log("\nFile names in .gitignore files not getting parsed: \n");
+    console.log("\nFile names in .gitignore files not getting parsed: \n".yellow);
     // including node_modules in gitIgnoreFilesArray
     gitIgnoreFilesArray.push('node_modules');
-    console.log(gitIgnoreFilesArray);
+    const arrayString = gitIgnoreFilesArray.join(", ");
+    console.log(arrayString.cyan);
     // parsing all the .js & .jsx files, except files in gitIgnoreFilesArray
-    console.log("\nFile path name of .js & .jsx files getting parsed: \n");
+    console.log("\nFile path name of .js & .jsx files getting parsed: \n".yellow);
     parseJSFiles(__dirname, gitIgnoreFilesArray);
     console.log("\n");
+    Log.NodeJsSecurifyResults();
 }
 catch (error) {
-    console.error("Error parsing file:", error);
+    console.log("Error parsing file".underline.red);
+    console.log("Please resolve error before running NodeJsSecurify".underline.red);
+    console.error(error);
 }
-class Log {
-    static VariableDeclaration() {
-    }
-    static IfStatement() {
-    }
-    static ExpressionStatement() {
-    }
-    static ArrowstaticExpression() {
-    }
-    static AssignmentExpression() {
-    }
-    static MemberExpression() {
-    }
-    static ObjectExpression() {
-    }
-    static CallExpression() {
-    }
-    static VariableDeclarator() {
-    }
-    static NewExpression() {
-    }
-    static BinaryExpression() {
-    }
-    static Identifier() {
-    }
-    static Literal() {
-    }
-    static BlockStatement() {
-    }
-}
-exports.Log = Log;
