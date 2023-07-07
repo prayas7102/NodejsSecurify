@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/esprima": "^4.0.3",
+    "@types/esquery": "^1.5.0",
     "@types/node": "^20.3.3",
     "typescript": "^5.1.6"
   },
@@ -20,6 +21,7 @@
     "colors": "^1.4.0",
     "concurrently": "^8.2.0",
     "esprima": "^4.0.1",
+    "esquery": "^1.5.0",
     "path": "^0.12.7"
   },
   "files": [

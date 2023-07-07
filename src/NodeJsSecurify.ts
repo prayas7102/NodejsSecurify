@@ -6,8 +6,8 @@ import * as esprima from 'esprima';
 import * as fs from "fs";
 import * as path from 'path';
 import * as colors from 'colors';
-import { CallBackHell } from './Vulnerability/CallBackHell';
-import { DOSAttack } from './Vulnerability/DOSAttack';
+// import { CallBackHell } from './Vulnerability/CallBackHell';
+// import { DOSAttack } from './Vulnerability/DOSAttack';
 
 const colours = colors;
 export class Log {
