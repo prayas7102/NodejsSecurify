@@ -6,8 +6,7 @@ import * as esprima from 'esprima';
 import * as fs from "fs";
 import * as path from 'path';
 import * as colors from 'colors';
-// import { CallBackHell } from './Vulnerability/CallBackHell';
-// import { DOSAttack } from './Vulnerability/DOSAttack';
+import { detectCallbackHell } from './Vulnerability/DetectCallBackHell';
 
 const colours = colors;
 export class Log {
@@ -73,7 +72,7 @@ function parseJSFiles(directory: string, gitIgnoreFilesArray: string[]) {
             const jsonAst: esprima.Program = esprima?.parseScript(fileContent, { loc: true, comment: true, tokens: true, tolerant: true, jsx: true });
             const strAst: string = JSON.stringify(jsonAst, null, 1);
 
-            // Write data in 'name_of_file_being_parsed.json'.
+            // // Write data in 'name_of_file_being_parsed.json'.
             fs?.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err: any): any => {
                 if (err) throw err;
             });
@@ -100,6 +99,12 @@ try {
     console.log("\nFile path name of .js & .jsx files getting parsed: \n".yellow);
     parseJSFiles(__dirname, gitIgnoreFilesArray);
     console.log("\n");
+
+    // parsing files for callback-hell errors
+    let files: string[] = fs.readdirSync('./EsprimaOutput');
+    files.forEach((file: string)=>{
+        detectCallbackHell('./EsprimaOutput/'+file);
+    })
 
     Log.NodeJsSecurifyResults();
 }
