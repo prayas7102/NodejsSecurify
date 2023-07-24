@@ -59,6 +59,7 @@ function findGitIgnoreFiles(directory) {
         });
     }
     traverseDirectory(directory);
+    // gitIgnoreFiles += ("\nBackend\nfrontend");
     return gitIgnoreFiles;
 }
 // Recursively traverse all the files in given directory path.
@@ -88,6 +89,8 @@ function parseJSFiles(directory, gitIgnoreFilesArray) {
                 if (err)
                     throw err;
             });
+            ((0, DetectCallBackHell_1.detectCallBackHell)(jsonAst, 0, file));
+            console.log("\n");
         }
     }
 }
@@ -106,11 +109,6 @@ try {
     console.log("\nFile path name of .js & .jsx files getting parsed: \n".yellow);
     parseJSFiles(__dirname, gitIgnoreFilesArray);
     console.log("\n");
-    // parsing files for callback-hell errors
-    let files = fs.readdirSync('./EsprimaOutput');
-    files.forEach((file) => {
-        (0, DetectCallBackHell_1.detectCallbackHell)('./EsprimaOutput/' + file);
-    });
     Log.NodeJsSecurifyResults();
 }
 catch (error) {
