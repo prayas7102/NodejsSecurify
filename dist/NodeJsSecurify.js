@@ -59,6 +59,7 @@ function findGitIgnoreFiles(directory) {
         });
     }
     traverseDirectory(directory);
+    // testing command:
     // gitIgnoreFiles += ("\nBackend\nfrontend");
     return gitIgnoreFiles;
 }
@@ -95,7 +96,8 @@ function parseJSFiles(directory, gitIgnoreFilesArray) {
     }
 }
 try {
-    __dirname = 'C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender';
+    // testing command:
+    // __dirname = 'C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender';
     console.log('\nRoot Directory Name : '.yellow + __dirname.rainbow);
     // concat all the results from gitignore files
     let gitIgnoreFiles = findGitIgnoreFiles(__dirname);
