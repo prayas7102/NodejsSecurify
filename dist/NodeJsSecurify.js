@@ -32,6 +32,7 @@ const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 const colors = __importStar(require("colors"));
 const DetectCallBackHell_1 = require("./Vulnerability/DetectCallBackHell");
+const DetectBruteForceAttack_1 = require("./Vulnerability/DetectBruteForceAttack");
 const colours = colors;
 class Log {
     static NodeJsSecurifyResults() {
@@ -53,12 +54,14 @@ class Log {
         try {
             // testing command:
             // C:\Users\hp\Desktop\NodeSecurify\API_Based_Email_Sender
-            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender"
+            __dirname = "C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender";
             // __dirname = 'D:\ChatApp\node_modules\node-js-securify\dist';
             // process.exit(1);
+            console.log("\n************************************************\n".green);
+            console.log("**********Node-Js-Securify STARTED**************\n".green);
+            console.log("************************************************\n".green);
             __dirname = extractParentPath(__dirname);
-            console.log(__dirname);
-            console.log('\nRoot Directory Name : '.yellow + __dirname.rainbow);
+            console.log('\nSearching for .js files in (root directory) : '.yellow + __dirname.rainbow);
             // concat all the results from gitignore files
             let gitIgnoreFiles = Log.findGitIgnoreFiles(__dirname);
             let gitIgnoreFilesArray = gitIgnoreFiles.split('\n');
@@ -130,7 +133,8 @@ class Log {
                     if (err)
                         throw err;
                 });
-                ((0, DetectCallBackHell_1.detectCallBackHell)(jsonAst, 0, file));
+                (0, DetectCallBackHell_1.detectCallBackHell)(jsonAst, 0, file);
+                (0, DetectBruteForceAttack_1.detectBruteForcing)(strAst);
                 console.log("\n");
             }
         }

@@ -7,6 +7,7 @@ import * as fs from "fs";
 import * as path from 'path';
 import * as colors from 'colors';
 import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
+import { detectBruteForcing } from './Vulnerability/DetectBruteForceAttack';
 
 const colours = colors;
 export class Log {
@@ -34,14 +35,17 @@ export class Log {
         try {
             // testing command:
             // C:\Users\hp\Desktop\NodeSecurify\API_Based_Email_Sender
-            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender"
+            __dirname = "C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender"
             // __dirname = 'D:\ChatApp\node_modules\node-js-securify\dist';
             // process.exit(1);
 
-            __dirname = extractParentPath(__dirname);
-            console.log(__dirname)
+            console.log("\n************************************************\n".green);
+            console.log("**********Node-Js-Securify STARTED**************\n".green);
+            console.log("************************************************\n".green);
 
-            console.log('\nRoot Directory Name : '.yellow + __dirname.rainbow);
+            __dirname = extractParentPath(__dirname);
+
+            console.log('\nSearching for .js files in (root directory) : '.yellow + __dirname.rainbow);
 
             // concat all the results from gitignore files
             let gitIgnoreFiles: string = Log.findGitIgnoreFiles(__dirname);
@@ -130,7 +134,9 @@ export class Log {
                 fs?.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err: any): any => {
                     if (err) throw err;
                 });
-                (detectCallBackHell(jsonAst, 0, file));
+
+                detectCallBackHell(jsonAst, 0, file);
+                detectBruteForcing(strAst);
                 console.log("\n");
             }
         }
