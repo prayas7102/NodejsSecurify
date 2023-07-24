@@ -10,7 +10,7 @@ function detectCallBackHell(ast, depth, fileName) {
                     const location = callee.loc.start.line;
                     const detected = "Callback hell detected! AT Line no. => " + location + " In file: " + fileName;
                     console.log(detected.red);
-                    return;
+                    process.exit(1);
                 }
                 for (const arg of node.arguments) {
                     traverse(arg, depth + 1);

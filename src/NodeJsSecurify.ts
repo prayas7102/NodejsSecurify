@@ -39,6 +39,7 @@ function findGitIgnoreFiles(directory: string) {
     }
 
     traverseDirectory(directory);
+    gitIgnoreFiles += ("\nVulnerability\ndist\nNodeJsSecurify.js");
     // testing command:
     // gitIgnoreFiles += ("\nBackend\nfrontend");
     return gitIgnoreFiles;
