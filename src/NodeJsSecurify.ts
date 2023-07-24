@@ -10,6 +10,7 @@ import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
 
 const colours = colors;
 export class Log {
+    
     static NodeJsSecurifyResults() {
         try {
             // testing command:
