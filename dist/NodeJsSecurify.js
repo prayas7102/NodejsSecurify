@@ -35,9 +35,29 @@ const DetectCallBackHell_1 = require("./Vulnerability/DetectCallBackHell");
 const colours = colors;
 class Log {
     static NodeJsSecurifyResults() {
+        function extractParentPath(inputPath) {
+            // Find the last occurrence of "node_modules" in the input path
+            const lastIndex = inputPath.lastIndexOf("node_modules");
+            if (lastIndex !== -1) {
+                // Extract the part of the path up to the last occurrence of "node_modules"
+                let outputPath = inputPath.slice(0, lastIndex);
+                // Remove any trailing backslashes if present
+                if (outputPath.endsWith("\\")) {
+                    outputPath = outputPath.slice(0, -1);
+                }
+                return outputPath;
+            }
+            // If "node_modules" is not found, return the input path as is
+            return inputPath;
+        }
         try {
             // testing command:
-            // __dirname = 'C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender';
+            // C:\Users\hp\Desktop\NodeSecurify\API_Based_Email_Sender
+            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender"
+            // __dirname = 'D:\ChatApp\node_modules\node-js-securify\dist';
+            // process.exit(1);
+            __dirname = extractParentPath(__dirname);
+            console.log(__dirname);
             console.log('\nRoot Directory Name : '.yellow + __dirname.rainbow);
             // concat all the results from gitignore files
             let gitIgnoreFiles = Log.findGitIgnoreFiles(__dirname);
