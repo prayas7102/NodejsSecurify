@@ -21,7 +21,7 @@ Continuous Updates and Maintenance: The package aims to stay up to date with the
 NodejsSecurify is a valuable tool for developers seeking to proactively identify and address security vulnerabilities in their Node.js applications. By integrating this npm package into their development process, developers can enhance the security posture of their codebase, reduce the risk of potential attacks, and reinforce adherence to industry-standard security practices.
 
 # Keywords
-NodeJs, TypeScript, JavaScript, JSX, Security, DOS, Brute Force, CallBack Hell, Dangerous Functions
+NodeJs, TypeScript, JSX, DOS, Brute Force, CallBack Hell
 
 # Installation
 

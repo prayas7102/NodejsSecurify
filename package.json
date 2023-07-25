@@ -5,6 +5,14 @@
   "repository": "https://github.com/prayas7102/NodejsSecurify",
   "main": "./dist/NodeJsSecurify.js",
   "types": "./dist/NodeJsSecurify.d.ts",
+  "keywords": [
+    "NodeJs",
+    "TypeScript",
+    "JSX",
+    "DOS",
+    "Brute Force",
+    "CallBack Hell"
+  ],
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
