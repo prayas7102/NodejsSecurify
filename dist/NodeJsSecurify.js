@@ -33,6 +33,7 @@ const path = __importStar(require("path"));
 const colors = __importStar(require("colors"));
 const DetectCallBackHell_1 = require("./Vulnerability/DetectCallBackHell");
 const DetectBruteForceAttack_1 = require("./Vulnerability/DetectBruteForceAttack");
+const SensitiveDataExposure_1 = require("./Vulnerability/SensitiveDataExposure");
 const colours = colors;
 class Log {
     static NodeJsSecurifyResults() {
@@ -48,7 +49,7 @@ class Log {
                 }
                 return outputPath;
             }
-            // If "node_modules" is not found, return the input path as is
+            // If "node_modules" is not found, return the input path as it is
             return inputPath;
         }
         try {
@@ -102,8 +103,6 @@ class Log {
         }
         traverseDirectory(directory);
         gitIgnoreFiles += ("\nVulnerability\ndist\nNodeJsSecurify.js");
-        // testing command:
-        // gitIgnoreFiles += ("\nBackend\nfrontend");
         return gitIgnoreFiles;
     }
     // Recursively traverse all the files in given directory path.
@@ -134,7 +133,8 @@ class Log {
                         throw err;
                 });
                 (0, DetectCallBackHell_1.detectCallBackHell)(jsonAst, 0, file);
-                (0, DetectBruteForceAttack_1.detectBruteForcing)(strAst);
+                (0, DetectBruteForceAttack_1.detectBruteForceVulnerability)(jsonAst);
+                (0, SensitiveDataExposure_1.SensitiveDataExposure)(jsonAst);
                 console.log("\n");
             }
         }

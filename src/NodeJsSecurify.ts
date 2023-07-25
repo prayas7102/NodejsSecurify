@@ -7,7 +7,8 @@ import * as fs from "fs";
 import * as path from 'path';
 import * as colors from 'colors';
 import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
-import { detectBruteForcing } from './Vulnerability/DetectBruteForceAttack';
+import { detectBruteForceVulnerability } from './Vulnerability/DetectBruteForceAttack';
+import { SensitiveDataExposure } from './Vulnerability/SensitiveDataExposure';
 
 const colours = colors;
 export class Log {
@@ -16,26 +17,27 @@ export class Log {
         function extractParentPath(inputPath: string) {
             // Find the last occurrence of "node_modules" in the input path
             const lastIndex = inputPath.lastIndexOf("node_modules");
-          
+
             if (lastIndex !== -1) {
-              // Extract the part of the path up to the last occurrence of "node_modules"
-              let outputPath = inputPath.slice(0, lastIndex);
-          
-              // Remove any trailing backslashes if present
-              if (outputPath.endsWith("\\")) {
-                outputPath = outputPath.slice(0, -1);
-              }
-          
-              return outputPath;
+                // Extract the part of the path up to the last occurrence of "node_modules"
+                let outputPath = inputPath.slice(0, lastIndex);
+
+                // Remove any trailing backslashes if present
+                if (outputPath.endsWith("\\")) {
+                    outputPath = outputPath.slice(0, -1);
+                }
+
+                return outputPath;
             }
-          
-            // If "node_modules" is not found, return the input path as is
+
+            // If "node_modules" is not found, return the input path as it is
             return inputPath;
-          }
+        }
+
         try {
             // testing command:
             // C:\Users\hp\Desktop\NodeSecurify\API_Based_Email_Sender
-            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender"
+            __dirname = "C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender"
             // __dirname = 'D:\ChatApp\node_modules\node-js-securify\dist';
             // process.exit(1);
 
@@ -95,8 +97,6 @@ export class Log {
 
         traverseDirectory(directory);
         gitIgnoreFiles += ("\nVulnerability\ndist\nNodeJsSecurify.js");
-        // testing command:
-        // gitIgnoreFiles += ("\nBackend\nfrontend");
         return gitIgnoreFiles;
     }
 
@@ -136,7 +136,8 @@ export class Log {
                 });
 
                 detectCallBackHell(jsonAst, 0, file);
-                detectBruteForcing(strAst);
+                detectBruteForceVulnerability(jsonAst);
+                SensitiveDataExposure(jsonAst);
                 console.log("\n");
             }
         }
