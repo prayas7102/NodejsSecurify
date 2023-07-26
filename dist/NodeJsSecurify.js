@@ -41,7 +41,6 @@ const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 const colors = __importStar(require("colors"));
 const DetectCallBackHell_1 = require("./Vulnerability/DetectCallBackHell");
-// import { detectBruteForceVulnerability } from './Vulnerability/DetectBruteForceAttack';
 const colours = colors;
 class Log {
     static NodeJsSecurifyResults() {
@@ -63,7 +62,7 @@ class Log {
         try {
             // testing command:
             // comment this before publishing
-            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
+            __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder";
             // process.exit(1);
             console.log("\n******************************************************************************************".green);
             console.log("****************************** Node-Js-Securify STARTED **********************************".green);
