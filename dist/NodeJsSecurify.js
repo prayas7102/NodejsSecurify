@@ -25,6 +25,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Log = void 0;
 const esprima = __importStar(require("esprima"));
@@ -32,8 +41,7 @@ const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 const colors = __importStar(require("colors"));
 const DetectCallBackHell_1 = require("./Vulnerability/DetectCallBackHell");
-const DetectBruteForceAttack_1 = require("./Vulnerability/DetectBruteForceAttack");
-const SensitiveDataExposure_1 = require("./Vulnerability/SensitiveDataExposure");
+// import { detectBruteForceVulnerability } from './Vulnerability/DetectBruteForceAttack';
 const colours = colors;
 class Log {
     static NodeJsSecurifyResults() {
@@ -54,12 +62,12 @@ class Log {
         }
         try {
             // testing command:
-            __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder";
-            // __dirname = 'D:\ChatApp\node_modules\node-js-securify\dist';
+            // comment this before publishing
+            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
             // process.exit(1);
-            console.log("\n************************************************\n".green);
-            console.log("**********Node-Js-Securify STARTED**************\n".green);
-            console.log("************************************************\n".green);
+            console.log("\n******************************************************************************************".green);
+            console.log("****************************** Node-Js-Securify STARTED **********************************".green);
+            console.log("******************************************************************************************".green);
             __dirname = extractParentPath(__dirname);
             console.log('\nSearching for .js files in (root directory) : '.yellow + __dirname.rainbow);
             // concat all the results from gitignore files
@@ -108,35 +116,36 @@ class Log {
     // Ensure it does the same when installed by anyone in any directory of their system.
     // So make such changes to ensure the former. 
     static parseJSFiles(directory, gitIgnoreFilesArray) {
-        let files = fs.readdirSync(directory);
-        files = files.filter(function (e) {
-            return gitIgnoreFilesArray.indexOf(e) === -1;
+        return __awaiter(this, void 0, void 0, function* () {
+            let files = fs.readdirSync(directory);
+            files = files.filter(function (e) {
+                return gitIgnoreFilesArray.indexOf(e) === -1;
+            });
+            for (const file of files) {
+                const filePath = path.join(directory, file);
+                const stat = fs === null || fs === void 0 ? void 0 : fs.statSync(filePath);
+                const fileLastName = path.extname(filePath);
+                if (stat.isDirectory()) {
+                    // Recursively parse files in subdirectories
+                    Log.parseJSFiles(filePath, gitIgnoreFilesArray);
+                }
+                else if (fileLastName === '.js' || fileLastName === '.jsx') {
+                    console.log(filePath.blue);
+                    const fileContent = fs === null || fs === void 0 ? void 0 : fs.readFileSync(filePath, 'utf8');
+                    // Parse the file content using the esprima parser
+                    const jsonAst = esprima === null || esprima === void 0 ? void 0 : esprima.parseScript(fileContent, { loc: true, comment: true, tokens: true, tolerant: true, jsx: true });
+                    const strAst = JSON.stringify(jsonAst, null, 1);
+                    // // Write data in 'name_of_file_being_parsed.json'.
+                    fs === null || fs === void 0 ? void 0 : fs.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err) => {
+                        if (err)
+                            throw err;
+                    });
+                    (0, DetectCallBackHell_1.detectCallBackHell)(jsonAst, 0, file);
+                    // await detectBruteForceVulnerability(fileContent);
+                    console.log("\n");
+                }
+            }
         });
-        for (const file of files) {
-            const filePath = path.join(directory, file);
-            const stat = fs === null || fs === void 0 ? void 0 : fs.statSync(filePath);
-            const fileLastName = path.extname(filePath);
-            if (stat.isDirectory()) {
-                // Recursively parse files in subdirectories
-                Log.parseJSFiles(filePath, gitIgnoreFilesArray);
-            }
-            else if (fileLastName === '.js' || fileLastName === '.jsx') {
-                console.log(filePath.blue);
-                const fileContent = fs === null || fs === void 0 ? void 0 : fs.readFileSync(filePath, 'utf8');
-                // Parse the file content using the esprima parser
-                const jsonAst = esprima === null || esprima === void 0 ? void 0 : esprima.parseScript(fileContent, { loc: true, comment: true, tokens: true, tolerant: true, jsx: true });
-                const strAst = JSON.stringify(jsonAst, null, 1);
-                // // Write data in 'name_of_file_being_parsed.json'.
-                fs === null || fs === void 0 ? void 0 : fs.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err) => {
-                    if (err)
-                        throw err;
-                });
-                (0, DetectCallBackHell_1.detectCallBackHell)(jsonAst, 0, file);
-                (0, DetectBruteForceAttack_1.detectBruteForceVulnerability)(jsonAst);
-                (0, SensitiveDataExposure_1.SensitiveDataExposure)(jsonAst);
-                console.log("\n");
-            }
-        }
     }
 }
 exports.Log = Log;

@@ -10,7 +10,8 @@
     "TypeScript",
     "JSX",
     "DOS",
-    "Brute Force", "OWASP",
+    "Brute Force",
+    "OWASP",
     "CallBack Hell"
   ],
   "scripts": {
@@ -27,6 +28,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
+    "@tensorflow/tfjs": "^4.9.0",
     "colors": "^1.4.0",
     "concurrently": "^8.2.0",
     "esprima": "^4.0.1",

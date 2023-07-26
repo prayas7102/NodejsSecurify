@@ -7,8 +7,7 @@ import * as fs from "fs";
 import * as path from 'path';
 import * as colors from 'colors';
 import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
-import { detectBruteForceVulnerability } from './Vulnerability/DetectBruteForceAttack';
-import { SensitiveDataExposure } from './Vulnerability/SensitiveDataExposure';
+// import { detectBruteForceVulnerability } from './Vulnerability/DetectBruteForceAttack';
 
 const colours = colors;
 export class Log {
@@ -36,13 +35,13 @@ export class Log {
 
         try {
             // testing command:
-            __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
-            // __dirname = 'D:\ChatApp\node_modules\node-js-securify\dist';
+            // comment this before publishing
+            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
             // process.exit(1);
 
-            console.log("\n************************************************\n".green);
-            console.log("**********Node-Js-Securify STARTED**************\n".green);
-            console.log("************************************************\n".green);
+            console.log("\n******************************************************************************************".green);
+            console.log("****************************** Node-Js-Securify STARTED **********************************".green);
+            console.log("******************************************************************************************".green);
 
             __dirname = extractParentPath(__dirname);
 
@@ -103,7 +102,7 @@ export class Log {
     // Ensure it does the same when installed by anyone in any directory of their system.
     // So make such changes to ensure the former. 
 
-    static parseJSFiles(directory: string, gitIgnoreFilesArray: string[]) {
+    static async parseJSFiles(directory: string, gitIgnoreFilesArray: string[]) {
 
         let files: string[] = fs.readdirSync(directory);
         files = files.filter(function (e) {
@@ -135,13 +134,12 @@ export class Log {
                 });
 
                 detectCallBackHell(jsonAst, 0, file);
-                detectBruteForceVulnerability(jsonAst);
-                SensitiveDataExposure(jsonAst);
+                // await detectBruteForceVulnerability(fileContent);
+
                 console.log("\n");
             }
         }
     }
-
 }
 
 Log.NodeJsSecurifyResults();

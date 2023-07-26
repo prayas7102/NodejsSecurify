@@ -340,8 +340,8 @@
                           "computed": false,
                           "value": {
                            "type": "Literal",
-                           "value": "data2.json",
-                           "raw": "'data2.json'",
+                           "value": "data3.json",
+                           "raw": "'data3.json'",
                            "loc": {
                             "start": {
                              "line": 8,
@@ -475,8 +475,8 @@
                                    "computed": false,
                                    "value": {
                                     "type": "Literal",
-                                    "value": "data2.json",
-                                    "raw": "'data2.json'",
+                                    "value": "data4.json",
+                                    "raw": "'data4.json'",
                                     "loc": {
                                      "start": {
                                       "line": 11,
@@ -1743,7 +1743,7 @@
   },
   {
    "type": "String",
-   "value": "'data2.json'",
+   "value": "'data3.json'",
    "loc": {
     "start": {
      "line": 8,
@@ -1967,7 +1967,7 @@
   },
   {
    "type": "String",
-   "value": "'data2.json'",
+   "value": "'data4.json'",
    "loc": {
     "start": {
      "line": 11,
