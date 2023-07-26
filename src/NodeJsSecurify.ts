@@ -36,8 +36,7 @@ export class Log {
 
         try {
             // testing command:
-            // C:\Users\hp\Desktop\NodeSecurify\API_Based_Email_Sender
-            __dirname = "C:/Users/hp/Desktop/NodeSecurify/API_Based_Email_Sender"
+            __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
             // __dirname = 'D:\ChatApp\node_modules\node-js-securify\dist';
             // process.exit(1);
 
