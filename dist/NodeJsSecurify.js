@@ -41,6 +41,7 @@ const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 const colors = __importStar(require("colors"));
 const DetectCallBackHell_1 = require("./Vulnerability/DetectCallBackHell");
+const DetectVulnerableRegex_1 = require("./Vulnerability/DetectVulnerableRegex");
 const colours = colors;
 class Log {
     static NodeJsSecurifyResults() {
@@ -134,13 +135,14 @@ class Log {
                     // Parse the file content using the esprima parser
                     const jsonAst = esprima === null || esprima === void 0 ? void 0 : esprima.parseScript(fileContent, { loc: true, comment: true, tokens: true, tolerant: true, jsx: true });
                     const strAst = JSON.stringify(jsonAst, null, 1);
-                    // // Write data in 'name_of_file_being_parsed.json'.
+                    // Write data in 'name_of_file_being_parsed.json'.
                     fs === null || fs === void 0 ? void 0 : fs.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err) => {
                         if (err)
                             throw err;
                     });
                     (0, DetectCallBackHell_1.detectCallBackHell)(jsonAst, 0, file);
                     // await detectBruteForceVulnerability(fileContent);
+                    ((0, DetectVulnerableRegex_1.isRegexVulnerable)(jsonAst));
                     console.log("\n");
                 }
             }

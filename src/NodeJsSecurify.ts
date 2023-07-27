@@ -7,6 +7,7 @@ import * as fs from "fs";
 import * as path from 'path';
 import * as colors from 'colors';
 import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
+import { isRegexVulnerable } from './Vulnerability/DetectVulnerableRegex';
 
 const colours = colors;
 export class Log {
@@ -123,14 +124,14 @@ export class Log {
                 const jsonAst: esprima.Program = esprima?.parseScript(fileContent, { loc: true, comment: true, tokens: true, tolerant: true, jsx: true });
                 const strAst: string = JSON.stringify(jsonAst, null, 1);
 
-                // // Write data in 'name_of_file_being_parsed.json'.
+                // Write data in 'name_of_file_being_parsed.json'.
                 fs?.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err: any): any => {
                     if (err) throw err;
                 });
 
                 detectCallBackHell(jsonAst, 0, file);
                 // await detectBruteForceVulnerability(fileContent);
-
+                (isRegexVulnerable(jsonAst));
                 console.log("\n");
             }
         }
