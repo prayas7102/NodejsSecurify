@@ -6,6 +6,7 @@ import * as esprima from 'esprima';
 import * as fs from "fs";
 import * as path from 'path';
 import * as colors from 'colors';
+import { spawn } from 'child_process';
 import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
 import { isRegexVulnerable } from './Vulnerability/DetectVulnerableRegex';
 
@@ -28,7 +29,6 @@ export class Log {
             // If "node_modules" is not found, return the input path as it is
             return inputPath;
         }
-
         try {
             // testing command:
             // comment this before publishing
@@ -66,9 +66,25 @@ export class Log {
         }
     }
 
+    static callPythonFunction(pythonScript: string, pythonFunction: string, args: string): void {
+        const pythonProcess = spawn('python', [pythonScript, pythonFunction, args]);
+
+        pythonProcess.stdout.on('data', (data) => {
+            const result = data.toString().trim();
+            console.log(`Result: ${result}`);
+        });
+
+        pythonProcess.stderr.on('data', (data) => {
+            console.error(`Error: ${data.toString()}`);
+        });
+
+        pythonProcess.on('close', (code) => {
+            console.log(`Python process exited with code ${code}`);
+        });
+    }
+
     // traversing all the gitignore files and including all the file names 
     // not be parsed in gitIgnoreFiles string
-
     static findGitIgnoreFiles(directory: string) {
         let gitIgnoreFiles: string = "";
 
@@ -97,7 +113,6 @@ export class Log {
     // Recursively traverse all the files in given directory path.
     // Ensure it does the same when installed by anyone in any directory of their system.
     // So make such changes to ensure the former. 
-
     static async parseJSFiles(directory: string, gitIgnoreFilesArray: string[]) {
 
         let files: string[] = fs.readdirSync(directory);
@@ -130,12 +145,13 @@ export class Log {
                 });
 
                 detectCallBackHell(jsonAst, 0, file);
-                // await detectBruteForceVulnerability(fileContent);
+                await Log.callPythonFunction("./src/Vulnerability/DetectBruteForceAttack.py", fileContent, "detectCallBackHell");
                 (isRegexVulnerable(jsonAst));
                 console.log("\n");
             }
         }
     }
+    // C:\Users\hp\Desktop\NodeSecurify\src\Vulnerability\DetectBruteForceAttack.py
 }
 
 Log.NodeJsSecurifyResults();

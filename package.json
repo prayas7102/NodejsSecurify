@@ -28,6 +28,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
+    "child_process": "^1.0.2",
     "colors": "^1.4.0",
     "concurrently": "^8.2.0",
     "esprima": "^4.0.1",
