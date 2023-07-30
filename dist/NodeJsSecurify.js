@@ -43,6 +43,7 @@ const colors = __importStar(require("colors"));
 const DetectBruteForceAttack_1 = require("./Vulnerability/DetectBruteForceAttack");
 const DetectCallBackHell_1 = require("./Vulnerability/DetectCallBackHell");
 const DetectVulnerableRegex_1 = require("./Vulnerability/DetectVulnerableRegex");
+const DetectInputValidation_1 = require("./Vulnerability/DetectInputValidation");
 const colours = colors;
 class Log {
     static NodeJsSecurifyResults() {
@@ -146,6 +147,8 @@ class Log {
                     (0, DetectBruteForceAttack_1.detectBruteForce)(fileContent);
                     console.log("\n");
                     (0, DetectVulnerableRegex_1.isRegexVulnerable)(jsonAst);
+                    console.log("\n");
+                    (0, DetectInputValidation_1.detectInputValidation)(fileContent);
                     console.log("\n");
                 }
             }

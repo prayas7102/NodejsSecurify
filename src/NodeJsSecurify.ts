@@ -6,10 +6,10 @@ import * as esprima from 'esprima';
 import * as fs from "fs";
 import * as path from 'path';
 import * as colors from 'colors';
-import { spawn } from 'child_process';
 import {detectBruteForce} from './Vulnerability/DetectBruteForceAttack'
 import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
 import { isRegexVulnerable } from './Vulnerability/DetectVulnerableRegex';
+import { detectInputValidation } from './Vulnerability/DetectInputValidation';
 
 const colours = colors;
 export class Log {
@@ -133,6 +133,8 @@ export class Log {
                 detectBruteForce(fileContent);
                 console.log("\n");
                 isRegexVulnerable(jsonAst);
+                console.log("\n");
+                detectInputValidation(fileContent);
                 console.log("\n");
             }
         }
