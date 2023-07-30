@@ -126,7 +126,7 @@ export class Log {
 
                         // Write data in 'name_of_file_being_parsed.json'.
                         fs?.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err: any): any => {
-                            if (err) throw err;
+                            // if (err) throw err;
                         });
 
                         detectCallBackHell(jsonAst, 0, file);

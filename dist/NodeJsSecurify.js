@@ -141,8 +141,7 @@ class Log {
                             const strAst = JSON.stringify(jsonAst, null, 1);
                             // Write data in 'name_of_file_being_parsed.json'.
                             fs === null || fs === void 0 ? void 0 : fs.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err) => {
-                                if (err)
-                                    throw err;
+                                // if (err) throw err;
                             });
                             (0, DetectCallBackHell_1.detectCallBackHell)(jsonAst, 0, file);
                             console.log("\n");
