@@ -40,7 +40,7 @@ const esprima = __importStar(require("esprima"));
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 const colors = __importStar(require("colors"));
-const child_process_1 = require("child_process");
+const DetectBruteForceAttack_1 = require("./Vulnerability/DetectBruteForceAttack");
 const DetectCallBackHell_1 = require("./Vulnerability/DetectCallBackHell");
 const DetectVulnerableRegex_1 = require("./Vulnerability/DetectVulnerableRegex");
 const colours = colors;
@@ -64,7 +64,7 @@ class Log {
         try {
             // testing command:
             // comment this before publishing
-            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
+            __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder";
             // process.exit(1);
             console.log("\n******************************************************************************************".green);
             console.log("****************************** Node-Js-Securify STARTED **********************************".green);
@@ -89,19 +89,6 @@ class Log {
             console.log("Please resolve error in file (check last file path) before running NodeJsSecurify".underline.red);
             console.error(error);
         }
-    }
-    static callPythonFunction(pythonScript, pythonFunction, args) {
-        const pythonProcess = (0, child_process_1.spawn)('python', [pythonScript, pythonFunction, args]);
-        pythonProcess.stdout.on('data', (data) => {
-            const result = data.toString().trim();
-            console.log(`Result: ${result}`);
-        });
-        pythonProcess.stderr.on('data', (data) => {
-            console.error(`Error: ${data.toString()}`);
-        });
-        pythonProcess.on('close', (code) => {
-            console.log(`Python process exited with code ${code}`);
-        });
     }
     // traversing all the gitignore files and including all the file names 
     // not be parsed in gitIgnoreFiles string
@@ -155,8 +142,10 @@ class Log {
                             throw err;
                     });
                     (0, DetectCallBackHell_1.detectCallBackHell)(jsonAst, 0, file);
-                    yield Log.callPythonFunction("./dist/Vulnerability/DetectBruteForceAttack.py", fileContent, "detectCallBackHell");
-                    ((0, DetectVulnerableRegex_1.isRegexVulnerable)(jsonAst));
+                    console.log("\n");
+                    (0, DetectBruteForceAttack_1.detectBruteForce)(fileContent);
+                    console.log("\n");
+                    (0, DetectVulnerableRegex_1.isRegexVulnerable)(jsonAst);
                     console.log("\n");
                 }
             }

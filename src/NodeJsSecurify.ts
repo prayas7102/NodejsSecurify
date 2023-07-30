@@ -7,6 +7,7 @@ import * as fs from "fs";
 import * as path from 'path';
 import * as colors from 'colors';
 import { spawn } from 'child_process';
+import {detectBruteForce} from './Vulnerability/DetectBruteForceAttack'
 import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
 import { isRegexVulnerable } from './Vulnerability/DetectVulnerableRegex';
 
@@ -32,7 +33,7 @@ export class Log {
         try {
             // testing command:
             // comment this before publishing
-            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
+            __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
             // process.exit(1);
 
             console.log("\n******************************************************************************************".green);
@@ -64,23 +65,6 @@ export class Log {
             console.log("Please resolve error in file (check last file path) before running NodeJsSecurify".underline.red);
             console.error(error);
         }
-    }
-
-    static callPythonFunction(pythonScript: string, pythonFunction: string, args: string): void {
-        const pythonProcess = spawn('python', [pythonScript, pythonFunction, args]);
-
-        pythonProcess.stdout.on('data', (data) => {
-            const result = data.toString().trim();
-            console.log(`Result: ${result}`);
-        });
-
-        pythonProcess.stderr.on('data', (data) => {
-            console.error(`Error: ${data.toString()}`);
-        });
-
-        pythonProcess.on('close', (code) => {
-            console.log(`Python process exited with code ${code}`);
-        });
     }
 
     // traversing all the gitignore files and including all the file names 
@@ -145,8 +129,10 @@ export class Log {
                 });
 
                 detectCallBackHell(jsonAst, 0, file);
-                await Log.callPythonFunction("./dist/Vulnerability/DetectBruteForceAttack.py", fileContent, "detectCallBackHell");
-                (isRegexVulnerable(jsonAst));
+                console.log("\n");
+                detectBruteForce(fileContent);
+                console.log("\n");
+                isRegexVulnerable(jsonAst);
                 console.log("\n");
             }
         }
