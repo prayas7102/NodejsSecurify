@@ -64,7 +64,7 @@ class Log {
         try {
             // testing command:
             // comment this before publishing
-            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
+            __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder";
             // process.exit(1);
             console.log("\n******************************************************************************************".green);
             console.log("****************************** Node-Js-Securify STARTED **********************************".green);
@@ -155,7 +155,7 @@ class Log {
                             throw err;
                     });
                     (0, DetectCallBackHell_1.detectCallBackHell)(jsonAst, 0, file);
-                    yield Log.callPythonFunction("./src/Vulnerability/DetectBruteForceAttack.py", fileContent, "detectCallBackHell");
+                    yield Log.callPythonFunction("./dist/Vulnerability/DetectBruteForceAttack.py", fileContent, "detectCallBackHell");
                     ((0, DetectVulnerableRegex_1.isRegexVulnerable)(jsonAst));
                     console.log("\n");
                 }

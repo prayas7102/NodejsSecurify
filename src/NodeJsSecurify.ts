@@ -32,7 +32,7 @@ export class Log {
         try {
             // testing command:
             // comment this before publishing
-            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
+            __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
             // process.exit(1);
 
             console.log("\n******************************************************************************************".green);
@@ -145,7 +145,7 @@ export class Log {
                 });
 
                 detectCallBackHell(jsonAst, 0, file);
-                await Log.callPythonFunction("./src/Vulnerability/DetectBruteForceAttack.py", fileContent, "detectCallBackHell");
+                await Log.callPythonFunction("./dist/Vulnerability/DetectBruteForceAttack.py", fileContent, "detectCallBackHell");
                 (isRegexVulnerable(jsonAst));
                 console.log("\n");
             }
