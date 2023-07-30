@@ -119,38 +119,48 @@ class Log {
     // So make such changes to ensure the former. 
     static parseJSFiles(directory, gitIgnoreFilesArray) {
         return __awaiter(this, void 0, void 0, function* () {
-            let files = fs.readdirSync(directory);
-            files = files.filter(function (e) {
-                return gitIgnoreFilesArray.indexOf(e) === -1;
-            });
-            for (const file of files) {
-                const filePath = path.join(directory, file);
-                const stat = fs === null || fs === void 0 ? void 0 : fs.statSync(filePath);
-                const fileLastName = path.extname(filePath);
-                if (stat.isDirectory()) {
-                    // Recursively parse files in subdirectories
-                    Log.parseJSFiles(filePath, gitIgnoreFilesArray);
+            try {
+                let files = fs.readdirSync(directory);
+                files = files.filter(function (e) {
+                    return gitIgnoreFilesArray.indexOf(e) === -1;
+                });
+                for (const file of files) {
+                    const filePath = path.join(directory, file);
+                    const stat = fs === null || fs === void 0 ? void 0 : fs.statSync(filePath);
+                    const fileLastName = path.extname(filePath);
+                    if (stat.isDirectory()) {
+                        // Recursively parse files in subdirectories
+                        Log.parseJSFiles(filePath, gitIgnoreFilesArray);
+                    }
+                    else if (fileLastName === '.js' || fileLastName === '.jsx') {
+                        try {
+                            console.log(filePath.blue);
+                            const fileContent = fs === null || fs === void 0 ? void 0 : fs.readFileSync(filePath, 'utf8');
+                            // Parse the file content using the esprima parser
+                            const jsonAst = esprima === null || esprima === void 0 ? void 0 : esprima.parseScript(fileContent, { loc: true, comment: true, tokens: true, tolerant: true, jsx: true });
+                            const strAst = JSON.stringify(jsonAst, null, 1);
+                            // Write data in 'name_of_file_being_parsed.json'.
+                            fs === null || fs === void 0 ? void 0 : fs.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err) => {
+                                if (err)
+                                    throw err;
+                            });
+                            (0, DetectCallBackHell_1.detectCallBackHell)(jsonAst, 0, file);
+                            console.log("\n");
+                            (0, DetectBruteForceAttack_1.detectBruteForce)(fileContent);
+                            console.log("\n");
+                            (0, DetectVulnerableRegex_1.isRegexVulnerable)(jsonAst);
+                            console.log("\n");
+                            (0, DetectInputValidation_1.detectInputValidation)(fileContent);
+                            console.log("\n");
+                        }
+                        catch (error) {
+                            continue;
+                        }
+                    }
                 }
-                else if (fileLastName === '.js' || fileLastName === '.jsx') {
-                    console.log(filePath.blue);
-                    const fileContent = fs === null || fs === void 0 ? void 0 : fs.readFileSync(filePath, 'utf8');
-                    // Parse the file content using the esprima parser
-                    const jsonAst = esprima === null || esprima === void 0 ? void 0 : esprima.parseScript(fileContent, { loc: true, comment: true, tokens: true, tolerant: true, jsx: true });
-                    const strAst = JSON.stringify(jsonAst, null, 1);
-                    // Write data in 'name_of_file_being_parsed.json'.
-                    fs === null || fs === void 0 ? void 0 : fs.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err) => {
-                        if (err)
-                            throw err;
-                    });
-                    (0, DetectCallBackHell_1.detectCallBackHell)(jsonAst, 0, file);
-                    console.log("\n");
-                    (0, DetectBruteForceAttack_1.detectBruteForce)(fileContent);
-                    console.log("\n");
-                    (0, DetectVulnerableRegex_1.isRegexVulnerable)(jsonAst);
-                    console.log("\n");
-                    (0, DetectInputValidation_1.detectInputValidation)(fileContent);
-                    console.log("\n");
-                }
+            }
+            catch (error) {
+                return null;
             }
         });
     }

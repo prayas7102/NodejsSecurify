@@ -6,7 +6,7 @@ import * as esprima from 'esprima';
 import * as fs from "fs";
 import * as path from 'path';
 import * as colors from 'colors';
-import {detectBruteForce} from './Vulnerability/DetectBruteForceAttack'
+import { detectBruteForce } from './Vulnerability/DetectBruteForceAttack'
 import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
 import { isRegexVulnerable } from './Vulnerability/DetectVulnerableRegex';
 import { detectInputValidation } from './Vulnerability/DetectInputValidation';
@@ -99,47 +99,54 @@ export class Log {
     // So make such changes to ensure the former. 
     static async parseJSFiles(directory: string, gitIgnoreFilesArray: string[]) {
 
-        let files: string[] = fs.readdirSync(directory);
-        files = files.filter(function (e) {
-            return gitIgnoreFilesArray.indexOf(e) === -1;
-        });
+        try {
+            let files: string[] = fs.readdirSync(directory);
+            files = files.filter(function (e) {
+                return gitIgnoreFilesArray.indexOf(e) === -1;
+            });
 
-        for (const file of files) {
+            for (const file of files) {
 
-            const filePath: string = path.join(directory, file);
-            const stat: fs.Stats = fs?.statSync(filePath);
-            const fileLastName: string = path.extname(filePath);
+                const filePath: string = path.join(directory, file);
+                const stat: fs.Stats = fs?.statSync(filePath);
+                const fileLastName: string = path.extname(filePath);
 
-            if (stat.isDirectory()) {
-                // Recursively parse files in subdirectories
-                Log.parseJSFiles(filePath, gitIgnoreFilesArray);
+                if (stat.isDirectory()) {
+                    // Recursively parse files in subdirectories
+                    Log.parseJSFiles(filePath, gitIgnoreFilesArray);
+                }
+                else if (fileLastName === '.js' || fileLastName === '.jsx') {
+                    try {
+                        console.log(filePath.blue);
+                        const fileContent: string = fs?.readFileSync(filePath, 'utf8');
+
+                        // Parse the file content using the esprima parser
+                        const jsonAst: esprima.Program = esprima?.parseScript(fileContent, { loc: true, comment: true, tokens: true, tolerant: true, jsx: true });
+                        const strAst: string = JSON.stringify(jsonAst, null, 1);
+
+                        // Write data in 'name_of_file_being_parsed.json'.
+                        fs?.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err: any): any => {
+                            if (err) throw err;
+                        });
+
+                        detectCallBackHell(jsonAst, 0, file);
+                        console.log("\n");
+                        detectBruteForce(fileContent);
+                        console.log("\n");
+                        isRegexVulnerable(jsonAst);
+                        console.log("\n");
+                        detectInputValidation(fileContent);
+                        console.log("\n");
+                    } catch (error) {
+                        continue;
+                    }
+                }
             }
-            else if (fileLastName === '.js' || fileLastName === '.jsx') {
-
-                console.log(filePath.blue);
-                const fileContent: string = fs?.readFileSync(filePath, 'utf8');
-
-                // Parse the file content using the esprima parser
-                const jsonAst: esprima.Program = esprima?.parseScript(fileContent, { loc: true, comment: true, tokens: true, tolerant: true, jsx: true });
-                const strAst: string = JSON.stringify(jsonAst, null, 1);
-
-                // Write data in 'name_of_file_being_parsed.json'.
-                fs?.writeFile(`./EsprimaOutput/${file}.json`, strAst, (err: any): any => {
-                    if (err) throw err;
-                });
-
-                detectCallBackHell(jsonAst, 0, file);
-                console.log("\n");
-                detectBruteForce(fileContent);
-                console.log("\n");
-                isRegexVulnerable(jsonAst);
-                console.log("\n");
-                detectInputValidation(fileContent);
-                console.log("\n");
-            }
+        } catch (error) {
+            return null;
         }
+
     }
-    // C:\Users\hp\Desktop\NodeSecurify\src\Vulnerability\DetectBruteForceAttack.py
 }
 
 Log.NodeJsSecurifyResults();
