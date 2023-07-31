@@ -1,18 +1,23 @@
 {
   "name": "node-js-securify",
   "description": "Node-Js-Securify is an advanced npm package designed to enhance the security of Node.js applications. It provides a comprehensive set of security features and analysis capabilities to identify potential vulnerabilities and enforce best practices in accordance with OWASP guidelines.",
-  "version": "1.1.3",
+  "version": "2.0.0",
   "repository": "https://github.com/prayas7102/NodejsSecurify",
   "main": "./dist/NodeJsSecurify.js",
   "types": "./dist/NodeJsSecurify.d.ts",
   "keywords": [
     "NodeJs",
     "TypeScript",
-    "JSX",
-    "DOS",
-    "Brute Force",
+    "Input Validation",
+    "Dangerous Functions",
+    "DOS Attack",
+    "ReGex DOS Attack",
+    "Brute Force Attack",
     "OWASP",
-    "CallBack Hell"
+    "CallBack Hell",
+    "XSS Attack",
+    "Code Injection",
+    "Logistic Regression"
   ],
   "scripts": {
     "build": "tsc",
