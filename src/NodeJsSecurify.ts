@@ -10,6 +10,7 @@ import { detectBruteForce } from './Vulnerability/DetectBruteForceAttack'
 import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
 import { isRegexVulnerable } from './Vulnerability/DetectVulnerableRegex';
 import { detectInputValidation } from './Vulnerability/DetectInputValidation';
+import { detectDangerousFunctions } from './Vulnerability/DetectDangerousFunctions';
 
 const colours = colors;
 export class Log {
@@ -33,7 +34,7 @@ export class Log {
         try {
             // testing command:
             // comment this before publishing
-            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
+            __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
             // process.exit(1);
 
             console.log("\n******************************************************************************************".green);
@@ -137,7 +138,10 @@ export class Log {
                         console.log("\n");
                         detectInputValidation(fileContent);
                         console.log("\n");
+                        detectDangerousFunctions(jsonAst, fileContent);
+                        console.log("\n");
                     } catch (error) {
+                        console.log(error)
                         continue;
                     }
                 }
