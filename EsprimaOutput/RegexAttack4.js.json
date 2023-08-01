@@ -1,0 +1,735 @@
+{
+ "type": "Program",
+ "body": [
+  {
+   "type": "VariableDeclaration",
+   "declarations": [
+    {
+     "type": "VariableDeclarator",
+     "id": {
+      "type": "Identifier",
+      "name": "date",
+      "loc": {
+       "start": {
+        "line": 1,
+        "column": 6
+       },
+       "end": {
+        "line": 1,
+        "column": 10
+       }
+      }
+     },
+     "init": {
+      "type": "Literal",
+      "value": "2023-07-27",
+      "raw": "\"2023-07-27\"",
+      "loc": {
+       "start": {
+        "line": 1,
+        "column": 13
+       },
+       "end": {
+        "line": 1,
+        "column": 25
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 1,
+       "column": 6
+      },
+      "end": {
+       "line": 1,
+       "column": 25
+      }
+     }
+    }
+   ],
+   "kind": "const",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 0
+    },
+    "end": {
+     "line": 1,
+     "column": 26
+    }
+   }
+  },
+  {
+   "type": "VariableDeclaration",
+   "declarations": [
+    {
+     "type": "VariableDeclarator",
+     "id": {
+      "type": "Identifier",
+      "name": "regex",
+      "loc": {
+       "start": {
+        "line": 2,
+        "column": 6
+       },
+       "end": {
+        "line": 2,
+        "column": 11
+       }
+      }
+     },
+     "init": {
+      "type": "Literal",
+      "value": {},
+      "raw": "/^(a+)+[a-zA-Z]$/",
+      "regex": {
+       "pattern": "^(a+)+[a-zA-Z]$",
+       "flags": ""
+      },
+      "loc": {
+       "start": {
+        "line": 2,
+        "column": 14
+       },
+       "end": {
+        "line": 2,
+        "column": 31
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 2,
+       "column": 6
+      },
+      "end": {
+       "line": 2,
+       "column": 31
+      }
+     }
+    }
+   ],
+   "kind": "const",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 0
+    },
+    "end": {
+     "line": 2,
+     "column": 32
+    }
+   }
+  },
+  {
+   "type": "VariableDeclaration",
+   "declarations": [
+    {
+     "type": "VariableDeclarator",
+     "id": {
+      "type": "Identifier",
+      "name": "isValidDate",
+      "loc": {
+       "start": {
+        "line": 3,
+        "column": 6
+       },
+       "end": {
+        "line": 3,
+        "column": 17
+       }
+      }
+     },
+     "init": {
+      "type": "CallExpression",
+      "callee": {
+       "type": "MemberExpression",
+       "computed": false,
+       "object": {
+        "type": "Identifier",
+        "name": "regex",
+        "loc": {
+         "start": {
+          "line": 3,
+          "column": 20
+         },
+         "end": {
+          "line": 3,
+          "column": 25
+         }
+        }
+       },
+       "property": {
+        "type": "Identifier",
+        "name": "test",
+        "loc": {
+         "start": {
+          "line": 3,
+          "column": 26
+         },
+         "end": {
+          "line": 3,
+          "column": 30
+         }
+        }
+       },
+       "loc": {
+        "start": {
+         "line": 3,
+         "column": 20
+        },
+        "end": {
+         "line": 3,
+         "column": 30
+        }
+       }
+      },
+      "arguments": [
+       {
+        "type": "Identifier",
+        "name": "date",
+        "loc": {
+         "start": {
+          "line": 3,
+          "column": 31
+         },
+         "end": {
+          "line": 3,
+          "column": 35
+         }
+        }
+       }
+      ],
+      "loc": {
+       "start": {
+        "line": 3,
+        "column": 20
+       },
+       "end": {
+        "line": 3,
+        "column": 36
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 3,
+       "column": 6
+      },
+      "end": {
+       "line": 3,
+       "column": 36
+      }
+     }
+    }
+   ],
+   "kind": "const",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 0
+    },
+    "end": {
+     "line": 3,
+     "column": 37
+    }
+   }
+  },
+  {
+   "type": "ExpressionStatement",
+   "expression": {
+    "type": "CallExpression",
+    "callee": {
+     "type": "MemberExpression",
+     "computed": false,
+     "object": {
+      "type": "Identifier",
+      "name": "console",
+      "loc": {
+       "start": {
+        "line": 4,
+        "column": 0
+       },
+       "end": {
+        "line": 4,
+        "column": 7
+       }
+      }
+     },
+     "property": {
+      "type": "Identifier",
+      "name": "log",
+      "loc": {
+       "start": {
+        "line": 4,
+        "column": 8
+       },
+       "end": {
+        "line": 4,
+        "column": 11
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 4,
+       "column": 0
+      },
+      "end": {
+       "line": 4,
+       "column": 11
+      }
+     }
+    },
+    "arguments": [
+     {
+      "type": "Identifier",
+      "name": "isValidDate",
+      "loc": {
+       "start": {
+        "line": 4,
+        "column": 12
+       },
+       "end": {
+        "line": 4,
+        "column": 23
+       }
+      }
+     }
+    ],
+    "loc": {
+     "start": {
+      "line": 4,
+      "column": 0
+     },
+     "end": {
+      "line": 4,
+      "column": 24
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 0
+    },
+    "end": {
+     "line": 4,
+     "column": 25
+    }
+   }
+  }
+ ],
+ "sourceType": "script",
+ "loc": {
+  "start": {
+   "line": 1,
+   "column": 0
+  },
+  "end": {
+   "line": 4,
+   "column": 25
+  }
+ },
+ "comments": [
+  {
+   "type": "Line",
+   "value": " Output: true",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 26
+    },
+    "end": {
+     "line": 4,
+     "column": 41
+    }
+   }
+  }
+ ],
+ "tokens": [
+  {
+   "type": "Keyword",
+   "value": "const",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 0
+    },
+    "end": {
+     "line": 1,
+     "column": 5
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "date",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 6
+    },
+    "end": {
+     "line": 1,
+     "column": 10
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 11
+    },
+    "end": {
+     "line": 1,
+     "column": 12
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "\"2023-07-27\"",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 13
+    },
+    "end": {
+     "line": 1,
+     "column": 25
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 25
+    },
+    "end": {
+     "line": 1,
+     "column": 26
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "const",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 0
+    },
+    "end": {
+     "line": 2,
+     "column": 5
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "regex",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 6
+    },
+    "end": {
+     "line": 2,
+     "column": 11
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 12
+    },
+    "end": {
+     "line": 2,
+     "column": 13
+    }
+   }
+  },
+  {
+   "type": "RegularExpression",
+   "value": "/^(a+)+[a-zA-Z]$/",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 14
+    },
+    "end": {
+     "line": 2,
+     "column": 31
+    }
+   },
+   "regex": {
+    "pattern": "^(a+)+[a-zA-Z]$",
+    "flags": ""
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 31
+    },
+    "end": {
+     "line": 2,
+     "column": 32
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "const",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 0
+    },
+    "end": {
+     "line": 3,
+     "column": 5
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "isValidDate",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 6
+    },
+    "end": {
+     "line": 3,
+     "column": 17
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 18
+    },
+    "end": {
+     "line": 3,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "regex",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 20
+    },
+    "end": {
+     "line": 3,
+     "column": 25
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 25
+    },
+    "end": {
+     "line": 3,
+     "column": 26
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "test",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 26
+    },
+    "end": {
+     "line": 3,
+     "column": 30
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 30
+    },
+    "end": {
+     "line": 3,
+     "column": 31
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "date",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 31
+    },
+    "end": {
+     "line": 3,
+     "column": 35
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 35
+    },
+    "end": {
+     "line": 3,
+     "column": 36
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 36
+    },
+    "end": {
+     "line": 3,
+     "column": 37
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "console",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 0
+    },
+    "end": {
+     "line": 4,
+     "column": 7
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 7
+    },
+    "end": {
+     "line": 4,
+     "column": 8
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "log",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 8
+    },
+    "end": {
+     "line": 4,
+     "column": 11
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 11
+    },
+    "end": {
+     "line": 4,
+     "column": 12
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "isValidDate",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 12
+    },
+    "end": {
+     "line": 4,
+     "column": 23
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 23
+    },
+    "end": {
+     "line": 4,
+     "column": 24
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 24
+    },
+    "end": {
+     "line": 4,
+     "column": 25
+    }
+   }
+  }
+ ],
+ "errors": []
+}
