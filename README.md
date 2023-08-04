@@ -27,13 +27,19 @@ NodejsSecurify offers flexibility and extensibility, allowing developers to cust
 The package aims to stay up to date with the evolving security landscape. NodejsSecurify is actively maintained and periodically updated to address new security threats, enhance performance, and incorporate changes in the OWASP guidelines.
 
 
-# Installation
+# Installation (For contributor of this package)
 
 ```bash
 npm i node-js-securify
 ```
 
-# Usage
+then ..
+
+```bash
+npm start
+```
+
+# Usage (For user of this package)
 
 1. Require Log class from node-js-securify in any .js file of you project
 ```bash
