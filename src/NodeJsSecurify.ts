@@ -34,7 +34,7 @@ export class Log {
         try {
             // testing command:
             // comment this before publishing
-            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
+            __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
 
             console.log("\n******************************************************************************************".green);
             console.log("****************************** Node-Js-Securify STARTED **********************************".green);
