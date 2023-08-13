@@ -2,6 +2,8 @@
 
 NodejsSecurify is an advanced npm package designed to enhance the security of Node.js applications. It provides a comprehensive set of security features and analysis capabilities to identify potential vulnerabilities and enforce best practices in accordance with OWASP guidelines.
 
+npm repo link: https://www.npmjs.com/package/node-js-securify
+
 With NodejsSecurify, developers can seamlessly integrate security checks into their Node.js projects. The package leverages a sophisticated code parsing mechanism, employing a powerful parser library like Acorn, Babel Parser, Esprima, or Recast, to analyze JavaScript code and identify security weaknesses.
 
 # Key Features of NodejsSecurify:
@@ -25,13 +27,19 @@ NodejsSecurify offers flexibility and extensibility, allowing developers to cust
 The package aims to stay up to date with the evolving security landscape. NodejsSecurify is actively maintained and periodically updated to address new security threats, enhance performance, and incorporate changes in the OWASP guidelines.
 
 
-# Installation
+# Installation (For contributor of this package)
 
 ```bash
 npm i node-js-securify
 ```
 
-# Usage
+then ..
+
+```bash
+npm start
+```
+
+# Usage (For user of this package)
 
 1. Require Log class from node-js-securify in any .js file of you project
 ```bash
