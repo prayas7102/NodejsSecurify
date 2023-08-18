@@ -45,6 +45,8 @@ const DetectCallBackHell_1 = require("./Vulnerability/DetectCallBackHell");
 const DetectVulnerableRegex_1 = require("./Vulnerability/DetectVulnerableRegex");
 const DetectInputValidation_1 = require("./Vulnerability/DetectInputValidation");
 const DetectDangerousFunctions_1 = require("./Vulnerability/DetectDangerousFunctions");
+const AnalyzeCookies_1 = require("./Vulnerability/AnalyzeCookies");
+const AnalyzeSecurityHeaders_1 = require("./Vulnerability/AnalyzeSecurityHeaders");
 const colours = colors;
 class Log {
     static NodeJsSecurifyResults() {
@@ -152,6 +154,10 @@ class Log {
                             (0, DetectInputValidation_1.detectInputValidation)(fileContent);
                             console.log("\n");
                             (0, DetectDangerousFunctions_1.detectDangerousFunctions)(jsonAst, fileContent);
+                            console.log("\n");
+                            (0, AnalyzeCookies_1.analyzeCookies)(jsonAst);
+                            console.log("\n");
+                            (0, AnalyzeSecurityHeaders_1.analyzeSecurityHeaders)(fileContent);
                             console.log("\n");
                         }
                         catch (error) {

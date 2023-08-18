@@ -11,6 +11,8 @@ import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
 import { isRegexVulnerable } from './Vulnerability/DetectVulnerableRegex';
 import { detectInputValidation } from './Vulnerability/DetectInputValidation';
 import { detectDangerousFunctions } from './Vulnerability/DetectDangerousFunctions';
+import { analyzeCookies } from './Vulnerability/AnalyzeCookies';
+import {analyzeSecurityHeaders} from './Vulnerability/AnalyzeSecurityHeaders';
 
 const colours = colors;
 export class Log {
@@ -138,6 +140,10 @@ export class Log {
                         detectInputValidation(fileContent);
                         console.log("\n");
                         detectDangerousFunctions(jsonAst, fileContent);
+                        console.log("\n");
+                        analyzeCookies(jsonAst);
+                        console.log("\n");
+                        analyzeSecurityHeaders(fileContent);
                         console.log("\n");
                     } catch (error) {
                         console.log(error)
