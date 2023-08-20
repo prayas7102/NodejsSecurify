@@ -13,6 +13,7 @@ import { detectInputValidation } from './Vulnerability/DetectInputValidation';
 import { detectDangerousFunctions } from './Vulnerability/DetectDangerousFunctions';
 import { analyzeCookies } from './Vulnerability/AnalyzeCookies';
 import {analyzeSecurityHeaders} from './Vulnerability/AnalyzeSecurityHeaders';
+import { insecureAuthentication } from './Vulnerability/InsecureAuthentication';
 
 const colours = colors;
 export class Log {
@@ -36,7 +37,7 @@ export class Log {
         try {
             // testing command:
             // comment this before publishing
-            __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
+            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
 
             console.log("\n******************************************************************************************".green);
             console.log("****************************** Node-Js-Securify STARTED **********************************".green);
@@ -140,6 +141,8 @@ export class Log {
                         detectInputValidation(fileContent);
                         console.log("\n");
                         detectDangerousFunctions(jsonAst, fileContent);
+                        console.log("\n");
+                        insecureAuthentication(fileContent);
                         console.log("\n");
                         analyzeCookies(jsonAst);
                         console.log("\n");

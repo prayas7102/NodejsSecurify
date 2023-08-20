@@ -47,6 +47,7 @@ const DetectInputValidation_1 = require("./Vulnerability/DetectInputValidation")
 const DetectDangerousFunctions_1 = require("./Vulnerability/DetectDangerousFunctions");
 const AnalyzeCookies_1 = require("./Vulnerability/AnalyzeCookies");
 const AnalyzeSecurityHeaders_1 = require("./Vulnerability/AnalyzeSecurityHeaders");
+const InsecureAuthentication_1 = require("./Vulnerability/InsecureAuthentication");
 const colours = colors;
 class Log {
     static NodeJsSecurifyResults() {
@@ -68,7 +69,7 @@ class Log {
         try {
             // testing command:
             // comment this before publishing
-            __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder";
+            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
             console.log("\n******************************************************************************************".green);
             console.log("****************************** Node-Js-Securify STARTED **********************************".green);
             console.log("******************************************************************************************".green);
@@ -154,6 +155,8 @@ class Log {
                             (0, DetectInputValidation_1.detectInputValidation)(fileContent);
                             console.log("\n");
                             (0, DetectDangerousFunctions_1.detectDangerousFunctions)(jsonAst, fileContent);
+                            console.log("\n");
+                            (0, InsecureAuthentication_1.insecureAuthentication)(fileContent);
                             console.log("\n");
                             (0, AnalyzeCookies_1.analyzeCookies)(jsonAst);
                             console.log("\n");
