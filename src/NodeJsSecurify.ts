@@ -14,6 +14,7 @@ import { detectDangerousFunctions } from './Vulnerability/DetectDangerousFunctio
 import { analyzeCookies } from './Vulnerability/AnalyzeCookies';
 import {analyzeSecurityHeaders} from './Vulnerability/AnalyzeSecurityHeaders';
 import { insecureAuthentication } from './Vulnerability/InsecureAuthentication';
+import {checkVulnerablePackages} from './Vulnerability/DetectUnsafeNpmPackage';
 
 const colours = colors;
 export class Log {
@@ -61,6 +62,10 @@ export class Log {
             // parsing all the .js & .jsx files, except files in gitIgnoreFilesArray
             console.log("\nFile path name of .js & .jsx files getting parsed: \n".yellow);
             Log.parseJSFiles(__dirname, gitIgnoreFilesArray);
+
+            // parsing for vulnerable npm pacakage
+            console.log("\nParsing for vulnerable npm pacakage:".yellow);
+            checkVulnerablePackages();
             console.log("\n");
         }
         catch (error: any) {

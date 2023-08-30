@@ -48,6 +48,7 @@ const DetectDangerousFunctions_1 = require("./Vulnerability/DetectDangerousFunct
 const AnalyzeCookies_1 = require("./Vulnerability/AnalyzeCookies");
 const AnalyzeSecurityHeaders_1 = require("./Vulnerability/AnalyzeSecurityHeaders");
 const InsecureAuthentication_1 = require("./Vulnerability/InsecureAuthentication");
+const DetectUnsafeNpmPackage_1 = require("./Vulnerability/DetectUnsafeNpmPackage");
 const colours = colors;
 class Log {
     static NodeJsSecurifyResults() {
@@ -69,7 +70,7 @@ class Log {
         try {
             // testing command:
             // comment this before publishing
-            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
+            __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder";
             console.log("\n******************************************************************************************".green);
             console.log("****************************** Node-Js-Securify STARTED **********************************".green);
             console.log("******************************************************************************************".green);
@@ -86,6 +87,9 @@ class Log {
             // parsing all the .js & .jsx files, except files in gitIgnoreFilesArray
             console.log("\nFile path name of .js & .jsx files getting parsed: \n".yellow);
             Log.parseJSFiles(__dirname, gitIgnoreFilesArray);
+            // parsing for vulnerable npm pacakage
+            console.log("\nParsing for vulnerable npm pacakage:".yellow);
+            (0, DetectUnsafeNpmPackage_1.checkVulnerablePackages)();
             console.log("\n");
         }
         catch (error) {
