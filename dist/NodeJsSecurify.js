@@ -2,6 +2,20 @@
 // NodeJsSecurify, a typescript based npm package to secure your nodejs 
 // application code according to OWASP guidelines and check for best 
 // practices.
+// It provide security against :
+// => "Input Validation",
+// => "Dangerous Functions",
+// => "DOS Attack",
+// => "ReGex DOS Attack",
+// => "Brute Force Attack",
+// => "OWASP",
+// => "CallBack Hell",
+// => "XSS Attack",
+// => "Insecure Security Headers",
+// => "Unsafe npm packages",
+// => "Insecure Authentication",
+// => "Code Injection",
+// => "Logistic Regression"
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -67,8 +81,8 @@ class Log {
             return inputPath;
         }
         try {
-            // testing command:
-            // comment this before publishing
+            // testing command: node ./dist/NodeJsSecurify.js
+            // comment this before publishing npm package (uncomment only for testing)
             __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder";
             console.log("\n******************************************************************************************".green);
             console.log("****************************** Node-Js-Securify STARTED **********************************".green);
@@ -89,7 +103,6 @@ class Log {
             // parsing for vulnerable npm pacakage
             console.log("Parsing for vulnerable npm pacakage:".yellow);
             (0, DetectUnsafeNpmPackage_1.checkVulnerablePackages)();
-            console.log("\n");
         }
         catch (error) {
             console.log("Error parsing file".underline.red);
