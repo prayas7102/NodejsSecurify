@@ -45,7 +45,6 @@ const DetectCallBackHell_1 = require("./Vulnerability/DetectCallBackHell");
 const DetectVulnerableRegex_1 = require("./Vulnerability/DetectVulnerableRegex");
 const DetectInputValidation_1 = require("./Vulnerability/DetectInputValidation");
 const DetectDangerousFunctions_1 = require("./Vulnerability/DetectDangerousFunctions");
-const AnalyzeCookies_1 = require("./Vulnerability/AnalyzeCookies");
 const AnalyzeSecurityHeaders_1 = require("./Vulnerability/AnalyzeSecurityHeaders");
 const InsecureAuthentication_1 = require("./Vulnerability/InsecureAuthentication");
 const DetectUnsafeNpmPackage_1 = require("./Vulnerability/DetectUnsafeNpmPackage");
@@ -88,7 +87,7 @@ class Log {
             console.log("\nFile path name of .js & .jsx files getting parsed: \n".yellow);
             Log.parseJSFiles(__dirname, gitIgnoreFilesArray);
             // parsing for vulnerable npm pacakage
-            console.log("\nParsing for vulnerable npm pacakage:".yellow);
+            console.log("Parsing for vulnerable npm pacakage:".yellow);
             (0, DetectUnsafeNpmPackage_1.checkVulnerablePackages)();
             console.log("\n");
         }
@@ -161,8 +160,6 @@ class Log {
                             (0, DetectDangerousFunctions_1.detectDangerousFunctions)(jsonAst, fileContent);
                             console.log("\n");
                             (0, InsecureAuthentication_1.insecureAuthentication)(fileContent);
-                            console.log("\n");
-                            (0, AnalyzeCookies_1.analyzeCookies)(jsonAst);
                             console.log("\n");
                             (0, AnalyzeSecurityHeaders_1.analyzeSecurityHeaders)(fileContent);
                             console.log("\n");

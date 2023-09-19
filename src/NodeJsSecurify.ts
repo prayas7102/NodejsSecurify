@@ -11,7 +11,6 @@ import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
 import { isRegexVulnerable } from './Vulnerability/DetectVulnerableRegex';
 import { detectInputValidation } from './Vulnerability/DetectInputValidation';
 import { detectDangerousFunctions } from './Vulnerability/DetectDangerousFunctions';
-import { analyzeCookies } from './Vulnerability/AnalyzeCookies';
 import {analyzeSecurityHeaders} from './Vulnerability/AnalyzeSecurityHeaders';
 import { insecureAuthentication } from './Vulnerability/InsecureAuthentication';
 import {checkVulnerablePackages} from './Vulnerability/DetectUnsafeNpmPackage';
@@ -64,7 +63,7 @@ export class Log {
             Log.parseJSFiles(__dirname, gitIgnoreFilesArray);
 
             // parsing for vulnerable npm pacakage
-            console.log("\nParsing for vulnerable npm pacakage:".yellow);
+            console.log("Parsing for vulnerable npm pacakage:".yellow);
             checkVulnerablePackages();
             console.log("\n");
         }
@@ -148,8 +147,6 @@ export class Log {
                         detectDangerousFunctions(jsonAst, fileContent);
                         console.log("\n");
                         insecureAuthentication(fileContent);
-                        console.log("\n");
-                        analyzeCookies(jsonAst);
                         console.log("\n");
                         analyzeSecurityHeaders(fileContent);
                         console.log("\n");
