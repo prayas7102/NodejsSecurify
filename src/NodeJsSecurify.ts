@@ -51,7 +51,7 @@ export class Log {
         try {
             // testing command: node ./dist/NodeJsSecurify.js
             // comment this before publishing npm package (uncomment only for testing)
-            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
+            __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
 
             console.log("\n******************************************************************************************".green);
             console.log("****************************** Node-Js-Securify STARTED **********************************".green);
@@ -135,7 +135,7 @@ export class Log {
                     // Recursively parse files in subdirectories
                     Log.parseJSFiles(filePath, gitIgnoreFilesArray);
                 }
-                else if (fileLastName === '.js' || fileLastName === '.jsx') {
+                else if (fileLastName === '.js' || fileLastName === '.jsx' || fileLastName === '.tsx' || fileLastName === '.ts') {
                     try {
                         console.log(filePath.blue);
                         const fileContent: string = fs?.readFileSync(filePath, 'utf8');

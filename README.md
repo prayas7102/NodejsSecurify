@@ -27,7 +27,9 @@ NodejsSecurify generates detailed reports that highlight the identified security
 The package aims to stay up to date with the evolving security landscape. NodejsSecurify is actively maintained and periodically updated to address new security threats, enhance performance, and incorporate changes in the OWASP guidelines.
 
 
-# Installation (For contributor of this package)
+# Installation 
+
+1. Install the package
 
 ```bash
 npm i node-js-securify
@@ -35,22 +37,18 @@ npm i node-js-securify
 
 then ..
 
-```bash
-npm start
-```
+2. Require Log class from node-js-securify in any .js file of your project
 
-# Usage (For user of this package)
-
-1. Require Log class from node-js-securify in any .js file of you project
 ```bash
 const { Log } = require("node-js-securify");
 ```
 
-2. Call function NodeJsSecurifyResults() in the Log class from the same .js file
+3. Call function NodeJsSecurifyResults() in the Log class from the same .js file
+
 ```bash
 Log.NodeJsSecurifyResults();
 ```
 
-3. Run that .js file directly or indirectly depending on your code infrastructure
+4. Run that .js file directly or indirectly depending on your code infrastructure
 
-4. Keep an eye on your console to check for vulnerability analysis
+5. Keep an eye on your console to check for vulnerability analysis
