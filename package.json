@@ -3,6 +3,7 @@
   "description": "Node-Js-Securify is an advanced npm package designed to enhance the security of Node.js applications. It provides a comprehensive set of security features and analysis capabilities to identify potential vulnerabilities and enforce best practices in accordance with OWASP guidelines.",
   "version": "2.1.2",
   "repository": "https://github.com/prayas7102/NodejsSecurify",
+  "homepage": "https://pure-javascript-blogs.hashnode.dev/nodejssecurify-level-up-your-nodejs-app-security-with-this-npm-based-automation-package",
   "main": "./dist/NodeJsSecurify.js",
   "types": "./dist/NodeJsSecurify.d.ts",
   "keywords": [
