@@ -54,3 +54,7 @@ Log.NodeJsSecurifyResults();
 4. Run that .js file directly or indirectly depending on your code infrastructure
 
 5. Keep an eye on your console to check for vulnerability analysis
+
+# Contribution
+
+Check [CONTRIBUTING.md](https://github.com/prayas7102/NodejsSecurify/blob/main/CONTRIBUTING.md) for contributing in this project.
