@@ -62,4 +62,4 @@ We use GitHub Issues to track bugs, enhancements, and general questions. If you 
 
 ## License
 
-This project is licensed under the **[Your License]** - see the [LICENSE.md](https://github.com/prayas7102/NodejsSecurify/blob/main/LICENSE) file for details.
+This project is licensed under the **License: ** - [LICENSE.md](https://github.com/prayas7102/NodejsSecurify/blob/main/LICENSE) file for details.
