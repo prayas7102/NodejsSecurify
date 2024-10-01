@@ -2,9 +2,9 @@
 
 NodejsSecurify is an advanced (White Box Testing Automation) npm package designed to enhance the security of Node.js applications. It provides a comprehensive set of security features and analysis capabilities to identify potential vulnerabilities and enforce best practices in accordance with OWASP guidelines.
 
-npm repo link: https://www.npmjs.com/package/node-js-securify
+**NPM repo link:** https://www.npmjs.com/package/node-js-securify
 
-Detailed blog (highly recommended): https://pure-javascript-blogs.hashnode.dev/nodejssecurify-level-up-your-nodejs-app-security-with-this-npm-based-automation-package
+**Detailed blog (highly recommended):** https://pure-javascript-blogs.hashnode.dev/nodejssecurify-level-up-your-nodejs-app-security-with-this-npm-based-automation-package
 
 With NodejsSecurify, developers can seamlessly integrate security checks into their Node.js projects. The package leverages a sophisticated code parsing mechanism, employing a powerful parser library like Acorn, Babel Parser, Esprima, or Recast, to analyze JavaScript code and identify security weaknesses.
 
