@@ -34,6 +34,22 @@ We welcome contributions to this project! Please follow the guidelines below to 
     - Provide screenshots or test results if relevant
     - Make sure all tests pass
 
+## Run Testcases
+
+Open 2 terminal in your vscode:
+
+1. In first terminal concurrently run the main typescript file (NodeJsSecurify.ts) and it's javascript counterpart
+```bash
+    npm run start
+    ```
+(the above terminal would keep on running continously)
+
+2. In 2nd terminal run (to run tests in TestFolder):
+```bash
+    node ./dist/NodeJsSecurify.js
+    ```
+Run this to see every change you make in source code to be reflected in the terminal.
+
 ### Coding Standards
 
 - Follow the existing code style.
