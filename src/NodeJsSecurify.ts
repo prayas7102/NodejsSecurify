@@ -14,7 +14,6 @@
 // => "Unsafe npm packages",
 // => "Insecure Authentication",
 // => "Code Injection",
-// => "Logistic Regression"
 
 import * as esprima from 'esprima';
 import * as fs from "fs";
@@ -51,8 +50,7 @@ export class Log {
         try {
             // testing command: node ./dist/NodeJsSecurify.js
             // comment this before publishing npm package (uncomment only for testing)
-            // __dirname = "C:/Users/hp/Desktop/NodeSecurify/TestFolder"
-
+            // __dirname = "F:/NodeSecurify/TestFolder" // update this path depending on the path of TestFolder according to your system
             console.log("\n******************************************************************************************".green);
             console.log("****************************** Node-Js-Securify STARTED **********************************".green);
             console.log("******************************************************************************************".green);

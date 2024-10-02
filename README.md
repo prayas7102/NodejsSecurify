@@ -17,7 +17,7 @@ With NodejsSecurify, developers can seamlessly integrate security checks into th
 NodejsSecurify aligns with OWASP security standards, including the OWASP Cheat Sheet, which covers a wide range of security concerns, such as input validation, output encoding, authentication, session management, and more. It enforces these best practices by checking the provided code against the recommended guidelines.
 
 ## A Blend of Techniques for Comprehensive Analysis
-The diverse set of security checks is achieved through a combination of techniques. Some vulnerabilities are identified through logistic regression, while others are revealed by performing operations on the parsed code using Esprima or vanilla TypeScript. Additionally, simple if-else conditions play a crucial role in detecting certain vulnerabilities. This multi-faceted approach ensures a thorough and efficient analysis.
+The diverse set of security checks is achieved through a combination of techniques. Some vulnerabilities are identified through Naive Bayes classifier, while others are revealed by performing operations on the parsed code using Esprima or vanilla TypeScript. Additionally, simple if-else conditions play a crucial role in detecting certain vulnerabilities. This multi-faceted approach ensures a thorough and efficient analysis.
 
 ## Security Checks and Analysis: 
 The package performs a series of security checks on the parsed code to identify potential vulnerabilities or insecure coding patterns. It focuses on detecting common security risks, such as: Input Validation, Dangerous Functions, DOS Attack, ReGex DOS Attack, Brute Force Attack, CallBack Hell, XSS Attack, Insecure Security Headers, Unsafe npm packages, Insecure Authentication, Code Injection.

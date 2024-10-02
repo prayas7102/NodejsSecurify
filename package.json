@@ -21,7 +21,7 @@
     "Unsafe npm packages",
     "Insecure Authentication",
     "Code Injection",
-    "Logistic Regression"
+    "Naive Bayes classifier"
   ],
   "scripts": {
     "build": "tsc",
