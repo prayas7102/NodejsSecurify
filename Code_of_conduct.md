@@ -20,19 +20,19 @@ To maintain a positive, constructive, and respectful environment in the **Nodejs
 - **Collaboration**: Work openly and cooperatively with others, sharing knowledge and ideas that contribute to the growth of the platform.
 - **Inclusivity**: Use language and actions that welcome and include all participants, regardless of their background or experience level.
 - **Recognition**: Acknowledge and appreciate the contributions of all members, whether through code, design, feedback, or discussions.
-- **Professionalism**: Maintain professionalism in all interactions, ensuring that the project’s goals and values are prioritized.
+- **Professionalism**: Maintain a high level of professionalism in all interactions, ensuring that the project’s goals and values are prioritized. This includes timely responses to communication, delivering high-quality code submissions that meet established standards, and adhering to deadlines. Clear, respectful communication, openness to feedback, and a collaborative attitude are also essential to fostering a positive working environment.
 
 ### Unacceptable Behavior:
-- **Harassment**: Any form of harassment, including unwelcome comments, personal attacks, or inappropriate behavior, is strictly prohibited.
-- **Discrimination**: Discriminatory remarks or behavior based on personal identity, beliefs, or background will not be tolerated.
+- **Harassment**: Any form of harassment, including unwelcome comments, personal attacks, or inappropriate behavior, is strictly discouraged.
+- **Discrimination**: Discriminatory remarks or behavior based on personal identity, beliefs, or background is strictly discouraged.
 - **Disrespect**: Engaging in trolling, dismissive comments, or inflammatory remarks that disrupt the collaborative nature of the project is unacceptable.
 - **Privacy Violations**: Sharing private or sensitive information about others without their explicit consent is not allowed.
-- **Unethical Conduct**: Misusing the platform, violating ethical standards, or spreading misinformation is prohibited.
+- **Unethical Conduct**: Misusing the platform, violating ethical standards, or spreading misinformation is not permitted.
 - **Disruption**: Any actions that intentionally disrupt or interfere with the progress of the project or the community’s efforts will not be tolerated.
 
 ## Project Goals
 
-The **NodejsSecurify** project aims to create a social platform that allows developers to engage with the GitHub community through authenticated interactions. The key goals include:
+The **NodejsSecurify** project aims to enable users to explore the GitHub profiles of fellow developers, promoting networking, learning, and secure practices. The key goals include:
 - **Community Engagement**: Providing a space for developers to share thoughts, ideas, and insights with the wider GitHub community.
 - **Collaboration**: Encouraging interaction and collaboration among developers through meaningful discussions and updates.
 - **GitHub Profile Exploration**: Enabling users to explore the GitHub profiles of fellow developers, facilitating networking and knowledge-sharing.
