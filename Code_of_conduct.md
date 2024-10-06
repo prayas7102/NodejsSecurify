@@ -1,8 +1,8 @@
-# NodejsSecurify Project Code of Conduct
+# Code of Conduct
 
 ## Welcome
 
-Welcome to the **NodejsSecurify** repository! **NodejsSecurify** is an advanced (White Box Testing Automation) npm package designed to enhance the security of Node.js applications. It provides a comprehensive set of security features and analysis capabilities to identify potential vulnerabilities and enforce best practices in accordance with OWASP guidelines. Our goal is to create an open, inclusive, and respectful environment where developers can engage and collaborate. We are committed to maintaining a harassment-free experience for everyone involved.
+Welcome to the **NodejsSecurify** repository! **NodejsSecurify** is an advanced (White Box Testing Automation) npm package designed to strengthen the security of Node.js applications. It offers a comprehensive suite of security features. and analysis capabilities to identify potential vulnerabilities and promote and enforce best practices. in accordance with OWASP guidelines. Our goal is to create an open, inclusive, and respectful environment where developers can engage and collaborate. We are committed to maintaining a harassment-free experience for everyone involved.
 
 ## Our Pledge
 
