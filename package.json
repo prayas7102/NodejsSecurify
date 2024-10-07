@@ -34,6 +34,7 @@
     "@types/esprima": "^4.0.3",
     "@types/esquery": "^1.5.0",
     "@types/node": "^20.3.3",
+    "@types/pdfkit": "^0.13.5",
     "typescript": "^5.1.6"
   },
   "dependencies": {
@@ -43,6 +44,7 @@
     "esquery": "^1.5.0",
     "natural": "^6.5.0",
     "path": "^0.12.7",
+    "pdfkit": "^0.15.0",
     "randexp": "^0.5.3"
   },
   "files": [

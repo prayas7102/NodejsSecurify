@@ -19,6 +19,7 @@ import * as esprima from 'esprima';
 import * as fs from "fs";
 import * as path from 'path';
 import * as colors from 'colors';
+import * as util from 'util';
 import { detectBruteForce } from './Vulnerability/DetectBruteForceAttack'
 import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
 import { isRegexVulnerable } from './Vulnerability/DetectVulnerableRegex';
@@ -48,6 +49,19 @@ export class Log {
             return inputPath;
         }
         try {
+            const logFile = fs.createWriteStream('consoleOutput.log', { flags: 'w' });
+            const logStdout = process.stdout;
+
+            console.log = function () {
+                logFile.write(util.format.apply(null, Array.from(arguments)) + '\n');
+                logStdout.write(util.format.apply(null, Array.from(arguments)) + '\n');
+            };
+
+            console.error = function () {
+                logFile.write(util.format.apply(null, Array.from(arguments)) + '\n');
+                logStdout.write(util.format.apply(null, Array.from(arguments)) + '\n');
+            };
+
             // testing command: node ./dist/NodeJsSecurify.js
             // comment this before publishing npm package (uncomment only for testing)
             // __dirname = "F:/NodeSecurify/TestFolder" // update this path depending on the path of TestFolder according to your system
@@ -77,6 +91,8 @@ export class Log {
             // parsing for vulnerable npm pacakage
             console.log("Parsing for vulnerable npm pacakage:".yellow);
             checkVulnerablePackages();
+
+            logFile.end();
         }
         catch (error: any) {
             console.log("Error parsing file".underline.red);
