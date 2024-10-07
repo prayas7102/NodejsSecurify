@@ -52,7 +52,7 @@ The above terminal would keep on running continously for realtime compilation.
 Run this after every change you make in source code.
 
 3. Output:
-The output would be generated in 2nd terminal as well as in a pdf (NodeJsSecurifyReport.pdf) generated in root dir
+The output would be generated in 2nd terminal as well as in a pdf (NodeJsSecurifyReport.pdf) or log file (NodeJsSecurifyReport.log) generated in your root dir.
 
 ### Coding Standards
 
