@@ -55,7 +55,7 @@ Log.NodeJsSecurifyResults();
 
 4. Run that .js file directly or indirectly depending on your code infrastructure
 
-5. Keep an eye on your console to check for vulnerability analysis
+5. Keep an eye on your root directory to check for vulnerability analysis report PDF.
 
 # Contribution
 
