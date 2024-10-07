@@ -33,7 +33,7 @@ import {generatePDFReport} from './GenerateReport';
 const colours = colors;
 export class Log {
 
-    static NodeJsSecurifyResults() {
+    static async NodeJsSecurifyResults() {
         function extractParentPath(inputPath: string) {
             // Find the last occurrence of "node_modules" in the input path
             const lastIndex = inputPath.lastIndexOf("node_modules");
@@ -50,7 +50,11 @@ export class Log {
             return inputPath;
         }
         try {
-            const logFile = fs.createWriteStream('consoleOutput.log', { flags: 'w' });
+            
+            // testing command: node ./dist/NodeJsSecurify.js
+            // comment this before publishing npm package (uncomment only for testing)
+            // __dirname = "F:/NodeSecurify/TestFolder" // update this path depending on the path of TestFolder according to your system
+            const logFile = fs.createWriteStream(__dirname+'/consoleOutput.log', { flags: 'w' });
             const logStdout = process.stdout;
 
             console.log = function () {
@@ -63,14 +67,12 @@ export class Log {
                 logStdout.write(util.format.apply(null, Array.from(arguments)) + '\n');
             };
 
-            // testing command: node ./dist/NodeJsSecurify.js
-            // comment this before publishing npm package (uncomment only for testing)
-            // __dirname = "F:/NodeSecurify/TestFolder" // update this path depending on the path of TestFolder according to your system
+            __dirname = extractParentPath(__dirname);
+
             console.log("\n******************************************************************************************".green);
-            console.log("****************************** Node-Js-Securify STARTED **********************************".green);
+            console.log("****************************** Node-Js-Securify STARTED ***************************".green);
             console.log("******************************************************************************************".green);
 
-            __dirname = extractParentPath(__dirname);
 
             console.log('\nSearching for .js files in (root directory) : '.yellow + __dirname.rainbow);
 
@@ -90,9 +92,15 @@ export class Log {
             Log.parseJSFiles(__dirname, gitIgnoreFilesArray);
 
             // parsing for vulnerable npm pacakage
-            console.log("Parsing for vulnerable npm pacakage:".yellow);
-            checkVulnerablePackages();
-
+            console.log("Parsing for vulnerable npm pacakage:".blue);
+            checkVulnerablePackages(__dirname, logFile.path)
+            .then(() => {
+                    // Once the audit completes, call generatePDFReport
+                    generatePDFReport(__dirname, logFile.path);
+                })
+                .catch((error) => {
+                    console.error('An error occurred:', error);
+                });
             logFile.end();
         }
         catch (error: any) {
@@ -184,7 +192,6 @@ export class Log {
                     }
                 }
             }
-            generatePDFReport();
         } catch (error) {
             return null;
         }

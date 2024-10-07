@@ -2,32 +2,20 @@ import * as fs from 'fs';
 import PDFDocument = require('pdfkit');
 import * as path from 'path';
 
-export function generatePDFReport(): void {
+export function generatePDFReport(dir_path: string, logFilePath: string | Buffer): void {
     const doc = new PDFDocument();
-    const output = fs.createWriteStream('NodeJsSecurifyReport.pdf');
+    const output = fs.createWriteStream(`${dir_path}/NodeJsSecurifyReport.pdf`);
 
     doc.pipe(output);
 
     doc.fontSize(15).text('NodeJsSecurify Report', { align: 'center' });
     doc.moveDown();
 
-    // Define the path to the log file
-    const logFilePath = path.resolve(__dirname, 'consoleOutput.log');
-
-    // Check if the log file exists; if not, create it
-    if (!fs.existsSync(logFilePath)) {
-        fs.writeFileSync(logFilePath, '', 'utf8'); // Create an empty log file
-        console.log('consoleOutput.log file was not found, so a new one was created.');
-    }
-
     // Read the log file content
     let logContent: string = fs.readFileSync(logFilePath, 'utf8');
-    
+    console.log(logFilePath, logContent.length)
     // Modify the content of the log
     const lines: string[] = logContent.split('\n');
-    if (lines.length >= 3) {
-        lines[2] = '****************************** Node-Js-Securify STARTED ***************************';
-    }
     logContent = lines.join('\n');
 
     // Function to parse ANSI codes and write them to the PDF
@@ -71,5 +59,3 @@ export function generatePDFReport(): void {
     // Finalize the PDF
     doc.end();
 }
-
-generatePDFReport();
