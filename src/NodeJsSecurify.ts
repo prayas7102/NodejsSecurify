@@ -65,7 +65,7 @@ export class Log {
 
             // testing command: node ./dist/NodeJsSecurify.js
             // comment this before publishing npm package (uncomment only for testing)
-            // __dirname = "F:/NodeSecurify/TestFolder" // update this path depending on the path of TestFolder according to your system
+            __dirname = "F:/NodeSecurify/TestFolder" // update this path depending on the path of TestFolder according to your system
             console.log("\n******************************************************************************************".green);
             console.log("****************************** Node-Js-Securify STARTED **********************************".green);
             console.log("******************************************************************************************".green);

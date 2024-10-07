@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import PDFDocument = require('pdfkit');
+import * as path from 'path';
 
 export function generatePDFReport(): void {
     const doc = new PDFDocument();
@@ -10,10 +11,26 @@ export function generatePDFReport(): void {
     doc.fontSize(15).text('NodeJsSecurify Report', { align: 'center' });
     doc.moveDown();
 
-    let logContent: string = fs.readFileSync('consoleOutput.log', 'utf8');
+    // Define the path to the log file
+    const logFilePath = path.resolve(__dirname, 'consoleOutput.log');
+
+    // Check if the log file exists; if not, create it
+    if (!fs.existsSync(logFilePath)) {
+        fs.writeFileSync(logFilePath, '', 'utf8'); // Create an empty log file
+        console.log('consoleOutput.log file was not found, so a new one was created.');
+    }
+
+    // Read the log file content
+    let logContent: string = fs.readFileSync(logFilePath, 'utf8');
+    
+    // Modify the content of the log
     const lines: string[] = logContent.split('\n');
-    lines[2] = '****************************** Node-Js-Securify STARTED ***************************'
+    if (lines.length >= 3) {
+        lines[2] = '****************************** Node-Js-Securify STARTED ***************************';
+    }
     logContent = lines.join('\n');
+
+    // Function to parse ANSI codes and write them to the PDF
     function parseAnsiToPdf(doc: PDFKit.PDFDocument, content: string) {
         const lines = content.split('\n');
         lines.forEach(line => {
@@ -48,9 +65,10 @@ export function generatePDFReport(): void {
         });
     }
 
+    // Parse the ANSI codes from the log content and write them to the PDF
     parseAnsiToPdf(doc, logContent);
 
-
+    // Finalize the PDF
     doc.end();
 }
 
