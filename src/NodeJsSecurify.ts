@@ -28,6 +28,7 @@ import { detectDangerousFunctions } from './Vulnerability/DetectDangerousFunctio
 import {analyzeSecurityHeaders} from './Vulnerability/AnalyzeSecurityHeaders';
 import { insecureAuthentication } from './Vulnerability/InsecureAuthentication';
 import {checkVulnerablePackages} from './Vulnerability/DetectUnsafeNpmPackage';
+import {generatePDFReport} from './GenerateReport';
 
 const colours = colors;
 export class Log {
@@ -183,6 +184,7 @@ export class Log {
                     }
                 }
             }
+            generatePDFReport();
         } catch (error) {
             return null;
         }

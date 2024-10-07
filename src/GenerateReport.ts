@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import PDFDocument = require('pdfkit');
 
-function generatePDFReport(): void {
+export function generatePDFReport(): void {
     const doc = new PDFDocument();
     const output = fs.createWriteStream('NodeJsSecurifyReport.pdf');
 
