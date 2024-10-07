@@ -3,5 +3,5 @@
 /publish.txt
 /img.jpg
 /dist
-*consoleOutput.log
-*NodeJsSecurifyReport.pdf
+*.log
+*.pdf

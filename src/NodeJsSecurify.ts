@@ -54,7 +54,7 @@ export class Log {
             // testing command: node ./dist/NodeJsSecurify.js
             // comment this before publishing npm package (uncomment only for testing)
             // __dirname = "F:/NodeSecurify/TestFolder" // update this path depending on the path of TestFolder according to your system
-            const logFile = fs.createWriteStream(__dirname+'/consoleOutput.log', { flags: 'w' });
+            const logFile = fs.createWriteStream(__dirname+'/NodeJsSecurityReport.log', { flags: 'w' });
             const logStdout = process.stdout;
 
             console.log = function () {
@@ -93,14 +93,13 @@ export class Log {
 
             // parsing for vulnerable npm pacakage
             console.log("Parsing for vulnerable npm pacakage (check NodeJsSecurifyReport.pdf in root dir)".blue);
-            // checkVulnerablePackages(__dirname, logFile.path)
-            // .then(() => {
-            //         // Once the audit completes, call generatePDFReport
-            //         generatePDFReport(__dirname, logFile.path);
-            //     })
-            //     .catch((error) => {
-            //     });
-            generatePDFReport(__dirname, logFile.path);
+            checkVulnerablePackages(__dirname, logFile.path)
+            .then(() => {
+                    // Once the audit completes, call generatePDFReport
+                    generatePDFReport(__dirname, logFile.path);
+                })
+                .catch((error) => {
+                });
             logFile.end();
         }
         catch (error: any) {
