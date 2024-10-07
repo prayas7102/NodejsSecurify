@@ -51,6 +51,9 @@ The above terminal would keep on running continously for realtime compilation.
 ```
 Run this after every change you make in source code.
 
+3. Output:
+The output would be generated in 2nd terminal as well as in a pdf (NodeJsSecurifyReport.pdf) generated in root dir
+
 ### Coding Standards
 
 - Follow the existing code style.
