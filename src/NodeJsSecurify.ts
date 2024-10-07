@@ -93,13 +93,14 @@ export class Log {
 
             // parsing for vulnerable npm pacakage
             console.log("Parsing for vulnerable npm pacakage (check NodeJsSecurifyReport.pdf in root dir)".blue);
-            checkVulnerablePackages(__dirname, logFile.path)
-            .then(() => {
-                    // Once the audit completes, call generatePDFReport
-                    generatePDFReport(__dirname, logFile.path);
-                })
-                .catch((error) => {
-                });
+            // checkVulnerablePackages(__dirname, logFile.path)
+            // .then(() => {
+            //         // Once the audit completes, call generatePDFReport
+            //         generatePDFReport(__dirname, logFile.path);
+            //     })
+            //     .catch((error) => {
+            //     });
+            generatePDFReport(__dirname, logFile.path);
             logFile.end();
         }
         catch (error: any) {

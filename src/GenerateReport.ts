@@ -4,21 +4,15 @@ import * as path from 'path';
 
 export function generatePDFReport(dir_path: string, logFilePath: string | Buffer): void {
     const doc = new PDFDocument();
-    console.log(dir_path)
     const output = fs.createWriteStream(`${dir_path}/NodeJsSecurifyReport.pdf`);
-    console.log(dir_path)
     doc.pipe(output);
-    console.log(dir_path)
     doc.fontSize(15).text('NodeJsSecurify Report', { align: 'center' });
     doc.moveDown();
-    console.log(dir_path)
     // Read the log file content
     let logContent: string = fs.readFileSync(logFilePath, 'utf8');
-    console.log(dir_path)
     // Modify the content of the log
     const lines: string[] = logContent.split('\n');
     logContent = lines.join('\n');
-    console.log(dir_path)
     // Function to parse ANSI codes and write them to the PDF
     function parseAnsiToPdf(doc: PDFKit.PDFDocument, content: string) {
         const lines = content.split('\n');
@@ -53,11 +47,8 @@ export function generatePDFReport(dir_path: string, logFilePath: string | Buffer
             doc.text('\n');
         });
     }
-    console.log(dir_path)
     // Parse the ANSI codes from the log content and write them to the PDF
     parseAnsiToPdf(doc, logContent);
-    console.log(dir_path)
     // Finalize the PDF
     doc.end();
-    console.log(dir_path)
 }
