@@ -13,7 +13,6 @@ export function generatePDFReport(dir_path: string, logFilePath: string | Buffer
 
     // Read the log file content
     let logContent: string = fs.readFileSync(logFilePath, 'utf8');
-    console.log(logFilePath, logContent.length)
     // Modify the content of the log
     const lines: string[] = logContent.split('\n');
     logContent = lines.join('\n');

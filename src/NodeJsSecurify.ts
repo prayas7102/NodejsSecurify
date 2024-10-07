@@ -99,7 +99,6 @@ export class Log {
                     generatePDFReport(__dirname, logFile.path);
                 })
                 .catch((error) => {
-                    console.error('An error occurred:', error);
                 });
             logFile.end();
         }
