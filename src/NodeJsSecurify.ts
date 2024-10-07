@@ -58,6 +58,7 @@ export class Log {
             };
 
             console.error = function () {
+                logFile.write(util.format.apply(null, Array.from(arguments)) + '\n');
                 logStdout.write(util.format.apply(null, Array.from(arguments)) + '\n');
             };
 

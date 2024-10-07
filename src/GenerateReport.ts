@@ -10,7 +10,10 @@ function generatePDFReport(): void {
     doc.fontSize(15).text('NodeJsSecurify Report', { align: 'center' });
     doc.moveDown();
 
-    const logContent: string = fs.readFileSync('consoleOutput.log', 'utf8');
+    let logContent: string = fs.readFileSync('consoleOutput.log', 'utf8');
+    const lines: string[] = logContent.split('\n');
+    lines[2] = '****************************** Node-Js-Securify STARTED ***************************'
+    logContent = lines.join('\n');
     function parseAnsiToPdf(doc: PDFKit.PDFDocument, content: string) {
         const lines = content.split('\n');
         lines.forEach(line => {
@@ -27,7 +30,7 @@ function generatePDFReport(): void {
                     case 30: doc.fillColor('black'); break;
                     case 31: doc.fillColor('red'); break;
                     case 32: doc.fillColor('green'); break;
-                    case 33: doc.fillColor('yellow'); break;
+                    case 33: doc.fillColor('maroon'); break;
                     case 34: doc.fillColor('blue'); break;
                     case 35: doc.fillColor('magenta'); break;
                     case 36: doc.fillColor('cyan'); break;
