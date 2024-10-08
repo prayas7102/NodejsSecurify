@@ -31,6 +31,14 @@ import {checkVulnerablePackages} from './Vulnerability/DetectUnsafeNpmPackage';
 import {generatePDFReport} from './GenerateReport';
 
 const colours = colors;
+// there are two modes DEV and PROD.
+// switch to DEV mode while testing and PROD mode while pushing the code
+const mode: String = 'PROD';
+if (mode === 'DEV'){
+    // update this path depending on the path of TestFolder according to your system
+    __dirname = "F:/NodeSecurify/TestFolder";
+}
+
 export class Log {
 
     static async NodeJsSecurifyResults() {
@@ -49,22 +57,25 @@ export class Log {
             // If "node_modules" is not found, return the input path as it is
             return inputPath;
         }
+        const stripAnsi = (str: string) => str.replace(/\x1b\[[0-9;]*m/g, '');
         try {
-            
-            // testing command: node ./dist/NodeJsSecurify.js
-            // comment this before publishing npm package (uncomment only for testing)
-            // __dirname = "F:/NodeSecurify/TestFolder" // update this path depending on the path of TestFolder according to your system
             const logFile = fs.createWriteStream(__dirname+'/NodeJsSecurityReport.log', { flags: 'w' });
             const logStdout = process.stdout;
 
             console.log = function () {
-                logFile.write(util.format.apply(null, Array.from(arguments)) + '\n');
-                logStdout.write(util.format.apply(null, Array.from(arguments)) + '\n');
+                let message = util.format.apply(null, Array.from(arguments));
+                // Write the stripped message to the log file (no ANSI colors)
+                logFile.write(stripAnsi(message) + '\n');
+                // Write the colored message to the terminal
+                logStdout.write(message + '\n');
             };
-
+            
             console.error = function () {
-                logFile.write(util.format.apply(null, Array.from(arguments)) + '\n');
-                logStdout.write(util.format.apply(null, Array.from(arguments)) + '\n');
+                const message = util.format.apply(null, Array.from(arguments));
+                // Write the stripped message to the log file (no ANSI colors)
+                logFile.write(message + '\n');
+                // Write the colored message to the terminal
+                logStdout.write(message + '\n');
             };
 
             __dirname = extractParentPath(__dirname);

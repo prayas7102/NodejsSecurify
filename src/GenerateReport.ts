@@ -1,6 +1,5 @@
 import * as fs from 'fs';
 import PDFDocument = require('pdfkit');
-import * as path from 'path';
 
 export function generatePDFReport(dir_path: string, logFilePath: string | Buffer): void {
     const doc = new PDFDocument();

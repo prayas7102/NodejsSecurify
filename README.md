@@ -39,6 +39,12 @@ The package aims to stay up to date with the evolving security landscape. Nodejs
 npm i node-js-securify
 ```
 
+to get latest package:
+
+```bash
+npm install node-js-securify@latest
+```
+
 then ..
 
 2. Require Log class from node-js-securify in any .js file of your project
