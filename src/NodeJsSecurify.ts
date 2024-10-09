@@ -17,23 +17,14 @@
 
 import * as esprima from 'esprima';
 import * as fs from "fs";
-import * as path from 'path';
-import * as colors from 'colors';
-import * as util from 'util';
-import { detectBruteForce } from './Vulnerability/DetectBruteForceAttack'
-import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
-import { isRegexVulnerable } from './Vulnerability/DetectVulnerableRegex';
-import { detectInputValidation } from './Vulnerability/DetectInputValidation';
-import { detectDangerousFunctions } from './Vulnerability/DetectDangerousFunctions';
-import {analyzeSecurityHeaders} from './Vulnerability/AnalyzeSecurityHeaders';
-import { insecureAuthentication } from './Vulnerability/InsecureAuthentication';
-import {checkVulnerablePackages} from './Vulnerability/DetectUnsafeNpmPackage';
-import {generatePDFReport} from './GenerateReport';
+import natural from "natural";
+import { DatasetSample, removeRedundantData } from "./Vulnerability/DatasetUtils";
+import { Vulnerability, toStringMap, toDatasetMap } from "./Vulnerability/Vulnerability";
 
 const colours = colors;
 // there are two modes DEV and PROD.
 // switch to DEV mode while testing and PROD mode while pushing the code
-const mode: String = 'PROD';
+const mode: string = "PROD";
 if (mode === 'DEV'){
     // update this path depending on the path of TestFolder according to your system
     __dirname = "F:/NodeSecurify/TestFolder";
@@ -147,6 +138,55 @@ export class Log {
         return gitIgnoreFiles;
     }
 
+    static detectIfVulnerability(kind: Vulnerability, content: string): boolean {
+        let isDetected: boolean = false;
+
+        const vulnLabel: string = toStringMap[kind]; // ^_^
+
+        // Create a tokenizer.
+        const tokenizer = new natural.WordTokenizer();
+        const tokenizedSnippet: readonly string[] | null =
+            tokenizer.tokenize(content);
+
+        // Make prediction using the trained classifier.
+        if (tokenizedSnippet !== null) {
+            // Prepare the data for training.
+            const data: readonly DatasetSample[] = toDatasetMap[kind];
+            const cleanedDataset: readonly DatasetSample[] = removeRedundantData(data);
+
+            const codeSamples: readonly string[] = cleanedDataset.map((sample) => sample.code);
+            const labels: readonly number[] = cleanedDataset.map((sample) => sample.label);
+
+            // Vectorize the code samples using the tokenizer.
+            const tokenizerSamples: (readonly string[])[] = codeSamples
+                .map((code) => tokenizer.tokenize(code))
+                .filter((tokens): tokens is string[] => tokens !== null);
+
+            // Train a Naive Bayes classifier
+            const classifier = new natural.BayesClassifier();
+
+            for (let i = 0; i < tokenizerSamples.length; i++) {
+                // Copy ensures immutability.
+                classifier.addDocument([...tokenizerSamples[i]], labels[i].toString()); 
+            }
+            classifier.train();
+
+            const prediction: string = classifier.classify([...tokenizedSnippet]);
+            const result: number = parseInt(prediction, 10);
+            if (result === 1) {
+                isDetected = true;
+                console.log(`==> Code vulnerable to ${vulnLabel} in this file!!! `.red);
+            }
+        }
+
+        if (!isDetected) {
+            console.log(`==> Code NOT vulnerable to ${vulnLabel}`.green);
+        }
+
+        console.log("\n");
+        return !isDetected;
+    }
+
     // Recursively traverse all the files in given directory path.
     // Ensure it does the same when installed by anyone in any directory of their system.
     // So make such changes to ensure the former. 
@@ -184,18 +224,19 @@ export class Log {
 
                         detectCallBackHell(jsonAst, 0, file);
                         console.log("\n");
-                        detectBruteForce(fileContent);
-                        console.log("\n");
+
+                        Log.detectIfVulnerability(Vulnerability.BruteForce, fileContent);
+
                         isRegexVulnerable(jsonAst);
                         console.log("\n");
-                        detectInputValidation(fileContent);
-                        console.log("\n");
+
+                        Log.detectIfVulnerability(Vulnerability.InputValidation, fileContent);
+
                         detectDangerousFunctions(jsonAst, fileContent);
                         console.log("\n");
-                        insecureAuthentication(fileContent);
-                        console.log("\n");
-                        analyzeSecurityHeaders(fileContent);
-                        console.log("\n");
+
+                        Log.detectIfVulnerability(Vulnerability.InsecureAuthentication, fileContent);
+                        Log.detectIfVulnerability(Vulnerability.SecurityHeaders, fileContent);
                     } catch (error) {
                         console.log(error)
                         continue;
