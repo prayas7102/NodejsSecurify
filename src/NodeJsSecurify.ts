@@ -15,11 +15,19 @@
 // => "Insecure Authentication",
 // => "Code Injection",
 
-import * as esprima from 'esprima';
+import * as colors from "colors";
+import * as esprima from "esprima";
 import * as fs from "fs";
+import * as path from "path";
+import * as util from "util";
 import natural from "natural";
 import { DatasetSample, removeRedundantData } from "./Vulnerability/DatasetUtils";
 import { Vulnerability, toStringMap, toDatasetMap } from "./Vulnerability/Vulnerability";
+import { checkVulnerablePackages } from "./Vulnerability/DetectUnsafeNpmPackage";
+import { detectCallBackHell } from "./Vulnerability/DetectCallBackHell";
+import { detectDangerousFunctions } from "./Vulnerability/DetectDangerousFunctions";
+import { generatePDFReport } from "./GenerateReport";
+import { isRegexVulnerable } from "./Vulnerability/DetectVulnerableRegex";
 
 const colours = colors;
 // there are two modes DEV and PROD.
