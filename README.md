@@ -1,3 +1,5 @@
+![-NodeJs--------TypeScript------- (1)](https://github.com/user-attachments/assets/0d7a47a2-0fa7-4630-8d40-8e09e1704448)
+
 # NodejsSecurify
 
 NodejsSecurify is an advanced (White Box Testing Automation) npm package designed to enhance the security of Node.js applications. It provides a comprehensive set of security features and analysis capabilities to identify potential vulnerabilities and enforce best practices in accordance with OWASP guidelines.
@@ -37,6 +39,12 @@ The package aims to stay up to date with the evolving security landscape. Nodejs
 npm i node-js-securify
 ```
 
+to get latest package:
+
+```bash
+npm install node-js-securify@latest
+```
+
 then ..
 
 2. Require Log class from node-js-securify in any .js file of your project
@@ -53,7 +61,7 @@ Log.NodeJsSecurifyResults();
 
 4. Run that .js file directly or indirectly depending on your code infrastructure
 
-5. Keep an eye on your console to check for vulnerability analysis
+5. Keep an eye on your root directory to check for vulnerability analysis report pdf (NodeJsSecurifyReport.pdf) or log file (NodeJsSecurifyReport.log) 
 
 # Contribution
 

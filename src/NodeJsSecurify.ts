@@ -19,6 +19,7 @@ import * as esprima from 'esprima';
 import * as fs from "fs";
 import * as path from 'path';
 import * as colors from 'colors';
+import * as util from 'util';
 import { detectBruteForce } from './Vulnerability/DetectBruteForceAttack'
 import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
 import { isRegexVulnerable } from './Vulnerability/DetectVulnerableRegex';
@@ -27,11 +28,20 @@ import { detectDangerousFunctions } from './Vulnerability/DetectDangerousFunctio
 import {analyzeSecurityHeaders} from './Vulnerability/AnalyzeSecurityHeaders';
 import { insecureAuthentication } from './Vulnerability/InsecureAuthentication';
 import {checkVulnerablePackages} from './Vulnerability/DetectUnsafeNpmPackage';
+import {generatePDFReport} from './GenerateReport';
 
 const colours = colors;
+// there are two modes DEV and PROD.
+// switch to DEV mode while testing and PROD mode while pushing the code
+const mode: String = 'PROD';
+if (mode === 'DEV'){
+    // update this path depending on the path of TestFolder according to your system
+    __dirname = "F:/NodeSecurify/TestFolder";
+}
+
 export class Log {
 
-    static NodeJsSecurifyResults() {
+    static async NodeJsSecurifyResults() {
         function extractParentPath(inputPath: string) {
             // Find the last occurrence of "node_modules" in the input path
             const lastIndex = inputPath.lastIndexOf("node_modules");
@@ -47,15 +57,33 @@ export class Log {
             // If "node_modules" is not found, return the input path as it is
             return inputPath;
         }
+        const stripAnsi = (str: string) => str.replace(/\x1b\[[0-9;]*m/g, '');
         try {
-            // testing command: node ./dist/NodeJsSecurify.js
-            // comment this before publishing npm package (uncomment only for testing)
-            // __dirname = "F:/NodeSecurify/TestFolder" // update this path depending on the path of TestFolder according to your system
-            console.log("\n******************************************************************************************".green);
-            console.log("****************************** Node-Js-Securify STARTED **********************************".green);
-            console.log("******************************************************************************************".green);
+            const logFile = fs.createWriteStream(__dirname+'/NodeJsSecurityReport.log', { flags: 'w' });
+            const logStdout = process.stdout;
+
+            console.log = function () {
+                let message = util.format.apply(null, Array.from(arguments));
+                // Write the stripped message to the log file (no ANSI colors)
+                logFile.write(stripAnsi(message) + '\n');
+                // Write the colored message to the terminal
+                logStdout.write(message + '\n');
+            };
+            
+            console.error = function () {
+                const message = util.format.apply(null, Array.from(arguments));
+                // Write the stripped message to the log file (no ANSI colors)
+                logFile.write(message + '\n');
+                // Write the colored message to the terminal
+                logStdout.write(message + '\n');
+            };
 
             __dirname = extractParentPath(__dirname);
+
+            console.log("\n******************************************************************************************".green);
+            console.log("****************************** Node-Js-Securify STARTED ***************************".green);
+            console.log("******************************************************************************************".green);
+
 
             console.log('\nSearching for .js files in (root directory) : '.yellow + __dirname.rainbow);
 
@@ -75,8 +103,15 @@ export class Log {
             Log.parseJSFiles(__dirname, gitIgnoreFilesArray);
 
             // parsing for vulnerable npm pacakage
-            console.log("Parsing for vulnerable npm pacakage:".yellow);
-            checkVulnerablePackages();
+            console.log("Parsing for vulnerable npm pacakage (check NodeJsSecurifyReport.pdf in root dir)".blue);
+            checkVulnerablePackages(__dirname, logFile.path)
+            .then(() => {
+                    // Once the audit completes, call generatePDFReport
+                    generatePDFReport(__dirname, logFile.path);
+                })
+                .catch((error) => {
+                });
+            logFile.end();
         }
         catch (error: any) {
             console.log("Error parsing file".underline.red);

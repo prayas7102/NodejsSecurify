@@ -36,20 +36,25 @@ We welcome contributions to this project! Please follow the guidelines below to 
 
 ## Run Testcases
 
+1. In ./src/NodeJsSecurify.ts (Check line 36-40) change mode to 'DEV' (switch to 'DEV' mode while testing and 'PROD' mode while pushing the code). And update __dirname path depending on the path of TestFolder according to your system.
+
 Open 2 terminal in your vscode:
 
-1. In first terminal run:
+2. In first terminal run:
 ```bash
     npm run start
 ```
 This command is watching your main TypeScript file (NodeJsSecurify.ts) and automatically recompiling them into JavaScript file (./dist/NodeJsSecurify.js) when changes are detected.
 The above terminal would keep on running continously for realtime compilation.
 
-2. In 2nd terminal run (to run tests in TestFolder):
+3. In 2nd terminal run (to run tests in TestFolder):
 ```bash
     node ./dist/NodeJsSecurify.js
 ```
 Run this after every change you make in source code.
+
+3. Output:
+The output would be generated in 2nd terminal as well as in a pdf (NodeJsSecurifyReport.pdf) or log file (NodeJsSecurifyReport.log) generated in your root dir.
 
 ### Coding Standards
 
