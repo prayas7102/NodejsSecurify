@@ -103,7 +103,7 @@ export class Log {
             Log.parseJSFiles(__dirname, gitIgnoreFilesArray);
 
             // parsing for vulnerable npm pacakage
-            console.log("Parsing for vulnerable npm pacakage (check NodeJsSecurifyReport.pdf in root dir)".blue);
+            console.log("Parsing for vulnerable npm pacakage (check NodeJsSecurifyReport.log in root dir)".blue);
             checkVulnerablePackages(__dirname, logFile.path)
             .then(() => {
                     // Once the audit completes, call generatePDFReport
