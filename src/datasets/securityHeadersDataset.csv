@@ -1,0 +1,21 @@
+code,label
+"app.use((req, res, next) => {\n            res.setHeader('X-Content-Type-Options', 'nosniff');\n            next();\n          });\n          ",0
+"app.use((req, res, next) => {\n            res.setHeader('Cache-Control', 'public, max-age=3600');\n            next();\n          });\n          ",1
+"app.use((req, res, next) => {\n            res.setHeader('X-Frame-Options', 'DENY');\n            next();\n          });\n          ",0
+"app.use((req, res, next) => {\n            res.setHeader('Feature-Policy', ""geolocation *"");\n            next();\n          });\n          ",1
+"app.use((req, res, next) => {\n            res.setHeader('X-XSS-Protection', '1; mode=block');\n            next();\n          });\n          ",0
+"app.use((req, res, next) => {\n            res.setHeader('Referrer-Policy', 'unsafe-url');\n            next();\n          });\n          ",1
+"app.use((req, res, next) => {\n            res.setHeader('Content-Security-Policy', ""default-src 'self'"");\n            next();\n          });\n          ",0
+"app.use((req, res, next) => {\n            res.setHeader('Strict-Transport-Security', 'max-age=31536000');\n            next();\n          });\n          ",1
+"app.use((req, res, next) => {\n            res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');\n            next();\n          });\n          ",0
+"app.use((req, res, next) => {\n            res.setHeader('Content-Security-Policy', ""script-src 'self'"");\n            next();\n          });\n          ",1
+"app.use((req, res, next) => {\n            res.setHeader('Referrer-Policy', 'same-origin');\n            next();\n          });\n          ",0
+"app.use((req, res, next) => {\n            res.setHeader('X-XSS-Protection', '0');\n            next();\n          });\n          ",1
+"app.use((req, res, next) => {\n            res.setHeader('Feature-Policy', ""geolocation 'self'; microphone 'self'"");\n            next();\n          });\n          ",0
+"app.use((req, res, next) => {\n            res.setHeader('X-Frame-Options', 'SAMEORIGIN');\n            next();\n          });\n          ",1
+"app.use((req, res, next) => {\n            res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');\n            next();\n          });\n          ",0
+"app.use((req, res, next) => {\n            res.setHeader('X-Content-Type-Options', 'nope');\n            next();\n          });\n          ",1
+"app.use((req, res, next) => {\n            res.setHeader('Public-Key-Pins', 'pin-sha256=""base64==""; max-age=5184000; includeSubDomains');\n            next();\n          });\n          ",0
+"app.use((req, res, next) => {\n            res.setHeader('Public-Key-Pins', 'pin-sha256=""invalid""; max-age=5184000');\n            next();\n          });\n          ",1
+"app.use((req, res, next) => {\n            res.setHeader('Expect-CT', 'enforce, max-age=2592000, report-uri=""https://example.com/report-ct""');\n            next();\n          });\n          ",0
+"app.use((req, res, next) => {\n            res.setHeader('Expect-CT', 'enforce');\n            next();\n          });\n          ",1
