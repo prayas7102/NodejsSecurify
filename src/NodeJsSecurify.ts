@@ -195,7 +195,7 @@ export class Log {
                         detectDangerousFunctions(jsonAst, fileContent);
                         console.log('\n');
 
-                        detectVulnerability(Vulnerability.InsecureAuthentication, fileContent);
+                        detectVulnerability(Vulnerability.InsecureAuth, fileContent);
                         console.log('\n');
 
                         detectVulnerability(Vulnerability.SecurityHeaders, fileContent);
