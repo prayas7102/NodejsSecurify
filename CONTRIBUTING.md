@@ -49,7 +49,7 @@ The above terminal would keep on running continously for realtime compilation.
 
 3. In 2nd terminal run (to run tests in TestFolder):
 ```bash
-    node ./dist/NodeJsSecurify.js
+    node ./dist/src/NodeJsSecurify.js
 ```
 Run this after every change you make in source code.
 
