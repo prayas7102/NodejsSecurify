@@ -81,7 +81,6 @@ export class Log {
             console.log(colors.green('\n******************************************************************************************'));
             console.log(colors.green('****************************** Node-Js-Securify STARTED ***************************'));
             console.log(colors.green('******************************************************************************************'));
-
             console.log(colors.yellow('\nSearching for .js files in (root directory) : ') + colors.rainbow(__dirname));
 
             // concat all the results from gitignore files
