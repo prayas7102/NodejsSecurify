@@ -15,11 +15,12 @@
 // => "Insecure Authentication",
 // => "Code Injection",
 
-import * as colors from 'colors';
 import * as esprima from 'esprima';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as util from 'util';
+import colors from 'colors';
+
 import { Vulnerability, detectVulnerability } from './Vulnerability/Vulnerability';
 import { checkVulnerablePackages } from './Vulnerability/DetectUnsafeNpmPackage';
 import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
@@ -77,29 +78,29 @@ export class Log {
 
             __dirname = extractParentPath(__dirname);
 
-            console.log('\n******************************************************************************************'.green);
-            console.log('****************************** Node-Js-Securify STARTED ***************************'.green);
-            console.log('******************************************************************************************'.green);
+            console.log(colors.green('\n******************************************************************************************'));
+            console.log(colors.green('****************************** Node-Js-Securify STARTED ***************************'));
+            console.log(colors.green('******************************************************************************************'));
 
-            console.log('\nSearching for .js files in (root directory) : '.yellow + __dirname.rainbow);
+            console.log(colors.yellow('\nSearching for .js files in (root directory) : ') + colors.rainbow(__dirname));
 
             // concat all the results from gitignore files
             let gitIgnoreFiles: string = Log.findGitIgnoreFiles(__dirname);
 
             let gitIgnoreFilesArray: string[] = gitIgnoreFiles.split('\n');
-            console.log('\nFile names in .gitignore files not getting parsed: \n'.yellow);
+            console.log(colors.yellow('\nFile names in .gitignore files not getting parsed: \n'));
 
             // including node_modules in gitIgnoreFilesArray
             gitIgnoreFilesArray.push('node_modules');
             const arrayString = gitIgnoreFilesArray.join(', ');
-            console.log(arrayString.cyan);
+            console.log(colors.cyan(arrayString));
 
             // parsing all the .js & .jsx files, except files in gitIgnoreFilesArray
-            console.log('\nFile path name of .js & .jsx files getting parsed: \n'.yellow);
+            console.log(colors.yellow('\nFile path name of .js & .jsx files getting parsed: \n'));
             Log.parseJSFiles(__dirname, gitIgnoreFilesArray);
 
             // parsing for vulnerable npm pacakage
-            console.log("Parsing for vulnerable npm pacakage (check NodeJsSecurifyReport.log in root dir)".blue);
+            console.log(colors.blue('Parsing for vulnerable npm pacakage (check NodeJsSecurifyReport.log in root dir)'));
             checkVulnerablePackages(__dirname, logFile.path)
                 .then(() => {
                     // Once the audit completes, call generatePDFReport
@@ -109,8 +110,8 @@ export class Log {
 
             logFile.end();
         } catch (error: any) {
-            console.log('Error parsing file'.underline.red);
-            console.log('Please resolve error in file (check last file path) before running NodeJsSecurify'.underline.red);
+            console.log(colors.red.underline('Error parsing file'));
+            console.log(colors.red.underline('Please resolve error in file (check last file path) before running NodeJsSecurify'));
             console.error(error);
         }
     }
@@ -162,7 +163,7 @@ export class Log {
                     Log.parseJSFiles(filePath, gitIgnoreFilesArray);
                 } else if (fileLastName === '.js' || fileLastName === '.jsx' || fileLastName === '.tsx' || fileLastName === '.ts') {
                     try {
-                        console.log(filePath.blue);
+                        console.log(colors.blue(filePath));
                         const fileContent: string = fs?.readFileSync(filePath, 'utf8');
 
                         // Parse the file content using the esprima parser
