@@ -1,6 +1,6 @@
 # CONTRIBUTING
 
-## Contribution guidelines
+## Guidelines
 
 We welcome contributions to this project! Please follow the guidelines below to
 ensure that your contributions are easy to integrate:
@@ -43,7 +43,7 @@ ensure that your contributions are easy to integrate:
    1. Change mode to 'DEV' (switch to 'DEV' mode while testing and 'PROD' mode
       while pushing the code).
 
-   1. Update `\_\_dirname` path depending on the path of `TestFolder/`
+   1. Update `__dirname` path depending on the path of `TestFolder/`
       according to your system.
 
 1. Now open two terminals in VSCode, or any other code editor or IDE.
