@@ -53,10 +53,28 @@ The above terminal would keep on running continously for realtime compilation.
 ```
 Run this after every change you make in source code.
 
-3. Output:
+4. Output:
 The output would be generated in 2nd terminal as well as in a pdf (NodeJsSecurifyReport.pdf) or log file (NodeJsSecurifyReport.log) generated in your root dir.
 
-### Coding Standards
+### Unit And Integration Tests
+
+To execute tests in the `tests/` directory, the following section in
+`package.json` is included:
+
+```json
+{
+  "scripts": {
+    "test": "vitest"
+  }
+}
+```
+
+Run `npm run test`, `yarn test`, or `pnpm test`─depending on your package
+manager, and the testing framework will print test results in your terminal.
+
+For more information, see the [writing tests] section.
+
+## Coding Standards
 
 - Follow the existing code style.
 - Include comments where necessary to explain complex logic.
@@ -85,3 +103,5 @@ We use GitHub Issues to track bugs, enhancements, and general questions. If you 
 ## License
 
 This project is licensed under the **License: ** - [LICENSE.md](https://github.com/prayas7102/NodejsSecurify/blob/main/LICENSE) file for details.
+
+[writing tests]: (https://vitest.dev/guide/#writing-tests)
