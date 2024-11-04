@@ -1,7 +1,8 @@
 /node_modules
+/EsprimaOutput
+/dist
 /package-lock.json
 /publish.txt
 /img.jpg
-/dist
 *.log
 *.pdf
