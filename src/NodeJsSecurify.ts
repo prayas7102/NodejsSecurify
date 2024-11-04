@@ -21,7 +21,8 @@ import * as path from 'path';
 import * as util from 'util';
 import colors from 'colors';
 
-import { Vulnerability, detectVulnerability } from './Vulnerability/Vulnerability';
+import { detectVulnerability } from './Vulnerability/Vulnerability';
+import { Vulnerability } from './Vulnerability/VulnerabilityTypes';
 import { checkVulnerablePackages } from './Vulnerability/DetectUnsafeNpmPackage';
 import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
 import { detectDangerousFunctions } from './Vulnerability/DetectDangerousFunctions';
@@ -31,11 +32,11 @@ import { isRegexVulnerable } from './Vulnerability/DetectVulnerableRegex';
 const colours = colors;
 // there are two modes DEV and PROD.
 // switch to DEV mode while testing and PROD mode while pushing the code
-const mode: string = 'PROD';
+const mode: string = 'DEV';
 if (mode === 'DEV') {
     // update this path depending on the path of TestFolder according to your system
-    __dirname = 'F:/NodeSecurify/TestFolder';
-    // __dirname = '../TestFolder';
+    // __dirname = 'F:/NodeSecurify/TestFolder';
+    __dirname = './TestFolder';
 }
 
 export class Log {
