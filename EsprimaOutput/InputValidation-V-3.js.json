@@ -1,0 +1,3222 @@
+{
+ "type": "Program",
+ "body": [
+  {
+   "type": "VariableDeclaration",
+   "declarations": [
+    {
+     "type": "VariableDeclarator",
+     "id": {
+      "type": "Identifier",
+      "name": "express",
+      "loc": {
+       "start": {
+        "line": 1,
+        "column": 6
+       },
+       "end": {
+        "line": 1,
+        "column": 13
+       }
+      }
+     },
+     "init": {
+      "type": "CallExpression",
+      "callee": {
+       "type": "Identifier",
+       "name": "require",
+       "loc": {
+        "start": {
+         "line": 1,
+         "column": 16
+        },
+        "end": {
+         "line": 1,
+         "column": 23
+        }
+       }
+      },
+      "arguments": [
+       {
+        "type": "Literal",
+        "value": "express",
+        "raw": "'express'",
+        "loc": {
+         "start": {
+          "line": 1,
+          "column": 24
+         },
+         "end": {
+          "line": 1,
+          "column": 33
+         }
+        }
+       }
+      ],
+      "loc": {
+       "start": {
+        "line": 1,
+        "column": 16
+       },
+       "end": {
+        "line": 1,
+        "column": 34
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 1,
+       "column": 6
+      },
+      "end": {
+       "line": 1,
+       "column": 34
+      }
+     }
+    }
+   ],
+   "kind": "const",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 0
+    },
+    "end": {
+     "line": 1,
+     "column": 35
+    }
+   }
+  },
+  {
+   "type": "VariableDeclaration",
+   "declarations": [
+    {
+     "type": "VariableDeclarator",
+     "id": {
+      "type": "Identifier",
+      "name": "jwt",
+      "loc": {
+       "start": {
+        "line": 2,
+        "column": 6
+       },
+       "end": {
+        "line": 2,
+        "column": 9
+       }
+      }
+     },
+     "init": {
+      "type": "CallExpression",
+      "callee": {
+       "type": "Identifier",
+       "name": "require",
+       "loc": {
+        "start": {
+         "line": 2,
+         "column": 12
+        },
+        "end": {
+         "line": 2,
+         "column": 19
+        }
+       }
+      },
+      "arguments": [
+       {
+        "type": "Literal",
+        "value": "jsonwebtoken",
+        "raw": "'jsonwebtoken'",
+        "loc": {
+         "start": {
+          "line": 2,
+          "column": 20
+         },
+         "end": {
+          "line": 2,
+          "column": 34
+         }
+        }
+       }
+      ],
+      "loc": {
+       "start": {
+        "line": 2,
+        "column": 12
+       },
+       "end": {
+        "line": 2,
+        "column": 35
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 2,
+       "column": 6
+      },
+      "end": {
+       "line": 2,
+       "column": 35
+      }
+     }
+    }
+   ],
+   "kind": "const",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 0
+    },
+    "end": {
+     "line": 2,
+     "column": 36
+    }
+   }
+  },
+  {
+   "type": "VariableDeclaration",
+   "declarations": [
+    {
+     "type": "VariableDeclarator",
+     "id": {
+      "type": "Identifier",
+      "name": "app",
+      "loc": {
+       "start": {
+        "line": 3,
+        "column": 6
+       },
+       "end": {
+        "line": 3,
+        "column": 9
+       }
+      }
+     },
+     "init": {
+      "type": "CallExpression",
+      "callee": {
+       "type": "Identifier",
+       "name": "express",
+       "loc": {
+        "start": {
+         "line": 3,
+         "column": 12
+        },
+        "end": {
+         "line": 3,
+         "column": 19
+        }
+       }
+      },
+      "arguments": [],
+      "loc": {
+       "start": {
+        "line": 3,
+        "column": 12
+       },
+       "end": {
+        "line": 3,
+        "column": 21
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 3,
+       "column": 6
+      },
+      "end": {
+       "line": 3,
+       "column": 21
+      }
+     }
+    }
+   ],
+   "kind": "const",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 0
+    },
+    "end": {
+     "line": 3,
+     "column": 22
+    }
+   }
+  },
+  {
+   "type": "ExpressionStatement",
+   "expression": {
+    "type": "CallExpression",
+    "callee": {
+     "type": "MemberExpression",
+     "computed": false,
+     "object": {
+      "type": "Identifier",
+      "name": "app",
+      "loc": {
+       "start": {
+        "line": 5,
+        "column": 0
+       },
+       "end": {
+        "line": 5,
+        "column": 3
+       }
+      }
+     },
+     "property": {
+      "type": "Identifier",
+      "name": "post",
+      "loc": {
+       "start": {
+        "line": 5,
+        "column": 4
+       },
+       "end": {
+        "line": 5,
+        "column": 8
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 5,
+       "column": 0
+      },
+      "end": {
+       "line": 5,
+       "column": 8
+      }
+     }
+    },
+    "arguments": [
+     {
+      "type": "Literal",
+      "value": "/verify-token",
+      "raw": "'/verify-token'",
+      "loc": {
+       "start": {
+        "line": 5,
+        "column": 9
+       },
+       "end": {
+        "line": 5,
+        "column": 24
+       }
+      }
+     },
+     {
+      "type": "ArrowFunctionExpression",
+      "id": null,
+      "params": [
+       {
+        "type": "Identifier",
+        "name": "req",
+        "loc": {
+         "start": {
+          "line": 5,
+          "column": 27
+         },
+         "end": {
+          "line": 5,
+          "column": 30
+         }
+        }
+       },
+       {
+        "type": "Identifier",
+        "name": "res",
+        "loc": {
+         "start": {
+          "line": 5,
+          "column": 32
+         },
+         "end": {
+          "line": 5,
+          "column": 35
+         }
+        }
+       }
+      ],
+      "body": {
+       "type": "BlockStatement",
+       "body": [
+        {
+         "type": "VariableDeclaration",
+         "declarations": [
+          {
+           "type": "VariableDeclarator",
+           "id": {
+            "type": "Identifier",
+            "name": "token",
+            "loc": {
+             "start": {
+              "line": 6,
+              "column": 8
+             },
+             "end": {
+              "line": 6,
+              "column": 13
+             }
+            }
+           },
+           "init": {
+            "type": "MemberExpression",
+            "computed": false,
+            "object": {
+             "type": "MemberExpression",
+             "computed": false,
+             "object": {
+              "type": "Identifier",
+              "name": "req",
+              "loc": {
+               "start": {
+                "line": 6,
+                "column": 16
+               },
+               "end": {
+                "line": 6,
+                "column": 19
+               }
+              }
+             },
+             "property": {
+              "type": "Identifier",
+              "name": "headers",
+              "loc": {
+               "start": {
+                "line": 6,
+                "column": 20
+               },
+               "end": {
+                "line": 6,
+                "column": 27
+               }
+              }
+             },
+             "loc": {
+              "start": {
+               "line": 6,
+               "column": 16
+              },
+              "end": {
+               "line": 6,
+               "column": 27
+              }
+             }
+            },
+            "property": {
+             "type": "Identifier",
+             "name": "authorization",
+             "loc": {
+              "start": {
+               "line": 6,
+               "column": 28
+              },
+              "end": {
+               "line": 6,
+               "column": 41
+              }
+             }
+            },
+            "loc": {
+             "start": {
+              "line": 6,
+              "column": 16
+             },
+             "end": {
+              "line": 6,
+              "column": 41
+             }
+            }
+           },
+           "loc": {
+            "start": {
+             "line": 6,
+             "column": 8
+            },
+            "end": {
+             "line": 6,
+             "column": 41
+            }
+           }
+          }
+         ],
+         "kind": "const",
+         "loc": {
+          "start": {
+           "line": 6,
+           "column": 2
+          },
+          "end": {
+           "line": 6,
+           "column": 42
+          }
+         }
+        },
+        {
+         "type": "VariableDeclaration",
+         "declarations": [
+          {
+           "type": "VariableDeclarator",
+           "id": {
+            "type": "Identifier",
+            "name": "decodedToken",
+            "loc": {
+             "start": {
+              "line": 11,
+              "column": 8
+             },
+             "end": {
+              "line": 11,
+              "column": 20
+             }
+            }
+           },
+           "init": {
+            "type": "CallExpression",
+            "callee": {
+             "type": "MemberExpression",
+             "computed": false,
+             "object": {
+              "type": "Identifier",
+              "name": "jwt",
+              "loc": {
+               "start": {
+                "line": 11,
+                "column": 23
+               },
+               "end": {
+                "line": 11,
+                "column": 26
+               }
+              }
+             },
+             "property": {
+              "type": "Identifier",
+              "name": "verify",
+              "loc": {
+               "start": {
+                "line": 11,
+                "column": 27
+               },
+               "end": {
+                "line": 11,
+                "column": 33
+               }
+              }
+             },
+             "loc": {
+              "start": {
+               "line": 11,
+               "column": 23
+              },
+              "end": {
+               "line": 11,
+               "column": 33
+              }
+             }
+            },
+            "arguments": [
+             {
+              "type": "Identifier",
+              "name": "token",
+              "loc": {
+               "start": {
+                "line": 11,
+                "column": 34
+               },
+               "end": {
+                "line": 11,
+                "column": 39
+               }
+              }
+             },
+             {
+              "type": "Literal",
+              "value": "secret_key",
+              "raw": "'secret_key'",
+              "loc": {
+               "start": {
+                "line": 11,
+                "column": 41
+               },
+               "end": {
+                "line": 11,
+                "column": 53
+               }
+              }
+             }
+            ],
+            "loc": {
+             "start": {
+              "line": 11,
+              "column": 23
+             },
+             "end": {
+              "line": 11,
+              "column": 54
+             }
+            }
+           },
+           "loc": {
+            "start": {
+             "line": 11,
+             "column": 8
+            },
+            "end": {
+             "line": 11,
+             "column": 54
+            }
+           }
+          }
+         ],
+         "kind": "const",
+         "loc": {
+          "start": {
+           "line": 11,
+           "column": 2
+          },
+          "end": {
+           "line": 11,
+           "column": 55
+          }
+         }
+        },
+        {
+         "type": "ExpressionStatement",
+         "expression": {
+          "type": "CallExpression",
+          "callee": {
+           "type": "MemberExpression",
+           "computed": false,
+           "object": {
+            "type": "Identifier",
+            "name": "res",
+            "loc": {
+             "start": {
+              "line": 12,
+              "column": 2
+             },
+             "end": {
+              "line": 12,
+              "column": 5
+             }
+            }
+           },
+           "property": {
+            "type": "Identifier",
+            "name": "send",
+            "loc": {
+             "start": {
+              "line": 12,
+              "column": 6
+             },
+             "end": {
+              "line": 12,
+              "column": 10
+             }
+            }
+           },
+           "loc": {
+            "start": {
+             "line": 12,
+             "column": 2
+            },
+            "end": {
+             "line": 12,
+             "column": 10
+            }
+           }
+          },
+          "arguments": [
+           {
+            "type": "Literal",
+            "value": "Token verified successfully!",
+            "raw": "'Token verified successfully!'",
+            "loc": {
+             "start": {
+              "line": 12,
+              "column": 11
+             },
+             "end": {
+              "line": 12,
+              "column": 41
+             }
+            }
+           }
+          ],
+          "loc": {
+           "start": {
+            "line": 12,
+            "column": 2
+           },
+           "end": {
+            "line": 12,
+            "column": 42
+           }
+          }
+         },
+         "loc": {
+          "start": {
+           "line": 12,
+           "column": 2
+          },
+          "end": {
+           "line": 12,
+           "column": 43
+          }
+         }
+        }
+       ],
+       "loc": {
+        "start": {
+         "line": 5,
+         "column": 40
+        },
+        "end": {
+         "line": 13,
+         "column": 1
+        }
+       }
+      },
+      "generator": false,
+      "expression": false,
+      "async": false,
+      "loc": {
+       "start": {
+        "line": 5,
+        "column": 26
+       },
+       "end": {
+        "line": 13,
+        "column": 1
+       }
+      }
+     }
+    ],
+    "loc": {
+     "start": {
+      "line": 5,
+      "column": 0
+     },
+     "end": {
+      "line": 13,
+      "column": 2
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 0
+    },
+    "end": {
+     "line": 13,
+     "column": 3
+    }
+   }
+  },
+  {
+   "type": "ExpressionStatement",
+   "expression": {
+    "type": "CallExpression",
+    "callee": {
+     "type": "MemberExpression",
+     "computed": false,
+     "object": {
+      "type": "Identifier",
+      "name": "app",
+      "loc": {
+       "start": {
+        "line": 15,
+        "column": 0
+       },
+       "end": {
+        "line": 15,
+        "column": 3
+       }
+      }
+     },
+     "property": {
+      "type": "Identifier",
+      "name": "get",
+      "loc": {
+       "start": {
+        "line": 15,
+        "column": 4
+       },
+       "end": {
+        "line": 15,
+        "column": 7
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 15,
+       "column": 0
+      },
+      "end": {
+       "line": 15,
+       "column": 7
+      }
+     }
+    },
+    "arguments": [
+     {
+      "type": "Literal",
+      "value": "/search",
+      "raw": "'/search'",
+      "loc": {
+       "start": {
+        "line": 15,
+        "column": 8
+       },
+       "end": {
+        "line": 15,
+        "column": 17
+       }
+      }
+     },
+     {
+      "type": "ArrowFunctionExpression",
+      "id": null,
+      "params": [
+       {
+        "type": "Identifier",
+        "name": "req",
+        "loc": {
+         "start": {
+          "line": 15,
+          "column": 20
+         },
+         "end": {
+          "line": 15,
+          "column": 23
+         }
+        }
+       },
+       {
+        "type": "Identifier",
+        "name": "res",
+        "loc": {
+         "start": {
+          "line": 15,
+          "column": 25
+         },
+         "end": {
+          "line": 15,
+          "column": 28
+         }
+        }
+       }
+      ],
+      "body": {
+       "type": "BlockStatement",
+       "body": [
+        {
+         "type": "VariableDeclaration",
+         "declarations": [
+          {
+           "type": "VariableDeclarator",
+           "id": {
+            "type": "Identifier",
+            "name": "pattern",
+            "loc": {
+             "start": {
+              "line": 16,
+              "column": 10
+             },
+             "end": {
+              "line": 16,
+              "column": 17
+             }
+            }
+           },
+           "init": {
+            "type": "MemberExpression",
+            "computed": false,
+            "object": {
+             "type": "MemberExpression",
+             "computed": false,
+             "object": {
+              "type": "Identifier",
+              "name": "req",
+              "loc": {
+               "start": {
+                "line": 16,
+                "column": 20
+               },
+               "end": {
+                "line": 16,
+                "column": 23
+               }
+              }
+             },
+             "property": {
+              "type": "Identifier",
+              "name": "query",
+              "loc": {
+               "start": {
+                "line": 16,
+                "column": 24
+               },
+               "end": {
+                "line": 16,
+                "column": 29
+               }
+              }
+             },
+             "loc": {
+              "start": {
+               "line": 16,
+               "column": 20
+              },
+              "end": {
+               "line": 16,
+               "column": 29
+              }
+             }
+            },
+            "property": {
+             "type": "Identifier",
+             "name": "pattern",
+             "loc": {
+              "start": {
+               "line": 16,
+               "column": 30
+              },
+              "end": {
+               "line": 16,
+               "column": 37
+              }
+             }
+            },
+            "loc": {
+             "start": {
+              "line": 16,
+              "column": 20
+             },
+             "end": {
+              "line": 16,
+              "column": 37
+             }
+            }
+           },
+           "loc": {
+            "start": {
+             "line": 16,
+             "column": 10
+            },
+            "end": {
+             "line": 16,
+             "column": 37
+            }
+           }
+          }
+         ],
+         "kind": "const",
+         "loc": {
+          "start": {
+           "line": 16,
+           "column": 4
+          },
+          "end": {
+           "line": 16,
+           "column": 38
+          }
+         }
+        },
+        {
+         "type": "VariableDeclaration",
+         "declarations": [
+          {
+           "type": "VariableDeclarator",
+           "id": {
+            "type": "Identifier",
+            "name": "regex",
+            "loc": {
+             "start": {
+              "line": 21,
+              "column": 10
+             },
+             "end": {
+              "line": 21,
+              "column": 15
+             }
+            }
+           },
+           "init": {
+            "type": "NewExpression",
+            "callee": {
+             "type": "Identifier",
+             "name": "RegExp",
+             "loc": {
+              "start": {
+               "line": 21,
+               "column": 22
+              },
+              "end": {
+               "line": 21,
+               "column": 28
+              }
+             }
+            },
+            "arguments": [
+             {
+              "type": "Identifier",
+              "name": "pattern",
+              "loc": {
+               "start": {
+                "line": 21,
+                "column": 29
+               },
+               "end": {
+                "line": 21,
+                "column": 36
+               }
+              }
+             }
+            ],
+            "loc": {
+             "start": {
+              "line": 21,
+              "column": 18
+             },
+             "end": {
+              "line": 21,
+              "column": 37
+             }
+            }
+           },
+           "loc": {
+            "start": {
+             "line": 21,
+             "column": 10
+            },
+            "end": {
+             "line": 21,
+             "column": 37
+            }
+           }
+          }
+         ],
+         "kind": "const",
+         "loc": {
+          "start": {
+           "line": 21,
+           "column": 4
+          },
+          "end": {
+           "line": 21,
+           "column": 38
+          }
+         }
+        },
+        {
+         "type": "ExpressionStatement",
+         "expression": {
+          "type": "CallExpression",
+          "callee": {
+           "type": "MemberExpression",
+           "computed": false,
+           "object": {
+            "type": "Identifier",
+            "name": "res",
+            "loc": {
+             "start": {
+              "line": 22,
+              "column": 4
+             },
+             "end": {
+              "line": 22,
+              "column": 7
+             }
+            }
+           },
+           "property": {
+            "type": "Identifier",
+            "name": "send",
+            "loc": {
+             "start": {
+              "line": 22,
+              "column": 8
+             },
+             "end": {
+              "line": 22,
+              "column": 12
+             }
+            }
+           },
+           "loc": {
+            "start": {
+             "line": 22,
+             "column": 4
+            },
+            "end": {
+             "line": 22,
+             "column": 12
+            }
+           }
+          },
+          "arguments": [
+           {
+            "type": "Literal",
+            "value": "Search executed successfully!",
+            "raw": "'Search executed successfully!'",
+            "loc": {
+             "start": {
+              "line": 22,
+              "column": 13
+             },
+             "end": {
+              "line": 22,
+              "column": 44
+             }
+            }
+           }
+          ],
+          "loc": {
+           "start": {
+            "line": 22,
+            "column": 4
+           },
+           "end": {
+            "line": 22,
+            "column": 45
+           }
+          }
+         },
+         "loc": {
+          "start": {
+           "line": 22,
+           "column": 4
+          },
+          "end": {
+           "line": 22,
+           "column": 46
+          }
+         }
+        }
+       ],
+       "loc": {
+        "start": {
+         "line": 15,
+         "column": 33
+        },
+        "end": {
+         "line": 23,
+         "column": 1
+        }
+       }
+      },
+      "generator": false,
+      "expression": false,
+      "async": false,
+      "loc": {
+       "start": {
+        "line": 15,
+        "column": 19
+       },
+       "end": {
+        "line": 23,
+        "column": 1
+       }
+      }
+     }
+    ],
+    "loc": {
+     "start": {
+      "line": 15,
+      "column": 0
+     },
+     "end": {
+      "line": 23,
+      "column": 2
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 0
+    },
+    "end": {
+     "line": 23,
+     "column": 3
+    }
+   }
+  },
+  {
+   "type": "ExpressionStatement",
+   "expression": {
+    "type": "CallExpression",
+    "callee": {
+     "type": "MemberExpression",
+     "computed": false,
+     "object": {
+      "type": "Identifier",
+      "name": "app",
+      "loc": {
+       "start": {
+        "line": 25,
+        "column": 0
+       },
+       "end": {
+        "line": 25,
+        "column": 3
+       }
+      }
+     },
+     "property": {
+      "type": "Identifier",
+      "name": "listen",
+      "loc": {
+       "start": {
+        "line": 25,
+        "column": 4
+       },
+       "end": {
+        "line": 25,
+        "column": 10
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 25,
+       "column": 0
+      },
+      "end": {
+       "line": 25,
+       "column": 10
+      }
+     }
+    },
+    "arguments": [
+     {
+      "type": "Literal",
+      "value": 3000,
+      "raw": "3000",
+      "loc": {
+       "start": {
+        "line": 25,
+        "column": 11
+       },
+       "end": {
+        "line": 25,
+        "column": 15
+       }
+      }
+     },
+     {
+      "type": "ArrowFunctionExpression",
+      "id": null,
+      "params": [],
+      "body": {
+       "type": "BlockStatement",
+       "body": [
+        {
+         "type": "ExpressionStatement",
+         "expression": {
+          "type": "CallExpression",
+          "callee": {
+           "type": "MemberExpression",
+           "computed": false,
+           "object": {
+            "type": "Identifier",
+            "name": "console",
+            "loc": {
+             "start": {
+              "line": 26,
+              "column": 2
+             },
+             "end": {
+              "line": 26,
+              "column": 9
+             }
+            }
+           },
+           "property": {
+            "type": "Identifier",
+            "name": "log",
+            "loc": {
+             "start": {
+              "line": 26,
+              "column": 10
+             },
+             "end": {
+              "line": 26,
+              "column": 13
+             }
+            }
+           },
+           "loc": {
+            "start": {
+             "line": 26,
+             "column": 2
+            },
+            "end": {
+             "line": 26,
+             "column": 13
+            }
+           }
+          },
+          "arguments": [
+           {
+            "type": "Literal",
+            "value": "Server is running on port 3000",
+            "raw": "'Server is running on port 3000'",
+            "loc": {
+             "start": {
+              "line": 26,
+              "column": 14
+             },
+             "end": {
+              "line": 26,
+              "column": 46
+             }
+            }
+           }
+          ],
+          "loc": {
+           "start": {
+            "line": 26,
+            "column": 2
+           },
+           "end": {
+            "line": 26,
+            "column": 47
+           }
+          }
+         },
+         "loc": {
+          "start": {
+           "line": 26,
+           "column": 2
+          },
+          "end": {
+           "line": 26,
+           "column": 48
+          }
+         }
+        }
+       ],
+       "loc": {
+        "start": {
+         "line": 25,
+         "column": 23
+        },
+        "end": {
+         "line": 27,
+         "column": 1
+        }
+       }
+      },
+      "generator": false,
+      "expression": false,
+      "async": false,
+      "loc": {
+       "start": {
+        "line": 25,
+        "column": 17
+       },
+       "end": {
+        "line": 27,
+        "column": 1
+       }
+      }
+     }
+    ],
+    "loc": {
+     "start": {
+      "line": 25,
+      "column": 0
+     },
+     "end": {
+      "line": 27,
+      "column": 2
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 25,
+     "column": 0
+    },
+    "end": {
+     "line": 27,
+     "column": 3
+    }
+   }
+  }
+ ],
+ "sourceType": "script",
+ "loc": {
+  "start": {
+   "line": 1,
+   "column": 0
+  },
+  "end": {
+   "line": 27,
+   "column": 3
+  }
+ },
+ "comments": [
+  {
+   "type": "Line",
+   "value": " Improper input validation: No checks on token format or existence.",
+   "loc": {
+    "start": {
+     "line": 8,
+     "column": 2
+    },
+    "end": {
+     "line": 8,
+     "column": 71
+    }
+   }
+  },
+  {
+   "type": "Line",
+   "value": " This can lead to security issues if the token is malformed or missing.",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 2
+    },
+    "end": {
+     "line": 9,
+     "column": 75
+    }
+   }
+  },
+  {
+   "type": "Line",
+   "value": " Improper input validation: No checks on the pattern input.",
+   "loc": {
+    "start": {
+     "line": 18,
+     "column": 4
+    },
+    "end": {
+     "line": 18,
+     "column": 65
+    }
+   }
+  },
+  {
+   "type": "Line",
+   "value": " Could lead to Regular Expression Denial of Service (ReDoS) attacks.",
+   "loc": {
+    "start": {
+     "line": 19,
+     "column": 4
+    },
+    "end": {
+     "line": 19,
+     "column": 74
+    }
+   }
+  }
+ ],
+ "tokens": [
+  {
+   "type": "Keyword",
+   "value": "const",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 0
+    },
+    "end": {
+     "line": 1,
+     "column": 5
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "express",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 6
+    },
+    "end": {
+     "line": 1,
+     "column": 13
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 14
+    },
+    "end": {
+     "line": 1,
+     "column": 15
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "require",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 16
+    },
+    "end": {
+     "line": 1,
+     "column": 23
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 23
+    },
+    "end": {
+     "line": 1,
+     "column": 24
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'express'",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 24
+    },
+    "end": {
+     "line": 1,
+     "column": 33
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 33
+    },
+    "end": {
+     "line": 1,
+     "column": 34
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 34
+    },
+    "end": {
+     "line": 1,
+     "column": 35
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "const",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 0
+    },
+    "end": {
+     "line": 2,
+     "column": 5
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "jwt",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 6
+    },
+    "end": {
+     "line": 2,
+     "column": 9
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 10
+    },
+    "end": {
+     "line": 2,
+     "column": 11
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "require",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 12
+    },
+    "end": {
+     "line": 2,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 19
+    },
+    "end": {
+     "line": 2,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'jsonwebtoken'",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 20
+    },
+    "end": {
+     "line": 2,
+     "column": 34
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 34
+    },
+    "end": {
+     "line": 2,
+     "column": 35
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 35
+    },
+    "end": {
+     "line": 2,
+     "column": 36
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "const",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 0
+    },
+    "end": {
+     "line": 3,
+     "column": 5
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "app",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 6
+    },
+    "end": {
+     "line": 3,
+     "column": 9
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 10
+    },
+    "end": {
+     "line": 3,
+     "column": 11
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "express",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 12
+    },
+    "end": {
+     "line": 3,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 19
+    },
+    "end": {
+     "line": 3,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 20
+    },
+    "end": {
+     "line": 3,
+     "column": 21
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 21
+    },
+    "end": {
+     "line": 3,
+     "column": 22
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "app",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 0
+    },
+    "end": {
+     "line": 5,
+     "column": 3
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 3
+    },
+    "end": {
+     "line": 5,
+     "column": 4
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "post",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 4
+    },
+    "end": {
+     "line": 5,
+     "column": 8
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 8
+    },
+    "end": {
+     "line": 5,
+     "column": 9
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'/verify-token'",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 9
+    },
+    "end": {
+     "line": 5,
+     "column": 24
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ",",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 24
+    },
+    "end": {
+     "line": 5,
+     "column": 25
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 26
+    },
+    "end": {
+     "line": 5,
+     "column": 27
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "req",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 27
+    },
+    "end": {
+     "line": 5,
+     "column": 30
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ",",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 30
+    },
+    "end": {
+     "line": 5,
+     "column": 31
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "res",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 32
+    },
+    "end": {
+     "line": 5,
+     "column": 35
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 35
+    },
+    "end": {
+     "line": 5,
+     "column": 36
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=>",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 37
+    },
+    "end": {
+     "line": 5,
+     "column": 39
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "{",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 40
+    },
+    "end": {
+     "line": 5,
+     "column": 41
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "const",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 2
+    },
+    "end": {
+     "line": 6,
+     "column": 7
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "token",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 8
+    },
+    "end": {
+     "line": 6,
+     "column": 13
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 14
+    },
+    "end": {
+     "line": 6,
+     "column": 15
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "req",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 16
+    },
+    "end": {
+     "line": 6,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 19
+    },
+    "end": {
+     "line": 6,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "headers",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 20
+    },
+    "end": {
+     "line": 6,
+     "column": 27
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 27
+    },
+    "end": {
+     "line": 6,
+     "column": 28
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "authorization",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 28
+    },
+    "end": {
+     "line": 6,
+     "column": 41
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 41
+    },
+    "end": {
+     "line": 6,
+     "column": 42
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "const",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 2
+    },
+    "end": {
+     "line": 11,
+     "column": 7
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "decodedToken",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 8
+    },
+    "end": {
+     "line": 11,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 21
+    },
+    "end": {
+     "line": 11,
+     "column": 22
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "jwt",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 23
+    },
+    "end": {
+     "line": 11,
+     "column": 26
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 26
+    },
+    "end": {
+     "line": 11,
+     "column": 27
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "verify",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 27
+    },
+    "end": {
+     "line": 11,
+     "column": 33
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 33
+    },
+    "end": {
+     "line": 11,
+     "column": 34
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "token",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 34
+    },
+    "end": {
+     "line": 11,
+     "column": 39
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ",",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 39
+    },
+    "end": {
+     "line": 11,
+     "column": 40
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'secret_key'",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 41
+    },
+    "end": {
+     "line": 11,
+     "column": 53
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 53
+    },
+    "end": {
+     "line": 11,
+     "column": 54
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 11,
+     "column": 54
+    },
+    "end": {
+     "line": 11,
+     "column": 55
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "res",
+   "loc": {
+    "start": {
+     "line": 12,
+     "column": 2
+    },
+    "end": {
+     "line": 12,
+     "column": 5
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 12,
+     "column": 5
+    },
+    "end": {
+     "line": 12,
+     "column": 6
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "send",
+   "loc": {
+    "start": {
+     "line": 12,
+     "column": 6
+    },
+    "end": {
+     "line": 12,
+     "column": 10
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 12,
+     "column": 10
+    },
+    "end": {
+     "line": 12,
+     "column": 11
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'Token verified successfully!'",
+   "loc": {
+    "start": {
+     "line": 12,
+     "column": 11
+    },
+    "end": {
+     "line": 12,
+     "column": 41
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 12,
+     "column": 41
+    },
+    "end": {
+     "line": 12,
+     "column": 42
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 12,
+     "column": 42
+    },
+    "end": {
+     "line": 12,
+     "column": 43
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "}",
+   "loc": {
+    "start": {
+     "line": 13,
+     "column": 0
+    },
+    "end": {
+     "line": 13,
+     "column": 1
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 13,
+     "column": 1
+    },
+    "end": {
+     "line": 13,
+     "column": 2
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 13,
+     "column": 2
+    },
+    "end": {
+     "line": 13,
+     "column": 3
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "app",
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 0
+    },
+    "end": {
+     "line": 15,
+     "column": 3
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 3
+    },
+    "end": {
+     "line": 15,
+     "column": 4
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "get",
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 4
+    },
+    "end": {
+     "line": 15,
+     "column": 7
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 7
+    },
+    "end": {
+     "line": 15,
+     "column": 8
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'/search'",
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 8
+    },
+    "end": {
+     "line": 15,
+     "column": 17
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ",",
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 17
+    },
+    "end": {
+     "line": 15,
+     "column": 18
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 19
+    },
+    "end": {
+     "line": 15,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "req",
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 20
+    },
+    "end": {
+     "line": 15,
+     "column": 23
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ",",
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 23
+    },
+    "end": {
+     "line": 15,
+     "column": 24
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "res",
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 25
+    },
+    "end": {
+     "line": 15,
+     "column": 28
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 28
+    },
+    "end": {
+     "line": 15,
+     "column": 29
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=>",
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 30
+    },
+    "end": {
+     "line": 15,
+     "column": 32
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "{",
+   "loc": {
+    "start": {
+     "line": 15,
+     "column": 33
+    },
+    "end": {
+     "line": 15,
+     "column": 34
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "const",
+   "loc": {
+    "start": {
+     "line": 16,
+     "column": 4
+    },
+    "end": {
+     "line": 16,
+     "column": 9
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "pattern",
+   "loc": {
+    "start": {
+     "line": 16,
+     "column": 10
+    },
+    "end": {
+     "line": 16,
+     "column": 17
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=",
+   "loc": {
+    "start": {
+     "line": 16,
+     "column": 18
+    },
+    "end": {
+     "line": 16,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "req",
+   "loc": {
+    "start": {
+     "line": 16,
+     "column": 20
+    },
+    "end": {
+     "line": 16,
+     "column": 23
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 16,
+     "column": 23
+    },
+    "end": {
+     "line": 16,
+     "column": 24
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "query",
+   "loc": {
+    "start": {
+     "line": 16,
+     "column": 24
+    },
+    "end": {
+     "line": 16,
+     "column": 29
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 16,
+     "column": 29
+    },
+    "end": {
+     "line": 16,
+     "column": 30
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "pattern",
+   "loc": {
+    "start": {
+     "line": 16,
+     "column": 30
+    },
+    "end": {
+     "line": 16,
+     "column": 37
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 16,
+     "column": 37
+    },
+    "end": {
+     "line": 16,
+     "column": 38
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "const",
+   "loc": {
+    "start": {
+     "line": 21,
+     "column": 4
+    },
+    "end": {
+     "line": 21,
+     "column": 9
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "regex",
+   "loc": {
+    "start": {
+     "line": 21,
+     "column": 10
+    },
+    "end": {
+     "line": 21,
+     "column": 15
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=",
+   "loc": {
+    "start": {
+     "line": 21,
+     "column": 16
+    },
+    "end": {
+     "line": 21,
+     "column": 17
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "new",
+   "loc": {
+    "start": {
+     "line": 21,
+     "column": 18
+    },
+    "end": {
+     "line": 21,
+     "column": 21
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "RegExp",
+   "loc": {
+    "start": {
+     "line": 21,
+     "column": 22
+    },
+    "end": {
+     "line": 21,
+     "column": 28
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 21,
+     "column": 28
+    },
+    "end": {
+     "line": 21,
+     "column": 29
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "pattern",
+   "loc": {
+    "start": {
+     "line": 21,
+     "column": 29
+    },
+    "end": {
+     "line": 21,
+     "column": 36
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 21,
+     "column": 36
+    },
+    "end": {
+     "line": 21,
+     "column": 37
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 21,
+     "column": 37
+    },
+    "end": {
+     "line": 21,
+     "column": 38
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "res",
+   "loc": {
+    "start": {
+     "line": 22,
+     "column": 4
+    },
+    "end": {
+     "line": 22,
+     "column": 7
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 22,
+     "column": 7
+    },
+    "end": {
+     "line": 22,
+     "column": 8
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "send",
+   "loc": {
+    "start": {
+     "line": 22,
+     "column": 8
+    },
+    "end": {
+     "line": 22,
+     "column": 12
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 22,
+     "column": 12
+    },
+    "end": {
+     "line": 22,
+     "column": 13
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'Search executed successfully!'",
+   "loc": {
+    "start": {
+     "line": 22,
+     "column": 13
+    },
+    "end": {
+     "line": 22,
+     "column": 44
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 22,
+     "column": 44
+    },
+    "end": {
+     "line": 22,
+     "column": 45
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 22,
+     "column": 45
+    },
+    "end": {
+     "line": 22,
+     "column": 46
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "}",
+   "loc": {
+    "start": {
+     "line": 23,
+     "column": 0
+    },
+    "end": {
+     "line": 23,
+     "column": 1
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 23,
+     "column": 1
+    },
+    "end": {
+     "line": 23,
+     "column": 2
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 23,
+     "column": 2
+    },
+    "end": {
+     "line": 23,
+     "column": 3
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "app",
+   "loc": {
+    "start": {
+     "line": 25,
+     "column": 0
+    },
+    "end": {
+     "line": 25,
+     "column": 3
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 25,
+     "column": 3
+    },
+    "end": {
+     "line": 25,
+     "column": 4
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "listen",
+   "loc": {
+    "start": {
+     "line": 25,
+     "column": 4
+    },
+    "end": {
+     "line": 25,
+     "column": 10
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 25,
+     "column": 10
+    },
+    "end": {
+     "line": 25,
+     "column": 11
+    }
+   }
+  },
+  {
+   "type": "Numeric",
+   "value": "3000",
+   "loc": {
+    "start": {
+     "line": 25,
+     "column": 11
+    },
+    "end": {
+     "line": 25,
+     "column": 15
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ",",
+   "loc": {
+    "start": {
+     "line": 25,
+     "column": 15
+    },
+    "end": {
+     "line": 25,
+     "column": 16
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 25,
+     "column": 17
+    },
+    "end": {
+     "line": 25,
+     "column": 18
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 25,
+     "column": 18
+    },
+    "end": {
+     "line": 25,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=>",
+   "loc": {
+    "start": {
+     "line": 25,
+     "column": 20
+    },
+    "end": {
+     "line": 25,
+     "column": 22
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "{",
+   "loc": {
+    "start": {
+     "line": 25,
+     "column": 23
+    },
+    "end": {
+     "line": 25,
+     "column": 24
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "console",
+   "loc": {
+    "start": {
+     "line": 26,
+     "column": 2
+    },
+    "end": {
+     "line": 26,
+     "column": 9
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 26,
+     "column": 9
+    },
+    "end": {
+     "line": 26,
+     "column": 10
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "log",
+   "loc": {
+    "start": {
+     "line": 26,
+     "column": 10
+    },
+    "end": {
+     "line": 26,
+     "column": 13
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 26,
+     "column": 13
+    },
+    "end": {
+     "line": 26,
+     "column": 14
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'Server is running on port 3000'",
+   "loc": {
+    "start": {
+     "line": 26,
+     "column": 14
+    },
+    "end": {
+     "line": 26,
+     "column": 46
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 26,
+     "column": 46
+    },
+    "end": {
+     "line": 26,
+     "column": 47
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 26,
+     "column": 47
+    },
+    "end": {
+     "line": 26,
+     "column": 48
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "}",
+   "loc": {
+    "start": {
+     "line": 27,
+     "column": 0
+    },
+    "end": {
+     "line": 27,
+     "column": 1
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 27,
+     "column": 1
+    },
+    "end": {
+     "line": 27,
+     "column": 2
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 27,
+     "column": 2
+    },
+    "end": {
+     "line": 27,
+     "column": 3
+    }
+   }
+  }
+ ],
+ "errors": []
+}
