@@ -160,6 +160,93 @@
    }
   },
   {
+   "type": "VariableDeclaration",
+   "declarations": [
+    {
+     "type": "VariableDeclarator",
+     "id": {
+      "type": "Identifier",
+      "name": "Joi",
+      "loc": {
+       "start": {
+        "line": 3,
+        "column": 6
+       },
+       "end": {
+        "line": 3,
+        "column": 9
+       }
+      }
+     },
+     "init": {
+      "type": "CallExpression",
+      "callee": {
+       "type": "Identifier",
+       "name": "require",
+       "loc": {
+        "start": {
+         "line": 3,
+         "column": 12
+        },
+        "end": {
+         "line": 3,
+         "column": 19
+        }
+       }
+      },
+      "arguments": [
+       {
+        "type": "Literal",
+        "value": "joi",
+        "raw": "'joi'",
+        "loc": {
+         "start": {
+          "line": 3,
+          "column": 20
+         },
+         "end": {
+          "line": 3,
+          "column": 25
+         }
+        }
+       }
+      ],
+      "loc": {
+       "start": {
+        "line": 3,
+        "column": 12
+       },
+       "end": {
+        "line": 3,
+        "column": 26
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 3,
+       "column": 6
+      },
+      "end": {
+       "line": 3,
+       "column": 26
+      }
+     }
+    }
+   ],
+   "kind": "const",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 0
+    },
+    "end": {
+     "line": 3,
+     "column": 27
+    }
+   }
+  },
+  {
    "type": "ExpressionStatement",
    "expression": {
     "type": "CallExpression",
@@ -171,11 +258,11 @@
       "name": "app",
       "loc": {
        "start": {
-        "line": 5,
+        "line": 6,
         "column": 0
        },
        "end": {
-        "line": 5,
+        "line": 6,
         "column": 3
        }
       }
@@ -185,22 +272,22 @@
       "name": "post",
       "loc": {
        "start": {
-        "line": 5,
+        "line": 6,
         "column": 4
        },
        "end": {
-        "line": 5,
+        "line": 6,
         "column": 8
        }
       }
      },
      "loc": {
       "start": {
-       "line": 5,
+       "line": 6,
        "column": 0
       },
       "end": {
-       "line": 5,
+       "line": 6,
        "column": 8
       }
      }
@@ -212,11 +299,11 @@
       "raw": "'/register'",
       "loc": {
        "start": {
-        "line": 5,
+        "line": 6,
         "column": 9
        },
        "end": {
-        "line": 5,
+        "line": 6,
         "column": 20
        }
       }
@@ -230,11 +317,11 @@
         "name": "req",
         "loc": {
          "start": {
-          "line": 5,
+          "line": 6,
           "column": 23
          },
          "end": {
-          "line": 5,
+          "line": 6,
           "column": 26
          }
         }
@@ -244,11 +331,11 @@
         "name": "res",
         "loc": {
          "start": {
-          "line": 5,
+          "line": 6,
           "column": 28
          },
          "end": {
-          "line": 5,
+          "line": 6,
           "column": 31
          }
         }
@@ -272,11 +359,11 @@
                "name": "username",
                "loc": {
                 "start": {
-                 "line": 6,
+                 "line": 7,
                  "column": 10
                 },
                 "end": {
-                 "line": 6,
+                 "line": 7,
                  "column": 18
                 }
                }
@@ -287,11 +374,11 @@
                "name": "username",
                "loc": {
                 "start": {
-                 "line": 6,
+                 "line": 7,
                  "column": 10
                 },
                 "end": {
-                 "line": 6,
+                 "line": 7,
                  "column": 18
                 }
                }
@@ -301,11 +388,11 @@
               "shorthand": true,
               "loc": {
                "start": {
-                "line": 6,
+                "line": 7,
                 "column": 10
                },
                "end": {
-                "line": 6,
+                "line": 7,
                 "column": 18
                }
               }
@@ -317,11 +404,11 @@
                "name": "password",
                "loc": {
                 "start": {
-                 "line": 6,
+                 "line": 7,
                  "column": 20
                 },
                 "end": {
-                 "line": 6,
+                 "line": 7,
                  "column": 28
                 }
                }
@@ -332,11 +419,11 @@
                "name": "password",
                "loc": {
                 "start": {
-                 "line": 6,
+                 "line": 7,
                  "column": 20
                 },
                 "end": {
-                 "line": 6,
+                 "line": 7,
                  "column": 28
                 }
                }
@@ -346,11 +433,11 @@
               "shorthand": true,
               "loc": {
                "start": {
-                "line": 6,
+                "line": 7,
                 "column": 20
                },
                "end": {
-                "line": 6,
+                "line": 7,
                 "column": 28
                }
               }
@@ -358,11 +445,11 @@
             ],
             "loc": {
              "start": {
-              "line": 6,
+              "line": 7,
               "column": 8
              },
              "end": {
-              "line": 6,
+              "line": 7,
               "column": 30
              }
             }
@@ -375,11 +462,11 @@
              "name": "req",
              "loc": {
               "start": {
-               "line": 6,
+               "line": 7,
                "column": 33
               },
               "end": {
-               "line": 6,
+               "line": 7,
                "column": 36
               }
              }
@@ -389,33 +476,33 @@
              "name": "body",
              "loc": {
               "start": {
-               "line": 6,
+               "line": 7,
                "column": 37
               },
               "end": {
-               "line": 6,
+               "line": 7,
                "column": 41
               }
              }
             },
             "loc": {
              "start": {
-              "line": 6,
+              "line": 7,
               "column": 33
              },
              "end": {
-              "line": 6,
+              "line": 7,
               "column": 41
              }
             }
            },
            "loc": {
             "start": {
-             "line": 6,
+             "line": 7,
              "column": 8
             },
             "end": {
-             "line": 6,
+             "line": 7,
              "column": 41
             }
            }
@@ -424,11 +511,11 @@
          "kind": "const",
          "loc": {
           "start": {
-           "line": 6,
+           "line": 7,
            "column": 2
           },
           "end": {
-           "line": 6,
+           "line": 7,
            "column": 42
           }
          }
@@ -445,11 +532,11 @@
             "name": "res",
             "loc": {
              "start": {
-              "line": 14,
+              "line": 9,
               "column": 2
              },
              "end": {
-              "line": 14,
+              "line": 9,
               "column": 5
              }
             }
@@ -459,22 +546,22 @@
             "name": "send",
             "loc": {
              "start": {
-              "line": 14,
+              "line": 9,
               "column": 6
              },
              "end": {
-              "line": 14,
+              "line": 9,
               "column": 10
              }
             }
            },
            "loc": {
             "start": {
-             "line": 14,
+             "line": 9,
              "column": 2
             },
             "end": {
-             "line": 14,
+             "line": 9,
              "column": 10
             }
            }
@@ -486,11 +573,11 @@
             "raw": "'User registered successfully!'",
             "loc": {
              "start": {
-              "line": 14,
+              "line": 9,
               "column": 11
              },
              "end": {
-              "line": 14,
+              "line": 9,
               "column": 42
              }
             }
@@ -498,22 +585,22 @@
           ],
           "loc": {
            "start": {
-            "line": 14,
+            "line": 9,
             "column": 2
            },
            "end": {
-            "line": 14,
+            "line": 9,
             "column": 43
            }
           }
          },
          "loc": {
           "start": {
-           "line": 14,
+           "line": 9,
            "column": 2
           },
           "end": {
-           "line": 14,
+           "line": 9,
            "column": 44
           }
          }
@@ -521,11 +608,11 @@
        ],
        "loc": {
         "start": {
-         "line": 5,
+         "line": 6,
          "column": 36
         },
         "end": {
-         "line": 15,
+         "line": 10,
          "column": 1
         }
        }
@@ -535,11 +622,11 @@
       "async": false,
       "loc": {
        "start": {
-        "line": 5,
+        "line": 6,
         "column": 22
        },
        "end": {
-        "line": 15,
+        "line": 10,
         "column": 1
        }
       }
@@ -547,22 +634,22 @@
     ],
     "loc": {
      "start": {
-      "line": 5,
+      "line": 6,
       "column": 0
      },
      "end": {
-      "line": 15,
+      "line": 10,
       "column": 2
      }
     }
    },
    "loc": {
     "start": {
-     "line": 5,
+     "line": 6,
      "column": 0
     },
     "end": {
-     "line": 15,
+     "line": 10,
      "column": 3
     }
    }
@@ -579,11 +666,11 @@
       "name": "app",
       "loc": {
        "start": {
-        "line": 18,
+        "line": 13,
         "column": 0
        },
        "end": {
-        "line": 18,
+        "line": 13,
         "column": 3
        }
       }
@@ -593,22 +680,22 @@
       "name": "get",
       "loc": {
        "start": {
-        "line": 18,
+        "line": 13,
         "column": 4
        },
        "end": {
-        "line": 18,
+        "line": 13,
         "column": 7
        }
       }
      },
      "loc": {
       "start": {
-       "line": 18,
+       "line": 13,
        "column": 0
       },
       "end": {
-       "line": 18,
+       "line": 13,
        "column": 7
       }
      }
@@ -620,11 +707,11 @@
       "raw": "'/search'",
       "loc": {
        "start": {
-        "line": 18,
+        "line": 13,
         "column": 8
        },
        "end": {
-        "line": 18,
+        "line": 13,
         "column": 17
        }
       }
@@ -638,11 +725,11 @@
         "name": "req",
         "loc": {
          "start": {
-          "line": 18,
+          "line": 13,
           "column": 20
          },
          "end": {
-          "line": 18,
+          "line": 13,
           "column": 23
          }
         }
@@ -652,11 +739,11 @@
         "name": "res",
         "loc": {
          "start": {
-          "line": 18,
+          "line": 13,
           "column": 25
          },
          "end": {
-          "line": 18,
+          "line": 13,
           "column": 28
          }
         }
@@ -675,11 +762,11 @@
             "name": "searchTerm",
             "loc": {
              "start": {
-              "line": 19,
+              "line": 14,
               "column": 8
              },
              "end": {
-              "line": 19,
+              "line": 14,
               "column": 18
              }
             }
@@ -695,11 +782,11 @@
               "name": "req",
               "loc": {
                "start": {
-                "line": 19,
+                "line": 14,
                 "column": 21
                },
                "end": {
-                "line": 19,
+                "line": 14,
                 "column": 24
                }
               }
@@ -709,22 +796,22 @@
               "name": "query",
               "loc": {
                "start": {
-                "line": 19,
+                "line": 14,
                 "column": 25
                },
                "end": {
-                "line": 19,
+                "line": 14,
                 "column": 30
                }
               }
              },
              "loc": {
               "start": {
-               "line": 19,
+               "line": 14,
                "column": 21
               },
               "end": {
-               "line": 19,
+               "line": 14,
                "column": 30
               }
              }
@@ -734,33 +821,33 @@
              "name": "q",
              "loc": {
               "start": {
-               "line": 19,
+               "line": 14,
                "column": 31
               },
               "end": {
-               "line": 19,
+               "line": 14,
                "column": 32
               }
              }
             },
             "loc": {
              "start": {
-              "line": 19,
+              "line": 14,
               "column": 21
              },
              "end": {
-              "line": 19,
+              "line": 14,
               "column": 32
              }
             }
            },
            "loc": {
             "start": {
-             "line": 19,
+             "line": 14,
              "column": 8
             },
             "end": {
-             "line": 19,
+             "line": 14,
              "column": 32
             }
            }
@@ -769,11 +856,11 @@
          "kind": "const",
          "loc": {
           "start": {
-           "line": 19,
+           "line": 14,
            "column": 2
           },
           "end": {
-           "line": 19,
+           "line": 14,
            "column": 33
           }
          }
@@ -790,11 +877,11 @@
             "name": "res",
             "loc": {
              "start": {
-              "line": 24,
+              "line": 16,
               "column": 2
              },
              "end": {
-              "line": 24,
+              "line": 16,
               "column": 5
              }
             }
@@ -804,22 +891,22 @@
             "name": "send",
             "loc": {
              "start": {
-              "line": 24,
+              "line": 16,
               "column": 6
              },
              "end": {
-              "line": 24,
+              "line": 16,
               "column": 10
              }
             }
            },
            "loc": {
             "start": {
-             "line": 24,
+             "line": 16,
              "column": 2
             },
             "end": {
-             "line": 24,
+             "line": 16,
              "column": 10
             }
            }
@@ -831,11 +918,11 @@
             "raw": "'Search results'",
             "loc": {
              "start": {
-              "line": 24,
+              "line": 16,
               "column": 11
              },
              "end": {
-              "line": 24,
+              "line": 16,
               "column": 27
              }
             }
@@ -843,22 +930,22 @@
           ],
           "loc": {
            "start": {
-            "line": 24,
+            "line": 16,
             "column": 2
            },
            "end": {
-            "line": 24,
+            "line": 16,
             "column": 28
            }
           }
          },
          "loc": {
           "start": {
-           "line": 24,
+           "line": 16,
            "column": 2
           },
           "end": {
-           "line": 24,
+           "line": 16,
            "column": 29
           }
          }
@@ -866,11 +953,11 @@
        ],
        "loc": {
         "start": {
-         "line": 18,
+         "line": 13,
          "column": 33
         },
         "end": {
-         "line": 25,
+         "line": 17,
          "column": 1
         }
        }
@@ -880,11 +967,11 @@
       "async": false,
       "loc": {
        "start": {
-        "line": 18,
+        "line": 13,
         "column": 19
        },
        "end": {
-        "line": 25,
+        "line": 17,
         "column": 1
        }
       }
@@ -892,22 +979,22 @@
     ],
     "loc": {
      "start": {
-      "line": 18,
+      "line": 13,
       "column": 0
      },
      "end": {
-      "line": 25,
+      "line": 17,
       "column": 2
      }
     }
    },
    "loc": {
     "start": {
-     "line": 18,
+     "line": 13,
      "column": 0
     },
     "end": {
-     "line": 25,
+     "line": 17,
      "column": 3
     }
    }
@@ -924,11 +1011,11 @@
       "name": "app",
       "loc": {
        "start": {
-        "line": 27,
+        "line": 19,
         "column": 0
        },
        "end": {
-        "line": 27,
+        "line": 19,
         "column": 3
        }
       }
@@ -938,22 +1025,22 @@
       "name": "listen",
       "loc": {
        "start": {
-        "line": 27,
+        "line": 19,
         "column": 4
        },
        "end": {
-        "line": 27,
+        "line": 19,
         "column": 10
        }
       }
      },
      "loc": {
       "start": {
-       "line": 27,
+       "line": 19,
        "column": 0
       },
       "end": {
-       "line": 27,
+       "line": 19,
        "column": 10
       }
      }
@@ -965,11 +1052,11 @@
       "raw": "3000",
       "loc": {
        "start": {
-        "line": 27,
+        "line": 19,
         "column": 11
        },
        "end": {
-        "line": 27,
+        "line": 19,
         "column": 15
        }
       }
@@ -993,11 +1080,11 @@
             "name": "console",
             "loc": {
              "start": {
-              "line": 28,
+              "line": 20,
               "column": 2
              },
              "end": {
-              "line": 28,
+              "line": 20,
               "column": 9
              }
             }
@@ -1007,22 +1094,22 @@
             "name": "log",
             "loc": {
              "start": {
-              "line": 28,
+              "line": 20,
               "column": 10
              },
              "end": {
-              "line": 28,
+              "line": 20,
               "column": 13
              }
             }
            },
            "loc": {
             "start": {
-             "line": 28,
+             "line": 20,
              "column": 2
             },
             "end": {
-             "line": 28,
+             "line": 20,
              "column": 13
             }
            }
@@ -1034,11 +1121,11 @@
             "raw": "'Server started on port 3000'",
             "loc": {
              "start": {
-              "line": 28,
+              "line": 20,
               "column": 14
              },
              "end": {
-              "line": 28,
+              "line": 20,
               "column": 43
              }
             }
@@ -1046,22 +1133,22 @@
           ],
           "loc": {
            "start": {
-            "line": 28,
+            "line": 20,
             "column": 2
            },
            "end": {
-            "line": 28,
+            "line": 20,
             "column": 44
            }
           }
          },
          "loc": {
           "start": {
-           "line": 28,
+           "line": 20,
            "column": 2
           },
           "end": {
-           "line": 28,
+           "line": 20,
            "column": 45
           }
          }
@@ -1069,11 +1156,11 @@
        ],
        "loc": {
         "start": {
-         "line": 27,
+         "line": 19,
          "column": 23
         },
         "end": {
-         "line": 29,
+         "line": 21,
          "column": 1
         }
        }
@@ -1083,11 +1170,11 @@
       "async": false,
       "loc": {
        "start": {
-        "line": 27,
+        "line": 19,
         "column": 17
        },
        "end": {
-        "line": 29,
+        "line": 21,
         "column": 1
        }
       }
@@ -1095,22 +1182,22 @@
     ],
     "loc": {
      "start": {
-      "line": 27,
+      "line": 19,
       "column": 0
      },
      "end": {
-      "line": 29,
+      "line": 21,
       "column": 2
      }
     }
    },
    "loc": {
     "start": {
-     "line": 27,
+     "line": 19,
      "column": 0
     },
     "end": {
-     "line": 29,
+     "line": 21,
      "column": 3
     }
    }
@@ -1123,7 +1210,7 @@
    "column": 0
   },
   "end": {
-   "line": 29,
+   "line": 21,
    "column": 3
   }
  },
@@ -1133,68 +1220,12 @@
    "value": " Route to handle user registration",
    "loc": {
     "start": {
-     "line": 4,
+     "line": 5,
      "column": 0
     },
     "end": {
-     "line": 4,
+     "line": 5,
      "column": 36
-    }
-   }
-  },
-  {
-   "type": "Line",
-   "value": " Improper input validation: No checks on input length or allowed characters",
-   "loc": {
-    "start": {
-     "line": 8,
-     "column": 2
-    },
-    "end": {
-     "line": 8,
-     "column": 79
-    }
-   }
-  },
-  {
-   "type": "Line",
-   "value": " This makes the application vulnerable to various attacks like SQL injection, cross-site scripting (XSS), etc.",
-   "loc": {
-    "start": {
-     "line": 9,
-     "column": 2
-    },
-    "end": {
-     "line": 9,
-     "column": 114
-    }
-   }
-  },
-  {
-   "type": "Line",
-   "value": " Save user to the database (not shown in this example)",
-   "loc": {
-    "start": {
-     "line": 11,
-     "column": 2
-    },
-    "end": {
-     "line": 11,
-     "column": 58
-    }
-   }
-  },
-  {
-   "type": "Line",
-   "value": " ...",
-   "loc": {
-    "start": {
-     "line": 12,
-     "column": 2
-    },
-    "end": {
-     "line": 12,
-     "column": 8
     }
    }
   },
@@ -1203,40 +1234,12 @@
    "value": " Route to handle search query",
    "loc": {
     "start": {
-     "line": 17,
+     "line": 12,
      "column": 0
     },
     "end": {
-     "line": 17,
+     "line": 12,
      "column": 31
-    }
-   }
-  },
-  {
-   "type": "Line",
-   "value": " Improper input validation: No sanitization or validation on the search term",
-   "loc": {
-    "start": {
-     "line": 21,
-     "column": 2
-    },
-    "end": {
-     "line": 21,
-     "column": 80
-    }
-   }
-  },
-  {
-   "type": "Line",
-   "value": " This makes the application vulnerable to SQL injection, NoSQL injection, and other security issues.",
-   "loc": {
-    "start": {
-     "line": 22,
-     "column": 2
-    },
-    "end": {
-     "line": 22,
-     "column": 104
     }
    }
   }
@@ -1453,15 +1456,127 @@
    }
   },
   {
+   "type": "Keyword",
+   "value": "const",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 0
+    },
+    "end": {
+     "line": 3,
+     "column": 5
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "Joi",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 6
+    },
+    "end": {
+     "line": 3,
+     "column": 9
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 10
+    },
+    "end": {
+     "line": 3,
+     "column": 11
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "require",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 12
+    },
+    "end": {
+     "line": 3,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 19
+    },
+    "end": {
+     "line": 3,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'joi'",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 20
+    },
+    "end": {
+     "line": 3,
+     "column": 25
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 25
+    },
+    "end": {
+     "line": 3,
+     "column": 26
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 26
+    },
+    "end": {
+     "line": 3,
+     "column": 27
+    }
+   }
+  },
+  {
    "type": "Identifier",
    "value": "app",
    "loc": {
     "start": {
-     "line": 5,
+     "line": 6,
      "column": 0
     },
     "end": {
-     "line": 5,
+     "line": 6,
      "column": 3
     }
    }
@@ -1471,11 +1586,11 @@
    "value": ".",
    "loc": {
     "start": {
-     "line": 5,
+     "line": 6,
      "column": 3
     },
     "end": {
-     "line": 5,
+     "line": 6,
      "column": 4
     }
    }
@@ -1485,11 +1600,11 @@
    "value": "post",
    "loc": {
     "start": {
-     "line": 5,
+     "line": 6,
      "column": 4
     },
     "end": {
-     "line": 5,
+     "line": 6,
      "column": 8
     }
    }
@@ -1499,11 +1614,11 @@
    "value": "(",
    "loc": {
     "start": {
-     "line": 5,
+     "line": 6,
      "column": 8
     },
     "end": {
-     "line": 5,
+     "line": 6,
      "column": 9
     }
    }
@@ -1513,11 +1628,11 @@
    "value": "'/register'",
    "loc": {
     "start": {
-     "line": 5,
+     "line": 6,
      "column": 9
     },
     "end": {
-     "line": 5,
+     "line": 6,
      "column": 20
     }
    }
@@ -1527,11 +1642,11 @@
    "value": ",",
    "loc": {
     "start": {
-     "line": 5,
+     "line": 6,
      "column": 20
     },
     "end": {
-     "line": 5,
+     "line": 6,
      "column": 21
     }
    }
@@ -1541,11 +1656,11 @@
    "value": "(",
    "loc": {
     "start": {
-     "line": 5,
+     "line": 6,
      "column": 22
     },
     "end": {
-     "line": 5,
+     "line": 6,
      "column": 23
     }
    }
@@ -1555,11 +1670,11 @@
    "value": "req",
    "loc": {
     "start": {
-     "line": 5,
+     "line": 6,
      "column": 23
     },
     "end": {
-     "line": 5,
+     "line": 6,
      "column": 26
     }
    }
@@ -1569,11 +1684,11 @@
    "value": ",",
    "loc": {
     "start": {
-     "line": 5,
+     "line": 6,
      "column": 26
     },
     "end": {
-     "line": 5,
+     "line": 6,
      "column": 27
     }
    }
@@ -1583,11 +1698,11 @@
    "value": "res",
    "loc": {
     "start": {
-     "line": 5,
+     "line": 6,
      "column": 28
     },
     "end": {
-     "line": 5,
+     "line": 6,
      "column": 31
     }
    }
@@ -1597,11 +1712,11 @@
    "value": ")",
    "loc": {
     "start": {
-     "line": 5,
+     "line": 6,
      "column": 31
     },
     "end": {
-     "line": 5,
+     "line": 6,
      "column": 32
     }
    }
@@ -1611,11 +1726,11 @@
    "value": "=>",
    "loc": {
     "start": {
-     "line": 5,
+     "line": 6,
      "column": 33
     },
     "end": {
-     "line": 5,
+     "line": 6,
      "column": 35
     }
    }
@@ -1625,11 +1740,11 @@
    "value": "{",
    "loc": {
     "start": {
-     "line": 5,
+     "line": 6,
      "column": 36
     },
     "end": {
-     "line": 5,
+     "line": 6,
      "column": 37
     }
    }
@@ -1639,11 +1754,11 @@
    "value": "const",
    "loc": {
     "start": {
-     "line": 6,
+     "line": 7,
      "column": 2
     },
     "end": {
-     "line": 6,
+     "line": 7,
      "column": 7
     }
    }
@@ -1653,11 +1768,11 @@
    "value": "{",
    "loc": {
     "start": {
-     "line": 6,
+     "line": 7,
      "column": 8
     },
     "end": {
-     "line": 6,
+     "line": 7,
      "column": 9
     }
    }
@@ -1667,11 +1782,11 @@
    "value": "username",
    "loc": {
     "start": {
-     "line": 6,
+     "line": 7,
      "column": 10
     },
     "end": {
-     "line": 6,
+     "line": 7,
      "column": 18
     }
    }
@@ -1681,11 +1796,11 @@
    "value": ",",
    "loc": {
     "start": {
-     "line": 6,
+     "line": 7,
      "column": 18
     },
     "end": {
-     "line": 6,
+     "line": 7,
      "column": 19
     }
    }
@@ -1695,11 +1810,11 @@
    "value": "password",
    "loc": {
     "start": {
-     "line": 6,
+     "line": 7,
      "column": 20
     },
     "end": {
-     "line": 6,
+     "line": 7,
      "column": 28
     }
    }
@@ -1709,11 +1824,11 @@
    "value": "}",
    "loc": {
     "start": {
-     "line": 6,
+     "line": 7,
      "column": 29
     },
     "end": {
-     "line": 6,
+     "line": 7,
      "column": 30
     }
    }
@@ -1723,11 +1838,11 @@
    "value": "=",
    "loc": {
     "start": {
-     "line": 6,
+     "line": 7,
      "column": 31
     },
     "end": {
-     "line": 6,
+     "line": 7,
      "column": 32
     }
    }
@@ -1737,11 +1852,11 @@
    "value": "req",
    "loc": {
     "start": {
-     "line": 6,
+     "line": 7,
      "column": 33
     },
     "end": {
-     "line": 6,
+     "line": 7,
      "column": 36
     }
    }
@@ -1751,11 +1866,11 @@
    "value": ".",
    "loc": {
     "start": {
-     "line": 6,
+     "line": 7,
      "column": 36
     },
     "end": {
-     "line": 6,
+     "line": 7,
      "column": 37
     }
    }
@@ -1765,11 +1880,11 @@
    "value": "body",
    "loc": {
     "start": {
-     "line": 6,
+     "line": 7,
      "column": 37
     },
     "end": {
-     "line": 6,
+     "line": 7,
      "column": 41
     }
    }
@@ -1779,11 +1894,11 @@
    "value": ";",
    "loc": {
     "start": {
-     "line": 6,
+     "line": 7,
      "column": 41
     },
     "end": {
-     "line": 6,
+     "line": 7,
      "column": 42
     }
    }
@@ -1793,11 +1908,11 @@
    "value": "res",
    "loc": {
     "start": {
-     "line": 14,
+     "line": 9,
      "column": 2
     },
     "end": {
-     "line": 14,
+     "line": 9,
      "column": 5
     }
    }
@@ -1807,11 +1922,11 @@
    "value": ".",
    "loc": {
     "start": {
-     "line": 14,
+     "line": 9,
      "column": 5
     },
     "end": {
-     "line": 14,
+     "line": 9,
      "column": 6
     }
    }
@@ -1821,11 +1936,11 @@
    "value": "send",
    "loc": {
     "start": {
-     "line": 14,
+     "line": 9,
      "column": 6
     },
     "end": {
-     "line": 14,
+     "line": 9,
      "column": 10
     }
    }
@@ -1835,11 +1950,11 @@
    "value": "(",
    "loc": {
     "start": {
-     "line": 14,
+     "line": 9,
      "column": 10
     },
     "end": {
-     "line": 14,
+     "line": 9,
      "column": 11
     }
    }
@@ -1849,11 +1964,11 @@
    "value": "'User registered successfully!'",
    "loc": {
     "start": {
-     "line": 14,
+     "line": 9,
      "column": 11
     },
     "end": {
-     "line": 14,
+     "line": 9,
      "column": 42
     }
    }
@@ -1863,11 +1978,11 @@
    "value": ")",
    "loc": {
     "start": {
-     "line": 14,
+     "line": 9,
      "column": 42
     },
     "end": {
-     "line": 14,
+     "line": 9,
      "column": 43
     }
    }
@@ -1877,11 +1992,11 @@
    "value": ";",
    "loc": {
     "start": {
-     "line": 14,
+     "line": 9,
      "column": 43
     },
     "end": {
-     "line": 14,
+     "line": 9,
      "column": 44
     }
    }
@@ -1891,11 +2006,11 @@
    "value": "}",
    "loc": {
     "start": {
-     "line": 15,
+     "line": 10,
      "column": 0
     },
     "end": {
-     "line": 15,
+     "line": 10,
      "column": 1
     }
    }
@@ -1905,11 +2020,11 @@
    "value": ")",
    "loc": {
     "start": {
-     "line": 15,
+     "line": 10,
      "column": 1
     },
     "end": {
-     "line": 15,
+     "line": 10,
      "column": 2
     }
    }
@@ -1919,11 +2034,11 @@
    "value": ";",
    "loc": {
     "start": {
-     "line": 15,
+     "line": 10,
      "column": 2
     },
     "end": {
-     "line": 15,
+     "line": 10,
      "column": 3
     }
    }
@@ -1933,11 +2048,11 @@
    "value": "app",
    "loc": {
     "start": {
-     "line": 18,
+     "line": 13,
      "column": 0
     },
     "end": {
-     "line": 18,
+     "line": 13,
      "column": 3
     }
    }
@@ -1947,11 +2062,11 @@
    "value": ".",
    "loc": {
     "start": {
-     "line": 18,
+     "line": 13,
      "column": 3
     },
     "end": {
-     "line": 18,
+     "line": 13,
      "column": 4
     }
    }
@@ -1961,11 +2076,11 @@
    "value": "get",
    "loc": {
     "start": {
-     "line": 18,
+     "line": 13,
      "column": 4
     },
     "end": {
-     "line": 18,
+     "line": 13,
      "column": 7
     }
    }
@@ -1975,11 +2090,11 @@
    "value": "(",
    "loc": {
     "start": {
-     "line": 18,
+     "line": 13,
      "column": 7
     },
     "end": {
-     "line": 18,
+     "line": 13,
      "column": 8
     }
    }
@@ -1989,11 +2104,11 @@
    "value": "'/search'",
    "loc": {
     "start": {
-     "line": 18,
+     "line": 13,
      "column": 8
     },
     "end": {
-     "line": 18,
+     "line": 13,
      "column": 17
     }
    }
@@ -2003,11 +2118,11 @@
    "value": ",",
    "loc": {
     "start": {
-     "line": 18,
+     "line": 13,
      "column": 17
     },
     "end": {
-     "line": 18,
+     "line": 13,
      "column": 18
     }
    }
@@ -2017,11 +2132,11 @@
    "value": "(",
    "loc": {
     "start": {
-     "line": 18,
+     "line": 13,
      "column": 19
     },
     "end": {
-     "line": 18,
+     "line": 13,
      "column": 20
     }
    }
@@ -2031,11 +2146,11 @@
    "value": "req",
    "loc": {
     "start": {
-     "line": 18,
+     "line": 13,
      "column": 20
     },
     "end": {
-     "line": 18,
+     "line": 13,
      "column": 23
     }
    }
@@ -2045,11 +2160,11 @@
    "value": ",",
    "loc": {
     "start": {
-     "line": 18,
+     "line": 13,
      "column": 23
     },
     "end": {
-     "line": 18,
+     "line": 13,
      "column": 24
     }
    }
@@ -2059,11 +2174,11 @@
    "value": "res",
    "loc": {
     "start": {
-     "line": 18,
+     "line": 13,
      "column": 25
     },
     "end": {
-     "line": 18,
+     "line": 13,
      "column": 28
     }
    }
@@ -2073,11 +2188,11 @@
    "value": ")",
    "loc": {
     "start": {
-     "line": 18,
+     "line": 13,
      "column": 28
     },
     "end": {
-     "line": 18,
+     "line": 13,
      "column": 29
     }
    }
@@ -2087,11 +2202,11 @@
    "value": "=>",
    "loc": {
     "start": {
-     "line": 18,
+     "line": 13,
      "column": 30
     },
     "end": {
-     "line": 18,
+     "line": 13,
      "column": 32
     }
    }
@@ -2101,11 +2216,11 @@
    "value": "{",
    "loc": {
     "start": {
-     "line": 18,
+     "line": 13,
      "column": 33
     },
     "end": {
-     "line": 18,
+     "line": 13,
      "column": 34
     }
    }
@@ -2115,11 +2230,11 @@
    "value": "const",
    "loc": {
     "start": {
-     "line": 19,
+     "line": 14,
      "column": 2
     },
     "end": {
-     "line": 19,
+     "line": 14,
      "column": 7
     }
    }
@@ -2129,11 +2244,11 @@
    "value": "searchTerm",
    "loc": {
     "start": {
-     "line": 19,
+     "line": 14,
      "column": 8
     },
     "end": {
-     "line": 19,
+     "line": 14,
      "column": 18
     }
    }
@@ -2143,11 +2258,11 @@
    "value": "=",
    "loc": {
     "start": {
-     "line": 19,
+     "line": 14,
      "column": 19
     },
     "end": {
-     "line": 19,
+     "line": 14,
      "column": 20
     }
    }
@@ -2157,11 +2272,11 @@
    "value": "req",
    "loc": {
     "start": {
-     "line": 19,
+     "line": 14,
      "column": 21
     },
     "end": {
-     "line": 19,
+     "line": 14,
      "column": 24
     }
    }
@@ -2171,11 +2286,11 @@
    "value": ".",
    "loc": {
     "start": {
-     "line": 19,
+     "line": 14,
      "column": 24
     },
     "end": {
-     "line": 19,
+     "line": 14,
      "column": 25
     }
    }
@@ -2185,11 +2300,11 @@
    "value": "query",
    "loc": {
     "start": {
-     "line": 19,
+     "line": 14,
      "column": 25
     },
     "end": {
-     "line": 19,
+     "line": 14,
      "column": 30
     }
    }
@@ -2199,11 +2314,11 @@
    "value": ".",
    "loc": {
     "start": {
-     "line": 19,
+     "line": 14,
      "column": 30
     },
     "end": {
-     "line": 19,
+     "line": 14,
      "column": 31
     }
    }
@@ -2213,11 +2328,11 @@
    "value": "q",
    "loc": {
     "start": {
-     "line": 19,
+     "line": 14,
      "column": 31
     },
     "end": {
-     "line": 19,
+     "line": 14,
      "column": 32
     }
    }
@@ -2227,11 +2342,11 @@
    "value": ";",
    "loc": {
     "start": {
-     "line": 19,
+     "line": 14,
      "column": 32
     },
     "end": {
-     "line": 19,
+     "line": 14,
      "column": 33
     }
    }
@@ -2241,11 +2356,11 @@
    "value": "res",
    "loc": {
     "start": {
-     "line": 24,
+     "line": 16,
      "column": 2
     },
     "end": {
-     "line": 24,
+     "line": 16,
      "column": 5
     }
    }
@@ -2255,11 +2370,11 @@
    "value": ".",
    "loc": {
     "start": {
-     "line": 24,
+     "line": 16,
      "column": 5
     },
     "end": {
-     "line": 24,
+     "line": 16,
      "column": 6
     }
    }
@@ -2269,11 +2384,11 @@
    "value": "send",
    "loc": {
     "start": {
-     "line": 24,
+     "line": 16,
      "column": 6
     },
     "end": {
-     "line": 24,
+     "line": 16,
      "column": 10
     }
    }
@@ -2283,11 +2398,11 @@
    "value": "(",
    "loc": {
     "start": {
-     "line": 24,
+     "line": 16,
      "column": 10
     },
     "end": {
-     "line": 24,
+     "line": 16,
      "column": 11
     }
    }
@@ -2297,11 +2412,11 @@
    "value": "'Search results'",
    "loc": {
     "start": {
-     "line": 24,
+     "line": 16,
      "column": 11
     },
     "end": {
-     "line": 24,
+     "line": 16,
      "column": 27
     }
    }
@@ -2311,11 +2426,11 @@
    "value": ")",
    "loc": {
     "start": {
-     "line": 24,
+     "line": 16,
      "column": 27
     },
     "end": {
-     "line": 24,
+     "line": 16,
      "column": 28
     }
    }
@@ -2325,11 +2440,11 @@
    "value": ";",
    "loc": {
     "start": {
-     "line": 24,
+     "line": 16,
      "column": 28
     },
     "end": {
-     "line": 24,
+     "line": 16,
      "column": 29
     }
    }
@@ -2339,11 +2454,11 @@
    "value": "}",
    "loc": {
     "start": {
-     "line": 25,
+     "line": 17,
      "column": 0
     },
     "end": {
-     "line": 25,
+     "line": 17,
      "column": 1
     }
    }
@@ -2353,11 +2468,11 @@
    "value": ")",
    "loc": {
     "start": {
-     "line": 25,
+     "line": 17,
      "column": 1
     },
     "end": {
-     "line": 25,
+     "line": 17,
      "column": 2
     }
    }
@@ -2367,11 +2482,11 @@
    "value": ";",
    "loc": {
     "start": {
-     "line": 25,
+     "line": 17,
      "column": 2
     },
     "end": {
-     "line": 25,
+     "line": 17,
      "column": 3
     }
    }
@@ -2381,11 +2496,11 @@
    "value": "app",
    "loc": {
     "start": {
-     "line": 27,
+     "line": 19,
      "column": 0
     },
     "end": {
-     "line": 27,
+     "line": 19,
      "column": 3
     }
    }
@@ -2395,11 +2510,11 @@
    "value": ".",
    "loc": {
     "start": {
-     "line": 27,
+     "line": 19,
      "column": 3
     },
     "end": {
-     "line": 27,
+     "line": 19,
      "column": 4
     }
    }
@@ -2409,11 +2524,11 @@
    "value": "listen",
    "loc": {
     "start": {
-     "line": 27,
+     "line": 19,
      "column": 4
     },
     "end": {
-     "line": 27,
+     "line": 19,
      "column": 10
     }
    }
@@ -2423,11 +2538,11 @@
    "value": "(",
    "loc": {
     "start": {
-     "line": 27,
+     "line": 19,
      "column": 10
     },
     "end": {
-     "line": 27,
+     "line": 19,
      "column": 11
     }
    }
@@ -2437,11 +2552,11 @@
    "value": "3000",
    "loc": {
     "start": {
-     "line": 27,
+     "line": 19,
      "column": 11
     },
     "end": {
-     "line": 27,
+     "line": 19,
      "column": 15
     }
    }
@@ -2451,11 +2566,11 @@
    "value": ",",
    "loc": {
     "start": {
-     "line": 27,
+     "line": 19,
      "column": 15
     },
     "end": {
-     "line": 27,
+     "line": 19,
      "column": 16
     }
    }
@@ -2465,11 +2580,11 @@
    "value": "(",
    "loc": {
     "start": {
-     "line": 27,
+     "line": 19,
      "column": 17
     },
     "end": {
-     "line": 27,
+     "line": 19,
      "column": 18
     }
    }
@@ -2479,11 +2594,11 @@
    "value": ")",
    "loc": {
     "start": {
-     "line": 27,
+     "line": 19,
      "column": 18
     },
     "end": {
-     "line": 27,
+     "line": 19,
      "column": 19
     }
    }
@@ -2493,11 +2608,11 @@
    "value": "=>",
    "loc": {
     "start": {
-     "line": 27,
+     "line": 19,
      "column": 20
     },
     "end": {
-     "line": 27,
+     "line": 19,
      "column": 22
     }
    }
@@ -2507,11 +2622,11 @@
    "value": "{",
    "loc": {
     "start": {
-     "line": 27,
+     "line": 19,
      "column": 23
     },
     "end": {
-     "line": 27,
+     "line": 19,
      "column": 24
     }
    }
@@ -2521,11 +2636,11 @@
    "value": "console",
    "loc": {
     "start": {
-     "line": 28,
+     "line": 20,
      "column": 2
     },
     "end": {
-     "line": 28,
+     "line": 20,
      "column": 9
     }
    }
@@ -2535,11 +2650,11 @@
    "value": ".",
    "loc": {
     "start": {
-     "line": 28,
+     "line": 20,
      "column": 9
     },
     "end": {
-     "line": 28,
+     "line": 20,
      "column": 10
     }
    }
@@ -2549,11 +2664,11 @@
    "value": "log",
    "loc": {
     "start": {
-     "line": 28,
+     "line": 20,
      "column": 10
     },
     "end": {
-     "line": 28,
+     "line": 20,
      "column": 13
     }
    }
@@ -2563,11 +2678,11 @@
    "value": "(",
    "loc": {
     "start": {
-     "line": 28,
+     "line": 20,
      "column": 13
     },
     "end": {
-     "line": 28,
+     "line": 20,
      "column": 14
     }
    }
@@ -2577,11 +2692,11 @@
    "value": "'Server started on port 3000'",
    "loc": {
     "start": {
-     "line": 28,
+     "line": 20,
      "column": 14
     },
     "end": {
-     "line": 28,
+     "line": 20,
      "column": 43
     }
    }
@@ -2591,11 +2706,11 @@
    "value": ")",
    "loc": {
     "start": {
-     "line": 28,
+     "line": 20,
      "column": 43
     },
     "end": {
-     "line": 28,
+     "line": 20,
      "column": 44
     }
    }
@@ -2605,11 +2720,11 @@
    "value": ";",
    "loc": {
     "start": {
-     "line": 28,
+     "line": 20,
      "column": 44
     },
     "end": {
-     "line": 28,
+     "line": 20,
      "column": 45
     }
    }
@@ -2619,11 +2734,11 @@
    "value": "}",
    "loc": {
     "start": {
-     "line": 29,
+     "line": 21,
      "column": 0
     },
     "end": {
-     "line": 29,
+     "line": 21,
      "column": 1
     }
    }
@@ -2633,11 +2748,11 @@
    "value": ")",
    "loc": {
     "start": {
-     "line": 29,
+     "line": 21,
      "column": 1
     },
     "end": {
-     "line": 29,
+     "line": 21,
      "column": 2
     }
    }
@@ -2647,11 +2762,11 @@
    "value": ";",
    "loc": {
     "start": {
-     "line": 29,
+     "line": 21,
      "column": 2
     },
     "end": {
-     "line": 29,
+     "line": 21,
      "column": 3
     }
    }
