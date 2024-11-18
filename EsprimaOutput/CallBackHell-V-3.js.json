@@ -1,0 +1,1316 @@
+{
+ "type": "Program",
+ "body": [
+  {
+   "type": "ExpressionStatement",
+   "expression": {
+    "type": "CallExpression",
+    "callee": {
+     "type": "Identifier",
+     "name": "setTimeout",
+     "loc": {
+      "start": {
+       "line": 1,
+       "column": 0
+      },
+      "end": {
+       "line": 1,
+       "column": 10
+      }
+     }
+    },
+    "arguments": [
+     {
+      "type": "FunctionExpression",
+      "id": null,
+      "params": [],
+      "body": {
+       "type": "BlockStatement",
+       "body": [
+        {
+         "type": "ExpressionStatement",
+         "expression": {
+          "type": "CallExpression",
+          "callee": {
+           "type": "MemberExpression",
+           "computed": false,
+           "object": {
+            "type": "Identifier",
+            "name": "console",
+            "loc": {
+             "start": {
+              "line": 2,
+              "column": 4
+             },
+             "end": {
+              "line": 2,
+              "column": 11
+             }
+            }
+           },
+           "property": {
+            "type": "Identifier",
+            "name": "log",
+            "loc": {
+             "start": {
+              "line": 2,
+              "column": 12
+             },
+             "end": {
+              "line": 2,
+              "column": 15
+             }
+            }
+           },
+           "loc": {
+            "start": {
+             "line": 2,
+             "column": 4
+            },
+            "end": {
+             "line": 2,
+             "column": 15
+            }
+           }
+          },
+          "arguments": [
+           {
+            "type": "Literal",
+            "value": "Timer 1",
+            "raw": "'Timer 1'",
+            "loc": {
+             "start": {
+              "line": 2,
+              "column": 16
+             },
+             "end": {
+              "line": 2,
+              "column": 25
+             }
+            }
+           }
+          ],
+          "loc": {
+           "start": {
+            "line": 2,
+            "column": 4
+           },
+           "end": {
+            "line": 2,
+            "column": 26
+           }
+          }
+         },
+         "loc": {
+          "start": {
+           "line": 2,
+           "column": 4
+          },
+          "end": {
+           "line": 2,
+           "column": 27
+          }
+         }
+        },
+        {
+         "type": "ExpressionStatement",
+         "expression": {
+          "type": "CallExpression",
+          "callee": {
+           "type": "Identifier",
+           "name": "setTimeout",
+           "loc": {
+            "start": {
+             "line": 3,
+             "column": 4
+            },
+            "end": {
+             "line": 3,
+             "column": 14
+            }
+           }
+          },
+          "arguments": [
+           {
+            "type": "FunctionExpression",
+            "id": null,
+            "params": [],
+            "body": {
+             "type": "BlockStatement",
+             "body": [
+              {
+               "type": "ExpressionStatement",
+               "expression": {
+                "type": "CallExpression",
+                "callee": {
+                 "type": "MemberExpression",
+                 "computed": false,
+                 "object": {
+                  "type": "Identifier",
+                  "name": "console",
+                  "loc": {
+                   "start": {
+                    "line": 4,
+                    "column": 8
+                   },
+                   "end": {
+                    "line": 4,
+                    "column": 15
+                   }
+                  }
+                 },
+                 "property": {
+                  "type": "Identifier",
+                  "name": "log",
+                  "loc": {
+                   "start": {
+                    "line": 4,
+                    "column": 16
+                   },
+                   "end": {
+                    "line": 4,
+                    "column": 19
+                   }
+                  }
+                 },
+                 "loc": {
+                  "start": {
+                   "line": 4,
+                   "column": 8
+                  },
+                  "end": {
+                   "line": 4,
+                   "column": 19
+                  }
+                 }
+                },
+                "arguments": [
+                 {
+                  "type": "Literal",
+                  "value": "Timer 2",
+                  "raw": "'Timer 2'",
+                  "loc": {
+                   "start": {
+                    "line": 4,
+                    "column": 20
+                   },
+                   "end": {
+                    "line": 4,
+                    "column": 29
+                   }
+                  }
+                 }
+                ],
+                "loc": {
+                 "start": {
+                  "line": 4,
+                  "column": 8
+                 },
+                 "end": {
+                  "line": 4,
+                  "column": 30
+                 }
+                }
+               },
+               "loc": {
+                "start": {
+                 "line": 4,
+                 "column": 8
+                },
+                "end": {
+                 "line": 4,
+                 "column": 31
+                }
+               }
+              },
+              {
+               "type": "ExpressionStatement",
+               "expression": {
+                "type": "CallExpression",
+                "callee": {
+                 "type": "Identifier",
+                 "name": "setTimeout",
+                 "loc": {
+                  "start": {
+                   "line": 5,
+                   "column": 8
+                  },
+                  "end": {
+                   "line": 5,
+                   "column": 18
+                  }
+                 }
+                },
+                "arguments": [
+                 {
+                  "type": "FunctionExpression",
+                  "id": null,
+                  "params": [],
+                  "body": {
+                   "type": "BlockStatement",
+                   "body": [
+                    {
+                     "type": "ExpressionStatement",
+                     "expression": {
+                      "type": "CallExpression",
+                      "callee": {
+                       "type": "MemberExpression",
+                       "computed": false,
+                       "object": {
+                        "type": "Identifier",
+                        "name": "console",
+                        "loc": {
+                         "start": {
+                          "line": 6,
+                          "column": 12
+                         },
+                         "end": {
+                          "line": 6,
+                          "column": 19
+                         }
+                        }
+                       },
+                       "property": {
+                        "type": "Identifier",
+                        "name": "log",
+                        "loc": {
+                         "start": {
+                          "line": 6,
+                          "column": 20
+                         },
+                         "end": {
+                          "line": 6,
+                          "column": 23
+                         }
+                        }
+                       },
+                       "loc": {
+                        "start": {
+                         "line": 6,
+                         "column": 12
+                        },
+                        "end": {
+                         "line": 6,
+                         "column": 23
+                        }
+                       }
+                      },
+                      "arguments": [
+                       {
+                        "type": "Literal",
+                        "value": "Timer 3",
+                        "raw": "'Timer 3'",
+                        "loc": {
+                         "start": {
+                          "line": 6,
+                          "column": 24
+                         },
+                         "end": {
+                          "line": 6,
+                          "column": 33
+                         }
+                        }
+                       }
+                      ],
+                      "loc": {
+                       "start": {
+                        "line": 6,
+                        "column": 12
+                       },
+                       "end": {
+                        "line": 6,
+                        "column": 34
+                       }
+                      }
+                     },
+                     "loc": {
+                      "start": {
+                       "line": 6,
+                       "column": 12
+                      },
+                      "end": {
+                       "line": 6,
+                       "column": 35
+                      }
+                     }
+                    }
+                   ],
+                   "loc": {
+                    "start": {
+                     "line": 5,
+                     "column": 30
+                    },
+                    "end": {
+                     "line": 8,
+                     "column": 9
+                    }
+                   }
+                  },
+                  "generator": false,
+                  "expression": false,
+                  "async": false,
+                  "loc": {
+                   "start": {
+                    "line": 5,
+                    "column": 19
+                   },
+                   "end": {
+                    "line": 8,
+                    "column": 9
+                   }
+                  }
+                 },
+                 {
+                  "type": "Literal",
+                  "value": 1000,
+                  "raw": "1000",
+                  "loc": {
+                   "start": {
+                    "line": 8,
+                    "column": 11
+                   },
+                   "end": {
+                    "line": 8,
+                    "column": 15
+                   }
+                  }
+                 }
+                ],
+                "loc": {
+                 "start": {
+                  "line": 5,
+                  "column": 8
+                 },
+                 "end": {
+                  "line": 8,
+                  "column": 16
+                 }
+                }
+               },
+               "loc": {
+                "start": {
+                 "line": 5,
+                 "column": 8
+                },
+                "end": {
+                 "line": 8,
+                 "column": 17
+                }
+               }
+              }
+             ],
+             "loc": {
+              "start": {
+               "line": 3,
+               "column": 26
+              },
+              "end": {
+               "line": 9,
+               "column": 5
+              }
+             }
+            },
+            "generator": false,
+            "expression": false,
+            "async": false,
+            "loc": {
+             "start": {
+              "line": 3,
+              "column": 15
+             },
+             "end": {
+              "line": 9,
+              "column": 5
+             }
+            }
+           },
+           {
+            "type": "Literal",
+            "value": 1000,
+            "raw": "1000",
+            "loc": {
+             "start": {
+              "line": 9,
+              "column": 7
+             },
+             "end": {
+              "line": 9,
+              "column": 11
+             }
+            }
+           }
+          ],
+          "loc": {
+           "start": {
+            "line": 3,
+            "column": 4
+           },
+           "end": {
+            "line": 9,
+            "column": 12
+           }
+          }
+         },
+         "loc": {
+          "start": {
+           "line": 3,
+           "column": 4
+          },
+          "end": {
+           "line": 9,
+           "column": 13
+          }
+         }
+        }
+       ],
+       "loc": {
+        "start": {
+         "line": 1,
+         "column": 22
+        },
+        "end": {
+         "line": 10,
+         "column": 1
+        }
+       }
+      },
+      "generator": false,
+      "expression": false,
+      "async": false,
+      "loc": {
+       "start": {
+        "line": 1,
+        "column": 11
+       },
+       "end": {
+        "line": 10,
+        "column": 1
+       }
+      }
+     },
+     {
+      "type": "Literal",
+      "value": 1000,
+      "raw": "1000",
+      "loc": {
+       "start": {
+        "line": 10,
+        "column": 3
+       },
+       "end": {
+        "line": 10,
+        "column": 7
+       }
+      }
+     }
+    ],
+    "loc": {
+     "start": {
+      "line": 1,
+      "column": 0
+     },
+     "end": {
+      "line": 10,
+      "column": 8
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 0
+    },
+    "end": {
+     "line": 10,
+     "column": 9
+    }
+   }
+  }
+ ],
+ "sourceType": "script",
+ "loc": {
+  "start": {
+   "line": 1,
+   "column": 0
+  },
+  "end": {
+   "line": 10,
+   "column": 9
+  }
+ },
+ "comments": [
+  {
+   "type": "Line",
+   "value": " More nested callbacks...",
+   "loc": {
+    "start": {
+     "line": 7,
+     "column": 12
+    },
+    "end": {
+     "line": 7,
+     "column": 39
+    }
+   }
+  }
+ ],
+ "tokens": [
+  {
+   "type": "Identifier",
+   "value": "setTimeout",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 0
+    },
+    "end": {
+     "line": 1,
+     "column": 10
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 10
+    },
+    "end": {
+     "line": 1,
+     "column": 11
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "function",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 11
+    },
+    "end": {
+     "line": 1,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 19
+    },
+    "end": {
+     "line": 1,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 20
+    },
+    "end": {
+     "line": 1,
+     "column": 21
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "{",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 22
+    },
+    "end": {
+     "line": 1,
+     "column": 23
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "console",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 4
+    },
+    "end": {
+     "line": 2,
+     "column": 11
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 11
+    },
+    "end": {
+     "line": 2,
+     "column": 12
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "log",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 12
+    },
+    "end": {
+     "line": 2,
+     "column": 15
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 15
+    },
+    "end": {
+     "line": 2,
+     "column": 16
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'Timer 1'",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 16
+    },
+    "end": {
+     "line": 2,
+     "column": 25
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 25
+    },
+    "end": {
+     "line": 2,
+     "column": 26
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 2,
+     "column": 26
+    },
+    "end": {
+     "line": 2,
+     "column": 27
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "setTimeout",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 4
+    },
+    "end": {
+     "line": 3,
+     "column": 14
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 14
+    },
+    "end": {
+     "line": 3,
+     "column": 15
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "function",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 15
+    },
+    "end": {
+     "line": 3,
+     "column": 23
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 23
+    },
+    "end": {
+     "line": 3,
+     "column": 24
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 24
+    },
+    "end": {
+     "line": 3,
+     "column": 25
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "{",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 26
+    },
+    "end": {
+     "line": 3,
+     "column": 27
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "console",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 8
+    },
+    "end": {
+     "line": 4,
+     "column": 15
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 15
+    },
+    "end": {
+     "line": 4,
+     "column": 16
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "log",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 16
+    },
+    "end": {
+     "line": 4,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 19
+    },
+    "end": {
+     "line": 4,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'Timer 2'",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 20
+    },
+    "end": {
+     "line": 4,
+     "column": 29
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 29
+    },
+    "end": {
+     "line": 4,
+     "column": 30
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 30
+    },
+    "end": {
+     "line": 4,
+     "column": 31
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "setTimeout",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 8
+    },
+    "end": {
+     "line": 5,
+     "column": 18
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 18
+    },
+    "end": {
+     "line": 5,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Keyword",
+   "value": "function",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 19
+    },
+    "end": {
+     "line": 5,
+     "column": 27
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 27
+    },
+    "end": {
+     "line": 5,
+     "column": 28
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 28
+    },
+    "end": {
+     "line": 5,
+     "column": 29
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "{",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 30
+    },
+    "end": {
+     "line": 5,
+     "column": 31
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "console",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 12
+    },
+    "end": {
+     "line": 6,
+     "column": 19
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 19
+    },
+    "end": {
+     "line": 6,
+     "column": 20
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "log",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 20
+    },
+    "end": {
+     "line": 6,
+     "column": 23
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 23
+    },
+    "end": {
+     "line": 6,
+     "column": 24
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'Timer 3'",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 24
+    },
+    "end": {
+     "line": 6,
+     "column": 33
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 33
+    },
+    "end": {
+     "line": 6,
+     "column": 34
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 6,
+     "column": 34
+    },
+    "end": {
+     "line": 6,
+     "column": 35
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "}",
+   "loc": {
+    "start": {
+     "line": 8,
+     "column": 8
+    },
+    "end": {
+     "line": 8,
+     "column": 9
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ",",
+   "loc": {
+    "start": {
+     "line": 8,
+     "column": 9
+    },
+    "end": {
+     "line": 8,
+     "column": 10
+    }
+   }
+  },
+  {
+   "type": "Numeric",
+   "value": "1000",
+   "loc": {
+    "start": {
+     "line": 8,
+     "column": 11
+    },
+    "end": {
+     "line": 8,
+     "column": 15
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 8,
+     "column": 15
+    },
+    "end": {
+     "line": 8,
+     "column": 16
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 8,
+     "column": 16
+    },
+    "end": {
+     "line": 8,
+     "column": 17
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "}",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 4
+    },
+    "end": {
+     "line": 9,
+     "column": 5
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ",",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 5
+    },
+    "end": {
+     "line": 9,
+     "column": 6
+    }
+   }
+  },
+  {
+   "type": "Numeric",
+   "value": "1000",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 7
+    },
+    "end": {
+     "line": 9,
+     "column": 11
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 11
+    },
+    "end": {
+     "line": 9,
+     "column": 12
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 9,
+     "column": 12
+    },
+    "end": {
+     "line": 9,
+     "column": 13
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "}",
+   "loc": {
+    "start": {
+     "line": 10,
+     "column": 0
+    },
+    "end": {
+     "line": 10,
+     "column": 1
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ",",
+   "loc": {
+    "start": {
+     "line": 10,
+     "column": 1
+    },
+    "end": {
+     "line": 10,
+     "column": 2
+    }
+   }
+  },
+  {
+   "type": "Numeric",
+   "value": "1000",
+   "loc": {
+    "start": {
+     "line": 10,
+     "column": 3
+    },
+    "end": {
+     "line": 10,
+     "column": 7
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 10,
+     "column": 7
+    },
+    "end": {
+     "line": 10,
+     "column": 8
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 10,
+     "column": 8
+    },
+    "end": {
+     "line": 10,
+     "column": 9
+    }
+   }
+  }
+ ],
+ "errors": []
+}

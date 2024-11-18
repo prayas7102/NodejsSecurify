@@ -21,7 +21,8 @@ import * as path from 'path';
 import * as util from 'util';
 import colors from 'colors';
 
-import { Vulnerability, detectVulnerability } from './Vulnerability/Vulnerability';
+import { detectVulnerability } from './Vulnerability/Vulnerability';
+import { Vulnerability } from './Vulnerability/VulnerabilityTypes';
 import { checkVulnerablePackages } from './Vulnerability/DetectUnsafeNpmPackage';
 import { detectCallBackHell } from './Vulnerability/DetectCallBackHell';
 import { detectDangerousFunctions } from './Vulnerability/DetectDangerousFunctions';

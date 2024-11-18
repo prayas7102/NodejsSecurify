@@ -1,0 +1,758 @@
+{
+ "type": "Program",
+ "body": [
+  {
+   "type": "VariableDeclaration",
+   "declarations": [
+    {
+     "type": "VariableDeclarator",
+     "id": {
+      "type": "Identifier",
+      "name": "token",
+      "loc": {
+       "start": {
+        "line": 1,
+        "column": 6
+       },
+       "end": {
+        "line": 1,
+        "column": 11
+       }
+      }
+     },
+     "init": {
+      "type": "CallExpression",
+      "callee": {
+       "type": "MemberExpression",
+       "computed": false,
+       "object": {
+        "type": "Identifier",
+        "name": "localStorage",
+        "loc": {
+         "start": {
+          "line": 1,
+          "column": 14
+         },
+         "end": {
+          "line": 1,
+          "column": 26
+         }
+        }
+       },
+       "property": {
+        "type": "Identifier",
+        "name": "getItem",
+        "loc": {
+         "start": {
+          "line": 1,
+          "column": 27
+         },
+         "end": {
+          "line": 1,
+          "column": 34
+         }
+        }
+       },
+       "loc": {
+        "start": {
+         "line": 1,
+         "column": 14
+        },
+        "end": {
+         "line": 1,
+         "column": 34
+        }
+       }
+      },
+      "arguments": [
+       {
+        "type": "Literal",
+        "value": "token",
+        "raw": "'token'",
+        "loc": {
+         "start": {
+          "line": 1,
+          "column": 35
+         },
+         "end": {
+          "line": 1,
+          "column": 42
+         }
+        }
+       }
+      ],
+      "loc": {
+       "start": {
+        "line": 1,
+        "column": 14
+       },
+       "end": {
+        "line": 1,
+        "column": 43
+       }
+      }
+     },
+     "loc": {
+      "start": {
+       "line": 1,
+       "column": 6
+      },
+      "end": {
+       "line": 1,
+       "column": 43
+      }
+     }
+    }
+   ],
+   "kind": "const",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 0
+    },
+    "end": {
+     "line": 1,
+     "column": 44
+    }
+   }
+  },
+  {
+   "type": "ExpressionStatement",
+   "expression": {
+    "type": "CallExpression",
+    "callee": {
+     "type": "Identifier",
+     "name": "test",
+     "loc": {
+      "start": {
+       "line": 3,
+       "column": 0
+      },
+      "end": {
+       "line": 3,
+       "column": 4
+      }
+     }
+    },
+    "arguments": [
+     {
+      "type": "Literal",
+      "value": "Should not store tokens in insecure locations",
+      "raw": "'Should not store tokens in insecure locations'",
+      "loc": {
+       "start": {
+        "line": 3,
+        "column": 5
+       },
+       "end": {
+        "line": 3,
+        "column": 52
+       }
+      }
+     },
+     {
+      "type": "ArrowFunctionExpression",
+      "id": null,
+      "params": [],
+      "body": {
+       "type": "BlockStatement",
+       "body": [
+        {
+         "type": "ExpressionStatement",
+         "expression": {
+          "type": "CallExpression",
+          "callee": {
+           "type": "MemberExpression",
+           "computed": false,
+           "object": {
+            "type": "CallExpression",
+            "callee": {
+             "type": "Identifier",
+             "name": "expect",
+             "loc": {
+              "start": {
+               "line": 4,
+               "column": 2
+              },
+              "end": {
+               "line": 4,
+               "column": 8
+              }
+             }
+            },
+            "arguments": [
+             {
+              "type": "Identifier",
+              "name": "token",
+              "loc": {
+               "start": {
+                "line": 4,
+                "column": 9
+               },
+               "end": {
+                "line": 4,
+                "column": 14
+               }
+              }
+             }
+            ],
+            "loc": {
+             "start": {
+              "line": 4,
+              "column": 2
+             },
+             "end": {
+              "line": 4,
+              "column": 15
+             }
+            }
+           },
+           "property": {
+            "type": "Identifier",
+            "name": "toBeNull",
+            "loc": {
+             "start": {
+              "line": 4,
+              "column": 16
+             },
+             "end": {
+              "line": 4,
+              "column": 24
+             }
+            }
+           },
+           "loc": {
+            "start": {
+             "line": 4,
+             "column": 2
+            },
+            "end": {
+             "line": 4,
+             "column": 24
+            }
+           }
+          },
+          "arguments": [],
+          "loc": {
+           "start": {
+            "line": 4,
+            "column": 2
+           },
+           "end": {
+            "line": 4,
+            "column": 26
+           }
+          }
+         },
+         "loc": {
+          "start": {
+           "line": 4,
+           "column": 2
+          },
+          "end": {
+           "line": 4,
+           "column": 27
+          }
+         }
+        }
+       ],
+       "loc": {
+        "start": {
+         "line": 3,
+         "column": 60
+        },
+        "end": {
+         "line": 5,
+         "column": 1
+        }
+       }
+      },
+      "generator": false,
+      "expression": false,
+      "async": false,
+      "loc": {
+       "start": {
+        "line": 3,
+        "column": 54
+       },
+       "end": {
+        "line": 5,
+        "column": 1
+       }
+      }
+     }
+    ],
+    "loc": {
+     "start": {
+      "line": 3,
+      "column": 0
+     },
+     "end": {
+      "line": 5,
+      "column": 2
+     }
+    }
+   },
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 0
+    },
+    "end": {
+     "line": 5,
+     "column": 3
+    }
+   }
+  }
+ ],
+ "sourceType": "script",
+ "loc": {
+  "start": {
+   "line": 1,
+   "column": 0
+  },
+  "end": {
+   "line": 5,
+   "column": 3
+  }
+ },
+ "comments": [
+  {
+   "type": "Line",
+   "value": " Assuming the token is stored in local storage",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 45
+    },
+    "end": {
+     "line": 1,
+     "column": 93
+    }
+   }
+  }
+ ],
+ "tokens": [
+  {
+   "type": "Keyword",
+   "value": "const",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 0
+    },
+    "end": {
+     "line": 1,
+     "column": 5
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "token",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 6
+    },
+    "end": {
+     "line": 1,
+     "column": 11
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 12
+    },
+    "end": {
+     "line": 1,
+     "column": 13
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "localStorage",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 14
+    },
+    "end": {
+     "line": 1,
+     "column": 26
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 26
+    },
+    "end": {
+     "line": 1,
+     "column": 27
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "getItem",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 27
+    },
+    "end": {
+     "line": 1,
+     "column": 34
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 34
+    },
+    "end": {
+     "line": 1,
+     "column": 35
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'token'",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 35
+    },
+    "end": {
+     "line": 1,
+     "column": 42
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 42
+    },
+    "end": {
+     "line": 1,
+     "column": 43
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 1,
+     "column": 43
+    },
+    "end": {
+     "line": 1,
+     "column": 44
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "test",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 0
+    },
+    "end": {
+     "line": 3,
+     "column": 4
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 4
+    },
+    "end": {
+     "line": 3,
+     "column": 5
+    }
+   }
+  },
+  {
+   "type": "String",
+   "value": "'Should not store tokens in insecure locations'",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 5
+    },
+    "end": {
+     "line": 3,
+     "column": 52
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ",",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 52
+    },
+    "end": {
+     "line": 3,
+     "column": 53
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 54
+    },
+    "end": {
+     "line": 3,
+     "column": 55
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 55
+    },
+    "end": {
+     "line": 3,
+     "column": 56
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "=>",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 57
+    },
+    "end": {
+     "line": 3,
+     "column": 59
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "{",
+   "loc": {
+    "start": {
+     "line": 3,
+     "column": 60
+    },
+    "end": {
+     "line": 3,
+     "column": 61
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "expect",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 2
+    },
+    "end": {
+     "line": 4,
+     "column": 8
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 8
+    },
+    "end": {
+     "line": 4,
+     "column": 9
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "token",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 9
+    },
+    "end": {
+     "line": 4,
+     "column": 14
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 14
+    },
+    "end": {
+     "line": 4,
+     "column": 15
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ".",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 15
+    },
+    "end": {
+     "line": 4,
+     "column": 16
+    }
+   }
+  },
+  {
+   "type": "Identifier",
+   "value": "toBeNull",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 16
+    },
+    "end": {
+     "line": 4,
+     "column": 24
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "(",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 24
+    },
+    "end": {
+     "line": 4,
+     "column": 25
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 25
+    },
+    "end": {
+     "line": 4,
+     "column": 26
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 4,
+     "column": 26
+    },
+    "end": {
+     "line": 4,
+     "column": 27
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": "}",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 0
+    },
+    "end": {
+     "line": 5,
+     "column": 1
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ")",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 1
+    },
+    "end": {
+     "line": 5,
+     "column": 2
+    }
+   }
+  },
+  {
+   "type": "Punctuator",
+   "value": ";",
+   "loc": {
+    "start": {
+     "line": 5,
+     "column": 2
+    },
+    "end": {
+     "line": 5,
+     "column": 3
+    }
+   }
+  }
+ ],
+ "errors": []
+}
